@@ -1,0 +1,292 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AboutUs - Business Practice</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="Practice_header">
+        <div class="topbar">
+            <div class="left">
+                <span><i class="fas fa-phone"></i> +91 98765-43210</span>
+                <span><i class="fas fa-envelope"></i> info@infrabuild.com</span>
+            </div>
+            <div class="right">
+                <a href="{% url 'investors' %}">Investors</a>
+                <a href="{% url 'news' %}">News</a>
+                <a href="{% url 'events' %}">events</a>
+                <a href="{% url 'contact' %}">Contact</a>
+                <a href="{% url 'careers' %}">Careers</a>
+            </div>
+        </div>
+        <hr class="nav-hr">
+
+        <div class="navbar">
+            <div class="logo">
+                <a href="{% url 'home' %}"><img src="../static/img/infralogo.png" alt=""></a>
+                InfraBuild
+            </div>
+            <nav>
+                <div class="dropdown">
+                    <a href="{% url 'about' %}">About Us <i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="{% url 'company_profile' %}">Company Profile</a>
+                        <a href="{% url 'leadership' %}">Leadership</a>
+                        <a href="{% url 'eco' %}">Ecosystem Partnership</a>
+                        <a href="{% url 'Business_Practice' %}">Business Practice</a>
+                        <a href="{% url 'governance' %}">Governance</a>
+                        <a href="{% url 'awards' %}">Awards</a>
+
+
+                        <button class="dropdown-btn" onclick="location.href='about'"> About <i
+                                class="fa fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <a href="{% url 'expertise' %}">Expertise</a>
+                <a href="{% url 'projects' %}">Projects</a>
+                <a href="{% url 'digital' %}">Digital</a>
+                <div class="dropdown">
+                    <a href="{% url 'insights' %}">Insights</a>
+                    <!-- <div class="dropdown-content">
+                        <a href="#blog">Sustainablity & <br> Decarbonisation</a>
+                        <a href="#reports">Mobility</a>
+                        <a href="#news">Resilience</a>
+                        <a href="#news">places</a>
+
+                        <button class="dropdown-btn" onclick="location.href='insights'">All Insights<i
+                                class="fa fa-arrow-right"></i></button>
+                    </div> -->
+                </div>
+                <a href="#search"><i class="fas fa-magnifying-glass"></i></a>
+            </nav>
+        </div>
+
+        <div class="header-content">
+            <h1 class="typewriter">An Impactful Business Practices</h1>
+            <p>At Infrabuild, integrity isn’t just a policy — it’s our promise.
+                We uphold the highest standards in quality, ethics, and sustainability in everything we do.
+                From groundbreaking to ribbon-cutting, our practices reflect trust, responsibility, and innovation.</p>
+        </div>
+    </header>
+
+    <section class="bp-section1-container">
+        <h2 class="bp-section1-heading">Our Business <span> Practice </span></h2>
+
+        <p class="bp-section1-paragraph">
+            At the heart of our business practice lies a steadfast commitment to integrity, transparency, and
+            sustainability. We believe that long-term success is achieved not just by delivering quality products and
+            services, but by building trust with our clients, employees, and stakeholders. Every decision we make is
+            grounded in ethical principles, and we strive to create value that extends beyond profits — positively
+            impacting communities and the environment. Our team consistently upholds a code of conduct that reflects
+            respect, responsibility, and fairness in all aspects of our operations.
+        </p>
+
+        <p class="bp-section1-paragraph">
+            Innovation also plays a key role in our business practice. We actively embrace new technologies, foster a
+            culture of continuous improvement, and encourage creative problem-solving at every level. This allows us to
+            adapt to a rapidly evolving marketplace while staying true to our core values. By investing in our people
+            and prioritizing collaboration, we ensure that our business remains resilient, agile, and future-ready.
+            Ultimately, our goal is to lead by example — not just by what we achieve, but by how we achieve it.
+        </p>
+    </section>
+
+    <section class="bp-codeofconduct-section">
+        <h2 class="bp-codeofconduct-title">Our Code <span>of Conduct</span></h2>
+        <div class="bp-codeofconduct-row">
+            <div class="bp-codeofconduct-col">
+                <div class="bp-codeofconduct-icon"><i class="fas fa-handshake"></i></div>
+                <div class="bp-codeofconduct-heading">Respect</div>
+                <div class="bp-codeofconduct-text">We treat everyone with dignity and foster a culture of inclusion and
+                    mutual appreciation.</div>
+            </div>
+            <div class="bp-codeofconduct-col">
+                <div class="bp-codeofconduct-icon"><i class="fas fa-bullhorn"></i></div>
+                <div class="bp-codeofconduct-heading">Transparency</div>
+                <div class="bp-codeofconduct-text">We communicate openly and honestly, ensuring clarity and trust in all
+                    we do.</div>
+            </div>
+            <div class="bp-codeofconduct-col">
+                <div class="bp-codeofconduct-icon"><i class="fas fa-user-check"></i></div>
+                <div class="bp-codeofconduct-heading">Accountability</div>
+                <div class="bp-codeofconduct-text">We own our actions, embrace feedback, and always strive to improve.
+                </div>
+            </div>
+            <div class="bp-codeofconduct-col">
+                <div class="bp-codeofconduct-icon"><i class="fas fa-gavel"></i></div>
+                <div class="bp-codeofconduct-heading">Integrity</div>
+                <div class="bp-codeofconduct-text">We uphold the highest standards of ethics and fairness in every
+                    decision.</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cg-section">
+        <div class="cg-col">
+            <h2>Compliance</h2>
+            <p>
+                Compliance forms the backbone of our ethical framework. We proactively align our operations with global
+                and local laws, regulatory standards, and internal procedures to ensure accountability and legal
+                integrity. Whether it’s safeguarding data privacy, meeting environmental mandates, or adhering to
+                anti-corruption policies, our teams are consistently trained and empowered to take responsible action.
+                By nurturing a strong compliance culture, we demonstrate our unwavering commitment to doing what’s right
+                — for our business, our people, and the communities we serve.
+            </p>
+        </div>
+        <div class="cg-col">
+            <h2>Governance</h2>
+            <p>
+                Governance is our guiding force for sustainable leadership. We uphold a structured system of oversight
+                that prioritizes ethical management, transparent reporting, and inclusive decision-making. With clearly
+                defined roles and responsibilities, we foster a culture of accountability from the boardroom to every
+                team. We believe in open stakeholder engagement and continual improvement of our governance practices to
+                ensure we not only meet expectations — we exceed them, building trust and driving long-term value across
+                every aspect of our organization.
+            </p>
+        </div>
+    </section>
+
+    <section class="bp-faq">
+        <h2 class="bp-faq-title">Discover More <span> About Our Practices </span></h2>
+
+        <div class="bp-faq-item">
+            <a href="{% url 'Business_Practice' %}">General Business Principles</a>
+            <i class="fas fa-paper-plane bp-faq-icon"></i>
+        </div>
+
+        <div class="bp-faq-item">
+            
+            <a href="{% url 'insights' %}">Diversity, Equity, Inclusion & Belonging Policy</a>
+            <i class="fas fa-paper-plane bp-faq-icon"></i>
+        </div>
+
+        <div class="bp-faq-item">
+            
+            <a href="{% url 'health' %}">Health & Safety</a>
+            <i class="fas fa-paper-plane bp-faq-icon"></i>
+        </div>
+
+        <div class="bp-faq-item">
+            
+            <a href="{% url 'privacy' %}">Human Rights Policy</a>
+            <i class="fas fa-paper-plane bp-faq-icon"></i>
+        </div>
+
+        <div class="bp-faq-item">
+            <a href="{% url 'awards' %}">Awards</a>
+            <i class="fas fa-paper-plane bp-faq-icon"></i>
+        </div>
+
+        <div class="bp-faq-item">
+            
+            <a href="{% url 'governance' %}">Governance</a>
+            <i class="fas fa-paper-plane bp-faq-icon"></i>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-section">
+                <a href="{% url 'home' %}">
+                    <h3>InfraBuild</h3>
+                </a>
+                <p>"Building Tomorrow, <br> Strengthening Today."</p>
+                <p>Building sustainable <br>infrastructure solutions <br>that power cities, <br> industries, and lives
+                    across <br>the
+                    globe. <br>
+                    Your vision, our foundation.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="{% url 'investors' %}">Investors</a></li>
+                    <li><a href="{% url 'news' %}">News</a></li>
+                    <li><a href="{% url 'events' %}">Events</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                    <li><a href="{% url 'careers' %}">Careers</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="{% url 'about' %}">About Us</a></li>
+                    <li><a href="{% url 'expertise' %}">Expertise</a></li>
+                    <li><a href="{% url 'projects' %}">Projects</a></li>
+                    <li><a href="{% url 'digital' %}">Digital</a></li>
+                    <li><a href="{% url 'insights' %}">Insights</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><strong>Call:</strong> +0123 456 789 00</p>
+                <p><strong>Email:</strong> user@example.com</p>
+
+                <div class="subscribe-box">
+                    <input type="email" placeholder="Write Email" />
+                    <button>→</button>
+                </div>
+
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://wa.me/?text=Check%20this%20out!" target="_blank" rel="noopener noreferrer"
+                        title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div>
+                <a href="{% url 'privacy' %}">Privacy Policy</a>
+                <a href="{% url 'about' %}">Our History</a>
+                <a href="{% url 'expertise' %}">What We Do</a>
+            </div>
+            <div>
+                © 2025 InfraBuild. All images are for demo purposes only.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script>
+        window.addEventListener("scroll", function () {
+            const topbar = document.querySelector(".topbar");
+            const navbar = document.querySelector(".navbar");
+
+            if (window.scrollY > 10) {
+                topbar.classList.add("scrolled");
+                navbar.classList.add("scrolled");
+            } else {
+                topbar.classList.remove("scrolled");
+                navbar.classList.remove("scrolled");
+            }
+        });
+    </script>
+
+</body>
+
+</html>

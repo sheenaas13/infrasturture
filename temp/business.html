@@ -1,0 +1,303 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capabilities - Business Advisory</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="business-ad_header">
+        <div class="topbar">
+            <div class="left">
+                <span><i class="fas fa-phone"></i> +91 98765-43210</span>
+                <span><i class="fas fa-envelope"></i> info@infrabuild.com</span>
+            </div>
+            <div class="right">
+                <a href="{% url 'investors' %}">Investors</a>
+                <a href="{% url 'news' %}">News</a>
+                <a href="{% url 'events' %}">events</a>
+                <a href="{% url 'contact' %}">Contact</a>
+                <a href="{% url 'careers' %}">Careers</a>
+            </div>
+        </div>
+        <hr class="nav-hr">
+
+        <div class="navbar">
+            <div class="logo">
+                <a href="{% url 'home' %}"><img src="../static/img/infralogo.png" alt=""></a>
+                InfraBuild
+            </div>
+            <nav>
+                <div class="dropdown">
+                    <a href="{% url 'about' %}">About Us <i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="{% url 'company_profile' %}">Company Profile</a>
+                        <a href="{% url 'leadership' %}">Leadership</a>
+                        <a href="{% url 'eco' %}">Ecosystem Partnership</a>
+                        <a href="{% url 'Business_Practice' %}">Business Practice</a>
+                        <a href="{% url 'governance' %}">Governance</a>
+                        <a href="{% url 'awards' %}">Awards</a>
+
+
+                        <button class="dropdown-btn" onclick="location.href='about'"> About <i
+                                class="fa fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <a href="{% url 'expertise' %}">Expertise</a>
+                <a href="{% url 'projects' %}">Projects</a>
+                <a href="{% url 'digital' %}">Digital</a>
+                <div class="dropdown">
+                    <a href="{% url 'insights' %}">Insights</a>
+                </div>
+                <a href="#search"><i class="fas fa-magnifying-glass"></i></a>
+            </nav>
+        </div>
+
+        <div class="header-content">
+            <h1 class="typewriter">Strategic Guidance for Sustainable Growth</h1>
+            <p> We empower organizations with clear, actionable insights to navigate complexity and drive performance.
+                Our advisory solutions blend deep industry knowledge.</p>
+        </div>
+    </header>
+
+    <section class="business-ad-section1">
+        <h2>Expert Advisory <span>for Confident Business Decisions</span></h2>
+        <p>
+            In today’s rapidly evolving business landscape, success requires more than ambition—it demands insight,
+            strategy, and agility. Our business advisory services provide a foundation of clarity and confidence,
+            empowering organizations to make smart decisions and seize emerging opportunities.
+        </p>
+        <br>
+        <p>
+            From financial strategy and operational optimization to risk management and organizational design,
+            we work closely with you to solve complex challenges and accelerate growth. With a deep understanding
+            of diverse industries, we help you transform uncertainty into competitive advantage.
+        </p>
+    </section>
+
+    <section class="business-ad-section2">
+        <div class="business-ad-text">
+            <h2>Insight-Driven Solutions <span>from Strategy to Execution</span></h2>
+            <p>
+                Our advisors combine data-driven insights with proven frameworks to craft actionable strategies
+                tailored to your specific goals. From startups to enterprise-level organizations, we ensure
+                your roadmap is built for resilience, agility, and long-term value creation.
+            </p>
+            <br>
+            <p>
+                Whether you're navigating a merger, entering a new market, or optimizing internal processes,
+                we provide expert guidance at every stage of your journey—translating vision into results.
+            </p>
+        </div>
+        <div class="business-ad-image">
+            <img src="../static/img/business1.webp" alt="Business Advisory Collaboration Visualization">
+        </div>
+    </section>
+
+    <section class="business-ad-section3">
+        <h2>Core Pillars of Our <span>Advisory Services</span></h2>
+        <p class="business-ad-main-p">
+            We approach every engagement with a commitment to insight, integrity, and impact.
+            Our advisory strengths span across strategy, structure, and execution—designed to help you navigate change,
+            improve performance, and unlock sustainable growth.
+        </p>
+
+        <div class="business-ad-point">
+            <div class="business-ad-number">1</div>
+            <div class="business-ad-point-content">
+                <h4>Strategic Planning for Long-Term Success</h4>
+                <p>We work with leadership to define and refine strategic objectives, align initiatives with vision,
+                    and create agile plans that adapt to market changes while maintaining a clear growth trajectory.</p>
+            </div>
+        </div>
+
+        <div class="business-ad-point">
+            <div class="business-ad-number">2</div>
+            <div class="business-ad-point-content">
+                <h4>Operational Excellence & Process Improvement</h4>
+                <p>Our team identifies inefficiencies and streamlines operations to boost productivity, reduce waste,
+                    and enhance overall organizational agility across departments and functions.</p>
+            </div>
+        </div>
+
+        <div class="business-ad-point">
+            <div class="business-ad-number">3</div>
+            <div class="business-ad-point-content">
+                <h4>Risk Management & Regulatory Readiness</h4>
+                <p>We help businesses navigate regulatory complexities, assess potential risks, and implement
+                    frameworks to stay compliant while protecting assets and reputation.</p>
+            </div>
+        </div>
+
+        <div class="business-ad-point">
+            <div class="business-ad-number">4</div>
+            <div class="business-ad-point-content">
+                <h4>Change Leadership & Transformation Support</h4>
+                <p>From restructuring to digital transformation, we guide organizations through change with clarity—
+                    aligning teams, managing resistance, and embedding new capabilities that drive lasting impact.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="more-capabilities">
+        <div class="solutions-container">
+            <div class="solutions-text">
+                <h2 class="more-capabilities-h2"> More <span>Capabilities</span></h2>
+                <p>
+                    Infrubuild offers a full spectrum of capabilities to support every phase of infrastructure
+                    development —
+                    from strategy and design to execution and delivery — with deep domain knowledge and technical
+                    excellence.
+                </p>
+            </div>
+            <div class="solutions-grid">
+                <div class="solution-card card13">
+                    <div class="solution-card-content">
+                        <h3>Architecture</h3>
+                        <p>Shape the built environment with purposeful, resilient, and forward-thinking design
+                            principles.</p>
+                        <a href="{% url 'architecture' %}">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="solution-card card14">
+                    <div class="solution-card-content">
+                        <h3>Prog. Management</h3>
+                        <p>Coordinate complex projects with agile planning, control systems, and stakeholder alignment.
+                        </p>
+                        <a href="{% url 'prog' %}">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="solution-card card12">
+                    <div class="solution-card-content">
+                        <h3>Business Advisory</h3>
+                        <p>Drive better outcomes with expert guidance on strategy, operations, and financial
+                            structuring.</p>
+                        <a href="{% url 'business' %}">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="solution-card card15 extra-cards">
+                    <div class="solution-card-content">
+                        <h3>Commercials</h3>
+                        <p>Ensure cost-efficiency and transparency through robust financial modeling and procurement
+                            control.</p>
+                        <a href="#">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="solution-card card16 extra-cards">
+                    <div class="solution-card-content">
+                        <h3>Health & Safety</h3>
+                        <p>Promote safe delivery environments with proactive compliance, audits, and training
+                            frameworks.</p>
+                        <a href="#">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-section">
+                <a href="{% url 'home' %}">
+                    <h3>InfraBuild</h3>
+                </a>
+                <p>"Building Tomorrow, <br> Strengthening Today."</p>
+                <p>Building sustainable <br>infrastructure solutions <br>that power cities, <br> industries, and lives
+                    across <br>the
+                    globe. <br>
+                    Your vision, our foundation.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="{% url 'investors' %}">Investors</a></li>
+                    <li><a href="{% url 'news' %}">News</a></li>
+                    <li><a href="{% url 'events' %}">Events</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                    <li><a href="{% url 'careers' %}">Careers</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="{% url 'about' %}">About Us</a></li>
+                    <li><a href="{% url 'expertise' %}">Expertise</a></li>
+                    <li><a href="{% url 'projects' %}">Projects</a></li>
+                    <li><a href="{% url 'digital' %}">Digital</a></li>
+                    <li><a href="{% url 'insights' %}">Insights</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><strong>Call:</strong> +0123 456 789 00</p>
+                <p><strong>Email:</strong> user@example.com</p>
+
+                <div class="subscribe-box">
+                    <input type="email" placeholder="Write Email" />
+                    <button>→</button>
+                </div>
+
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://wa.me/?text=Check%20this%20out!" target="_blank" rel="noopener noreferrer"
+                        title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div>
+                <a href="{% url 'privacy' %}">Privacy Policy</a>
+                <a href="{% url 'about' %}">Our History</a>
+                <a href="{% url 'expertise' %}">What We Do</a>
+            </div>
+            <div>
+                © 2025 InfraBuild. All images are for demo purposes only.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script>
+        window.addEventListener("scroll", function () {
+            const topbar = document.querySelector(".topbar");
+            const navbar = document.querySelector(".navbar");
+
+            if (window.scrollY > 10) {
+                topbar.classList.add("scrolled");
+                navbar.classList.add("scrolled");
+            } else {
+                topbar.classList.remove("scrolled");
+                navbar.classList.remove("scrolled");
+            }
+        });
+    </script>
+
+</body>
+
+</html>

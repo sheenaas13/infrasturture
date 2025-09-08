@@ -1,0 +1,303 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AboutUs - Leadership</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="leaders_header">
+        <div class="topbar">
+            <div class="left">
+                <span><i class="fas fa-phone"></i> +91 98765-43210</span>
+                <span><i class="fas fa-envelope"></i> info@infrabuild.com</span>
+            </div>
+            <div class="right">
+                <a href="{% url 'investors' %}">Investors</a>
+                <a href="{% url 'news' %}">News</a>
+                <a href="{% url 'events' %}">events</a>
+                <a href="{% url 'contact' %}">Contact</a>
+                <a href="{% url 'careers' %}">Careers</a>
+            </div>
+        </div>
+        <hr class="nav-hr">
+
+        <div class="navbar">
+            <div class="logo">
+                <a href="{% url 'home' %}"><img src="../static/img/infralogo.png" alt=""></a>
+                InfraBuild
+            </div>
+            <nav>
+                <div class="dropdown">
+                    <a href="{% url 'about' %}">About Us <i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="{% url 'company_profile' %}">Company Profile</a>
+                        <a href="{% url 'leadership' %}">Leadership</a>
+                        <a href="{% url 'eco' %}">Ecosystem Partnership</a>
+                        <a href="{% url 'Business_Practice' %}">Business Practice</a>
+                        <a href="{% url 'governance' %}">Governance</a>
+                        <a href="{% url 'awards' %}">Awards</a>
+
+
+                        <button class="dropdown-btn" onclick="location.href='about'"> About <i
+                                class="fa fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <a href="{% url 'expertise' %}">Expertise</a>
+                <a href="{% url 'projects' %}">Projects</a>
+                <a href="{% url 'digital' %}">Digital</a>
+                <div class="dropdown">
+                    <a href="{% url 'insights' %}">Insights</a>
+                    <!-- <div class="dropdown-content">
+                        <a href="#blog">Sustainablity & <br> Decarbonisation</a>
+                        <a href="#reports">Mobility</a>
+                        <a href="#news">Resilience</a>
+                        <a href="#news">places</a>
+
+                        <button class="dropdown-btn" onclick="location.href='insights'">All Insights<i
+                                class="fa fa-arrow-right"></i></button>
+                    </div> -->
+                </div>
+                <a href="#search"><i class="fas fa-magnifying-glass"></i></a>
+            </nav>
+        </div>
+
+        <div class="header-content">
+            <h1 class="typewriter">Empowering Leadership for Lasting Impact</h1>
+            <p>True leadership is not about authority, but about inspiring others to grow.
+                Great leaders lead by example, listen deeply, and act with integrity.
+                Their influence uplifts teams, shapes cultures, and drives meaningful change.</p>
+        </div>
+    </header>
+
+    <section class="leadership-section">
+        <h2 class="section-heading">The Essence of <span> Effective Leadership </span></h2>
+        <p class="section-paragraph">
+            Leadership is more than directing tasks—it's about inspiring a vision, building trust, and guiding others
+            with purpose.
+            A strong leader creates an environment where individuals feel valued, motivated, and empowered to contribute
+            their best.
+            Through clear communication, emotional intelligence, and unwavering integrity, leaders become catalysts for
+            growth and transformation.
+        </p>
+        <p class="section-paragraph">
+            Effective leadership also involves adaptability and the willingness to learn. Great leaders are not afraid
+            to embrace change,
+            listen to feedback, and evolve with their teams. They recognize that success is a collective effort and
+            foster collaboration,
+            innovation, and resilience. In doing so, they not only achieve goals but leave a lasting legacy.
+        </p>
+    </section>
+
+    <section class="leaders-section">
+        <h2 class="leaders-heading">Leaders & <span>Directors</span></h2>
+        <p class="leaders-intro">Meet the passionate minds leading our vision with grace and grit. Their guidance lights
+            the way to our success.</p>
+
+        <div class="leaders-grid">
+            <!-- Leader 1 -->
+            <div class="leader-card">
+                <img src="../static/img/aarav.jfif" alt="Omar Mehri" class="leader-image">
+                <div class="leader-info">
+                    <div class="leader-name">Omar Mehri</div>
+                    <div class="leader-position">Chairman of the Board</div>
+                    <div class="leader-description">
+                        Omar brings strength and clarity to every boardroom conversation. With wisdom and vision, he
+                        steers our strategy with unwavering commitment.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Leader 2 -->
+            <div class="leader-card">
+                <img src="../static/img/download (3).jfif" alt="Layla Samuel" class="leader-image">
+                <div class="leader-info">
+                    <div class="leader-name">Layla Samuel</div>
+                    <div class="leader-position">Chief Executive Officer (CEO)</div>
+                    <div class="leader-description">
+                        Layla leads with heart and ambition, balancing innovation and compassion to drive the company
+                        forward with unstoppable energy.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Leader 3 -->
+            <div class="leader-card">
+                <img src="../static/img/rohan.jfif" alt="Draper Timothy" class="leader-image">
+                <div class="leader-info">
+                    <div class="leader-name">Draper Timothy</div>
+                    <div class="leader-position">Chief Operating Officer (COO)</div>
+                    <div class="leader-description">
+                        Draper makes magic happen behind the scenes, keeping every operation seamless and every
+                        heartbeat of our mission strong.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Leader 4 -->
+            <div class="leader-card">
+                <img src="../static/img/neha.jfif" alt="Mariam Shah" class="leader-image">
+                <div class="leader-info">
+                    <div class="leader-name">Mariam Shah</div>
+                    <div class="leader-position">Chief Financial Officer (CFO)</div>
+                    <div class="leader-description">
+                        Mariam is our numbers queen — handling every dollar with care and strategy to keep our dreams
+                        financially flourishing.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Leader 5 -->
+            <div class="leader-card">
+                <img src="../static/img/vikram.jfif" alt="James Lee" class="leader-image">
+                <div class="leader-info">
+                    <div class="leader-name">James Lee</div>
+                    <div class="leader-position">Independent Director</div>
+                    <div class="leader-description">
+                        James brings a fresh perspective and independent insight, making sure our path is both bold and
+                        balanced.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Leader 6 -->
+            <div class="leader-card">
+                <img src="../static/img/Business Headshot Poses_ How to Pose Professionally.jfif" alt="Emily Stone"
+                    class="leader-image">
+                <div class="leader-info">
+                    <div class="leader-name">Emily Stone</div>
+                    <div class="leader-position">Director of Engineering</div>
+                    <div class="leader-description">
+                        Emily is the heartbeat of our tech brilliance—crafting systems with elegance and leading our
+                        engineering teams with spark and smarts.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="unity-leadership-section">
+        <h2 class="unity-heading">Bound by Vision, <span> Driven by Unity </span></h2>
+        <p class="unity-paragraph">
+            In the heart of every thriving organization lies a leadership that doesn't just manage — it inspires,
+            nurtures, and unites. Our leaders have cultivated a space where collaboration is not just encouraged but
+            celebrated. They have woven a culture where every voice matters, every idea counts, and each individual is
+            empowered to bring their truest, most brilliant self to the table. Through unwavering support and shared
+            purpose, they’ve created an environment where people don’t just work — they belong. Together, this unity
+            transforms ordinary efforts into extraordinary achievements, igniting the passion that fuels our finest
+            outcomes.
+        </p>
+
+        <div class="unity-images">
+            <img src="../static/img/team1.avif" alt="Team Collaboration" class="unity-image">
+            <img src="../static/img/team2.avif" alt="Leader Inspiring Team" class="unity-image">
+            <img src="../static/img/team3.webp" alt="Team Celebrating Success" class="unity-image">
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-section">
+                <a href="{% url 'home' %}">
+                    <h3>InfraBuild</h3>
+                </a>
+                <p>"Building Tomorrow, <br> Strengthening Today."</p>
+                <p>Building sustainable <br>infrastructure solutions <br>that power cities, <br> industries, and lives
+                    across <br>the
+                    globe. <br>
+                    Your vision, our foundation.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="{% url 'investors' %}">Investors</a></li>
+                    <li><a href="{% url 'news' %}">News</a></li>
+                    <li><a href="{% url 'events' %}">Events</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                    <li><a href="{% url 'careers' %}">Careers</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="{% url 'about' %}">About Us</a></li>
+                    <li><a href="{% url 'expertise' %}">Expertise</a></li>
+                    <li><a href="{% url 'projects' %}">Projects</a></li>
+                    <li><a href="{% url 'digital' %}">Digital</a></li>
+                    <li><a href="{% url 'insights' %}">Insights</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><strong>Call:</strong> +0123 456 789 00</p>
+                <p><strong>Email:</strong> user@example.com</p>
+
+                <div class="subscribe-box">
+                    <input type="email" placeholder="Write Email" />
+                    <button>→</button>
+                </div>
+
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://wa.me/?text=Check%20this%20out!" target="_blank" rel="noopener noreferrer"
+                        title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div>
+                <a href="{% url 'privacy' %}">Privacy Policy</a>
+                <a href="{% url 'about' %}">Our History</a>
+                <a href="{% url 'expertise' %}">What We Do</a>
+            </div>
+            <div>
+                © 2025 InfraBuild. All images are for demo purposes only.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script>
+        window.addEventListener("scroll", function () {
+            const topbar = document.querySelector(".topbar");
+            const navbar = document.querySelector(".navbar");
+
+            if (window.scrollY > 10) {
+                topbar.classList.add("scrolled");
+                navbar.classList.add("scrolled");
+            } else {
+                topbar.classList.remove("scrolled");
+                navbar.classList.remove("scrolled");
+            }
+        });
+    </script>
+
+</body>
+
+</html>

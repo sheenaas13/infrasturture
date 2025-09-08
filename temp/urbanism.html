@@ -1,0 +1,276 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solution - Urbanism</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="urbanism_header">
+        <div class="topbar">
+            <div class="left">
+                <span><i class="fas fa-phone"></i> +91 98765-43210</span>
+                <span><i class="fas fa-envelope"></i> info@infrabuild.com</span>
+            </div>
+            <div class="right">
+                <a href="{% url 'investors' %}">Investors</a>
+                <a href="{% url 'news' %}">News</a>
+                <a href="{% url 'events' %}">events</a>
+                <a href="{% url 'contact' %}">Contact</a>
+                <a href="{% url 'careers' %}">Careers</a>
+            </div>
+        </div>
+        <hr class="nav-hr">
+
+        <div class="navbar">
+            <div class="logo">
+                <a href="{% url 'home' %}"><img src="../static/img/infralogo.png" alt=""></a>
+                InfraBuild
+            </div>
+            <nav>
+                <div class="dropdown">
+                    <a href="{% url 'about' %}">About Us <i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="{% url 'company_profile' %}">Company Profile</a>
+                        <a href="{% url 'leadership' %}">Leadership</a>
+                        <a href="{% url 'eco' %}">Ecosystem Partnership</a>
+                        <a href="{% url 'Business_Practice' %}">Business Practice</a>
+                        <a href="{% url 'governance' %}">Governance</a>
+                        <a href="{% url 'awards' %}">Awards</a>
+
+
+                        <button class="dropdown-btn" onclick="location.href='about'"> About <i
+                                class="fa fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <a href="{% url 'expertise' %}">Expertise</a>
+                <a href="{% url 'projects' %}">Projects</a>
+                <a href="{% url 'digital' %}">Digital</a>
+                <div class="dropdown">
+                    <a href="{% url 'insights' %}">Insights</a>
+                </div>
+                <a href="#search"><i class="fas fa-magnifying-glass"></i></a>
+            </nav>
+        </div>
+
+        <div class="header-content">
+            <h1 class="typewriter">Shaping Smarter Cities for Tomorrow</h1>
+            <p>Urbanism is more than city planning—it’s about shaping human experiences.
+                We create walkable, connected, and sustainable spaces where life can flourish.
+                Through thoughtful design, we turn urban challenges into vibrant opportunities.</p>
+        </div>
+    </header>
+
+    <section class="urbanismsection1">
+        <div class="urbanismsection1-container">
+            <h2 class="urbanismsection1-heading">Reimagining Urbanism <span>for a Thriving Tomorrow</span></h2>
+            <p class="urbanismsection1-para">
+                Urbanism is about designing cities that work—for everyone. As populations grow and challenges intensify,
+                our approach centers on people, mobility, green space, and equity. We shape urban environments that are
+                vibrant, inclusive, and resilient—places where communities connect, economies grow, and futures are
+                built.
+            </p>
+        </div>
+    </section>
+
+    <section class="urbanismsection2">
+        <h2>Our Integrated <span>Urbanism Solutions</span></h2>
+        <p class="urbanismsection2-subheading">
+            We believe great cities are intentional. Through transit-oriented design, walkable neighborhoods, inclusive
+            public spaces, and climate-resilient infrastructure, our work addresses complexity with creativity. Urbanism
+            isn’t just about buildings—it’s about improving how people live, move, and thrive together.
+        </p>
+
+        <div class="urbanismsection2-item">
+            <div class="urbanismsection2-image">
+                <img src="../static/img/urbanism1.webp" alt="Transit-Oriented Development">
+            </div>
+            <div class="urbanismsection2-text">
+                <h3>Transit-Oriented Development</h3>
+                <p>We design compact, walkable communities around efficient public transit systems. These developments
+                    reduce car dependency, cut emissions, and enhance quality of life.</p>
+                <p>Every transit corridor becomes a hub of connectivity, opportunity, and sustainable growth.</p>
+            </div>
+        </div>
+
+        <div class="urbanismsection2-item">
+            <div class="urbanismsection2-text">
+                <h3>Inclusive Public Spaces</h3>
+                <p>Our cities must serve everyone. We craft plazas, parks, and shared spaces that invite interaction,
+                    promote safety, and celebrate cultural expression.</p>
+                <p>Urbanism, at its best, brings people together across backgrounds and generations.</p>
+            </div>
+            <div class="urbanismsection2-image">
+                <img src="../static/img/urbanism2.webp" alt="Inclusive Public Space">
+            </div>
+        </div>
+
+        <div class="urbanismsection2-item">
+            <div class="urbanismsection2-image">
+                <img src="../static/img/urbanism3.webp" alt="Green and Blue Infrastructure">
+            </div>
+            <div class="urbanismsection2-text">
+                <h3>Green & Blue Infrastructure</h3>
+                <p>We integrate nature into the urban fabric—through green roofs, urban wetlands, and permeable
+                    surfaces—to cool cities and manage water naturally.</p>
+                <p>These systems reduce flooding, improve air quality, and offer vital access to nature in dense areas.
+                </p>
+            </div>
+        </div>
+
+        <div class="urbanismsection2-item">
+            <div class="urbanismsection2-text">
+                <h3>Smart Urban Mobility</h3>
+                <p>We rethink movement through cities—prioritizing pedestrians, cyclists, and accessible transit over
+                    congestion. Our mobility strategies reduce emissions and reclaim streets for people.</p>
+                <p>With data-driven planning and smart technology, we make getting around seamless, safe, and
+                    sustainable.</p>
+            </div>
+            <div class="urbanismsection2-image">
+                <img src="../static/img/urbanism4.avif" alt="Urban Mobility">
+            </div>
+        </div>
+    </section>
+
+    <section class="more-mobility">
+        <div class="more-mobility-container">
+            <div class="solutions-text">
+                <h2> Learn about More Solutions</h2>
+            </div>
+            <div class="solutions-grid">
+                <div class="solution-card card2">
+                    <div class="solution-card-content">
+                        <h3>Mobility</h3>
+                        <p>Leverage intelligent planning tools to increase project efficiency and reduce delays.</p>
+
+                        <a href="{% url 'mobility' %}">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="solution-card card8">
+                    <div class="solution-card-content">
+                        <h3>Climage change</h3>
+                        <p>Advanced analytics to minimize costs while maintaining quality and compliance.</p>
+
+                        <a href="{% url 'climatechange' %}">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="solution-card card7">
+                    <div class="solution-card-content">
+                        <h3>Restoration</h3>
+                        <p>Utilize eco-centric strategies to restore degraded environments and promote long-term
+                            ecological balance.</p>
+
+                        <a href="{% url 'restoration' %}">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="footer">
+            <div class="footer-section">
+                <a href="{% url 'home' %}">
+                    <h3>InfraBuild</h3>
+                </a>
+                <p>"Building Tomorrow, <br> Strengthening Today."</p>
+                <p>Building sustainable <br>infrastructure solutions <br>that power cities, <br> industries, and lives
+                    across <br>the
+                    globe. <br>
+                    Your vision, our foundation.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="{% url 'investors' %}">Investors</a></li>
+                    <li><a href="{% url 'news' %}">News</a></li>
+                    <li><a href="{% url 'events' %}">Events</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                    <li><a href="{% url 'careers' %}">Careers</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="{% url 'about' %}">About Us</a></li>
+                    <li><a href="{% url 'expertise' %}">Expertise</a></li>
+                    <li><a href="{% url 'projects' %}">Projects</a></li>
+                    <li><a href="{% url 'digital' %}">Digital</a></li>
+                    <li><a href="{% url 'insights' %}">Insights</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><strong>Call:</strong> +0123 456 789 00</p>
+                <p><strong>Email:</strong> user@example.com</p>
+
+                <div class="subscribe-box">
+                    <input type="email" placeholder="Write Email" />
+                    <button>→</button>
+                </div>
+
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://wa.me/?text=Check%20this%20out!" target="_blank" rel="noopener noreferrer"
+                        title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div>
+                <a href="{% url 'privacy' %}">Privacy Policy</a>
+                <a href="{% url 'about' %}">Our History</a>
+                <a href="{% url 'expertise' %}">What We Do</a>
+            </div>
+            <div>
+                © 2025 InfraBuild. All images are for demo purposes only.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script>
+        window.addEventListener("scroll", function () {
+            const topbar = document.querySelector(".topbar");
+            const navbar = document.querySelector(".navbar");
+
+            if (window.scrollY > 10) {
+                topbar.classList.add("scrolled");
+                navbar.classList.add("scrolled");
+            } else {
+                topbar.classList.remove("scrolled");
+                navbar.classList.remove("scrolled");
+            }
+        });
+    </script>
+
+</body>
+
+</html>

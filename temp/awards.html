@@ -1,0 +1,328 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AboutUs - Awards</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="awards_header">
+        <div class="topbar">
+            <div class="left">
+                <span><i class="fas fa-phone"></i> +91 98765-43210</span>
+                <span><i class="fas fa-envelope"></i> info@infrabuild.com</span>
+            </div>
+            <div class="right">
+                <a href="{% url 'investors' %}">Investors</a>
+                <a href="{% url 'news' %}">News</a>
+                <a href="{% url 'events' %}">events</a>
+                <a href="{% url 'contact' %}">Contact</a>
+                <a href="{% url 'careers' %}">Careers</a>
+            </div>
+        </div>
+        <hr class="nav-hr">
+
+        <div class="navbar">
+            <div class="logo">
+                <a href="{% url 'home' %}"><img src="../static/img/infralogo.png" alt=""></a>
+                InfraBuild
+            </div>
+            <nav>
+                <div class="dropdown">
+                    <a href="{% url 'about' %}">About Us <i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="{% url 'company_profile' %}">Company Profile</a>
+                        <a href="{% url 'leadership' %}">Leadership</a>
+                        <a href="{% url 'eco' %}">Ecosystem Partnership</a>
+                        <a href="{% url 'Business_Practice' %}">Business Practice</a>
+                        <a href="{% url 'governance' %}">Governance</a>
+                        <a href="{% url 'awards' %}">Awards</a>
+
+                        <button class="dropdown-btn" onclick="location.href='about'"> About <i
+                                class="fa fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <a href="{% url 'expertise' %}">Expertise</a>
+                <a href="{% url 'projects' %}">Projects</a>
+                <a href="{% url 'digital' %}">Digital</a>
+                <div class="dropdown">
+                    <a href="{% url 'insights' %}">Insights </a>
+                    <!-- <div class="dropdown-content">
+                        <a href="#blog">Sustainablity & <br> Decarbonisation</a>
+                        <a href="#reports">Mobility</a>
+                        <a href="#news">Resilience</a>
+                        <a href="#news">places</a>
+
+                        <button class="dropdown-btn" onclick="location.href='insights'">All Insights<i
+                                class="fa fa-arrow-right"></i></button>
+                    </div> -->
+                </div>
+                <a href="#search"><i class="fas fa-magnifying-glass"></i></a>
+            </nav>
+        </div>
+
+        <div class="header-content">
+            <h1 class="typewriter">Celebrating Excellence & Achievements</h1>
+            <p>Every award tells a story of passion, perseverance, and purpose.
+                We honor the milestones that inspire us to dream bigger.
+                Join us in applauding the brilliance behind every recognition.</p>
+        </div>
+    </header>
+
+    <section class="awards-section">
+        <div class="container">
+            <h2 class="awards-heading">Honoring the <span>Journey of Excellence</span></h2>
+            <p class="awards-paragraph">
+                Awards are more than just trophies or titles — they are symbols of the passion, dedication, and dreams
+                that fuel every step of the journey. Each accolade stands as a tribute to the long hours, unwavering
+                commitment, and the quiet resilience that often goes unseen. Behind every recognition lies a story — of
+                challenges overcome, of milestones reached, and of the hearts that never gave up. These moments remind
+                us that true success is not only in the spotlight but also in the love we pour into our work.
+            </p>
+            <p class="awards-paragraph">
+                As we celebrate these achievements, we celebrate the people behind them — the visionaries, the
+                change-makers, and the silent warriors who give their all without asking for applause. Every award
+                reflects a spark that ignites greatness, a moment that inspires others to rise, and a legacy that
+                continues to shine. We are proud to honor these incredible accomplishments, and even more proud to be
+                part of a journey that celebrates not just success, but the spirit behind it.
+            </p>
+        </div>
+    </section>
+
+    <section class="awards-section2">
+        <div class="container">
+            <h2 class="awards-heading">Our Legacy of Excellence – <span>Awards & Recognition</span></h2>
+            <table class="awards-table">
+                <thead>
+                    <tr>
+                        <th>Award Name</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>National Infrastructure Excellence Award</td>
+                        <td>Honored for outstanding contribution to national infrastructure development in 2021.</td>
+                    </tr>
+                    <tr>
+                        <td>Smart City Innovator Award</td>
+                        <td>Recognized for implementing cutting-edge technology in smart city projects.</td>
+                    </tr>
+                    <tr>
+                        <td>Green Building Champion</td>
+                        <td>Awarded for sustainable construction and eco-friendly project execution.</td>
+                    </tr>
+                    <tr>
+                        <td>Best Urban Developer</td>
+                        <td>Celebrated for transforming urban landscapes with innovative designs.</td>
+                    </tr>
+                    <tr>
+                        <td>Top 10 Infrastructure Companies – India</td>
+                        <td>Featured in the national list of India’s top 10 infrastructure firms.</td>
+                    </tr>
+                    <tr>
+                        <td>Construction Safety Excellence Award</td>
+                        <td>Appreciated for maintaining highest standards of workplace safety.</td>
+                    </tr>
+                    <tr>
+                        <td>Engineering Marvel of the Year</td>
+                        <td>Received for structural innovation in bridge and highway engineering.</td>
+                    </tr>
+                    <tr>
+                        <td>CSR Impact Award</td>
+                        <td>Recognized for meaningful contributions in education, environment, and healthcare sectors.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Leadership in Sustainability</td>
+                        <td>Awarded to Infrabuild for its leadership role in sustainable infrastructure development.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Iconic Infrastructure Project Award</td>
+                        <td>Presented for the completion of a landmark project that redefined public infrastructure.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Women in Construction Excellence Award</td>
+                        <td>Honored for empowering women in engineering and construction roles.</td>
+                    </tr>
+                    <tr>
+                        <td>Best Use of BIM Technology</td>
+                        <td>Acknowledged for advanced use of Building Information Modeling in mega projects.</td>
+                    </tr>
+                    <tr>
+                        <td>Innovative Project Management Award</td>
+                        <td>Recognized for efficient and adaptive project execution strategies.</td>
+                    </tr>
+                    <tr>
+                        <td>Times Infra Brand of the Year</td>
+                        <td>Awarded for brand excellence and trust in infrastructure space.</td>
+                    </tr>
+                    <tr>
+                        <td>Global Infrastructure Visionary Award</td>
+                        <td>International recognition for visionary leadership in the field of infrastructure.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="awards-section2-paragraph">
+                Each award listed above is more than a recognition — it is a reflection of our unwavering commitment,
+                innovation, and the incredible people who make Infrabuild what it is. These honors not only celebrate
+                our accomplishments but also inspire us to keep pushing boundaries, building sustainably, and leaving a
+                legacy that speaks of excellence, integrity, and vision. We are proud of every milestone, and we carry
+                each one as a promise to shape a better tomorrow.
+            </p>
+        </div>
+    </section>
+
+    <section class="award-section3">
+        <div class="container">
+            <h2 class="values-heading">Our Core Values</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon"><i class="fas fa-handshake"></i></div>
+                    <div class="value-title">Integrity</div>
+                    <div class="value-description">We believe in honesty, transparency, and always doing what’s right —
+                        even when no one is watching.</div>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon"><i class="fas fa-lightbulb"></i></div>
+                    <div class="value-title">Innovation</div>
+                    <div class="value-description">We embrace change, lead with curiosity, and continuously explore
+                        better ways to build and deliver.</div>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon"><i class="fas fa-leaf"></i></div>
+                    <div class="value-title">Sustainability</div>
+                    <div class="value-description">Our commitment to the environment drives us to create responsible,
+                        future-ready infrastructure.</div>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon"><i class="fas fa-users"></i></div>
+                    <div class="value-title">Teamwork</div>
+                    <div class="value-description">Together we are stronger. Collaboration is at the heart of everything
+                        we achieve.</div>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon"><i class="fas fa-award"></i></div>
+                    <div class="value-title">Excellence</div>
+                    <div class="value-description">We pursue the highest standards in quality, delivery, and impact —
+                        every single time.</div>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon"><i class="fas fa-bullseye"></i></div>
+                    <div class="value-title">Customer Focus</div>
+                    <div class="value-description">We listen, understand, and act with care to exceed expectations and
+                        build lasting relationships.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="footer">
+            <div class="footer-section">
+                <a href="{% url 'home' %}">
+                    <h3>InfraBuild</h3>
+                </a>
+                <p>"Building Tomorrow, <br> Strengthening Today."</p>
+                <p>Building sustainable <br>infrastructure solutions <br>that power cities, <br> industries, and lives
+                    across <br>the
+                    globe. <br>
+                    Your vision, our foundation.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="{% url 'investors' %}">Investors</a></li>
+                    <li><a href="{% url 'news' %}">News</a></li>
+                    <li><a href="{% url 'events' %}">Events</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                    <li><a href="{% url 'careers' %}">Careers</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="{% url 'about' %}">About Us</a></li>
+                    <li><a href="{% url 'expertise' %}">Expertise</a></li>
+                    <li><a href="{% url 'projects' %}">Projects</a></li>
+                    <li><a href="{% url 'digital' %}">Digital</a></li>
+                    <li><a href="{% url 'insights' %}">Insights</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><strong>Call:</strong> +0123 456 789 00</p>
+                <p><strong>Email:</strong> user@example.com</p>
+
+                <div class="subscribe-box">
+                    <input type="email" placeholder="Write Email" />
+                    <button>→</button>
+                </div>
+
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://wa.me/?text=Check%20this%20out!" target="_blank" rel="noopener noreferrer"
+                        title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div>
+                <a href="{% url 'privacy' %}">Privacy Policy</a>
+                <a href="{% url 'about' %}">Our History</a>
+                <a href="{% url 'expertise' %}">What We Do</a>
+            </div>
+            <div>
+                © 2025 InfraBuild. All images are for demo purposes only.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script>
+        window.addEventListener("scroll", function () {
+            const topbar = document.querySelector(".topbar");
+            const navbar = document.querySelector(".navbar");
+
+            if (window.scrollY > 10) {
+                topbar.classList.add("scrolled");
+                navbar.classList.add("scrolled");
+            } else {
+                topbar.classList.remove("scrolled");
+                navbar.classList.remove("scrolled");
+            }
+        });
+    </script>
+
+</body>
+
+</html>

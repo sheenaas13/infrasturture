@@ -1,0 +1,332 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobility</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="mobility_header">
+        <div class="topbar">
+            <div class="left">
+                <span><i class="fas fa-phone"></i> +91 98765-43210</span>
+                <span><i class="fas fa-envelope"></i> info@infrabuild.com</span>
+            </div>
+            <div class="right">
+                <a href="{% url 'investors' %}">Investors</a>
+                <a href="{% url 'news' %}">News</a>
+                <a href="{% url 'events' %}">events</a>
+                <a href="{% url 'contact' %}">Contact</a>
+                <a href="{% url 'careers' %}">Careers</a>
+            </div>
+        </div>
+        <hr class="nav-hr">
+
+        <div class="navbar">
+            <div class="logo">
+                <a href="{% url 'home' %}"><img src="../static/img/infralogo.png" alt=""></a>
+                InfraBuild
+            </div>
+            <nav>
+                <div class="dropdown">
+                    <a href="{% url 'about' %}">About Us <i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="{% url 'company_profile' %}">Company Profile</a>
+                        <a href="{% url 'leadership' %}">Leadership</a>
+                        <a href="{% url 'eco' %}">Ecosystem Partnership</a>
+                        <a href="{% url 'Business_Practice' %}">Business Practice</a>
+                        <a href="{% url 'governance' %}">Governance</a>
+                        <a href="{% url 'awards' %}">Awards</a>
+
+
+                        <button class="dropdown-btn" onclick="location.href='about'"> About <i
+                                class="fa fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <a href="{% url 'expertise' %}">Expertise</a>
+                <a href="{% url 'projects' %}">Projects</a>
+                <a href="{% url 'digital' %}">Digital</a>
+                <div class="dropdown">
+                    <a href="{% url 'insights' %}">Insights</a>
+                    <!-- <div class="dropdown-content">
+                        <a href="#blog">Sustainablity & <br> Decarbonisation</a>
+                        <a href="#reports">Mobility</a>
+                        <a href="#news">Resilience</a>
+                        <a href="#news">places</a>
+
+                        <button class="dropdown-btn" onclick="location.href='insights'">All Insights<i class="fa fa-arrow-right"></i></button>
+                    </div> -->
+                </div>
+                <a href="#search"><i class="fas fa-magnifying-glass"></i></a>
+            </nav>
+        </div>
+
+        <div class="header-content">
+            <h1 class="typewriter">Reimagining Mobility for a Smarter Tomorrow</h1>
+            <p>From seamless public transport to sustainable urban movement,
+                our mobility solutions are designed to connect people and places efficiently.
+                Explore how innovation is redefining the way we move through our cities.</p>
+        </div>
+    </header>
+
+    <section class="mobility-section">
+        <div class="mobility-container">
+            <h2 class="mobility-section-heading">Reimagining Mobility <span>for a Smarter Tomorrow</span></h2>
+
+            <p class="mobility-section-para">
+                Mobility is more than just movement — it's the rhythm of a thriving city. As urban populations grow and
+                digital technologies evolve, the way we navigate our environments must adapt accordingly. Gone are the
+                days of disconnected, inefficient transit. Today’s mobility solutions embrace sustainability,
+                innovation, and accessibility at their core. From AI-powered traffic systems to smart parking, electric
+                vehicles, and multimodal transportation hubs, the future is built on integrated frameworks that reduce
+                emissions, ease congestion, and ensure equitable access for all. It’s not just about getting from A to B
+                — it’s about enhancing quality of life while minimizing environmental impact and fostering connected
+                communities.
+            </p>
+        </div>
+    </section>
+
+    <section class="mobility-solutions-section">
+        <h2>Our Smart <span>Mobility Solutions</span></h2>
+
+        <div class="mobility-solution-item">
+
+            <div class="mobility-solution-text">
+                <h3>New Airport Hubs</h3>
+                <p>We’re reimagining airport infrastructure to support multimodal connectivity, reduce congestion, and
+                    create a seamless travel experience for millions. From smart terminals to next-gen logistics, our
+                    vision transforms air mobility into a hub of efficiency and sustainability.</p>
+                <p>With advanced automation, predictive analytics, and real-time passenger flow systems, these hubs
+                    promise reduced wait times, optimized air traffic, and a greener approach to aviation operations
+                    worldwide.</p>
+            </div>
+            <div class="mobility-solution-image">
+                <img src="../static/img/mobility1" alt="EV Charging Network">
+            </div>
+        </div>
+
+        <div class="mobility-solution-item">
+
+            <div class="mobility-solution-text">
+                <h3>Intelligent Rail & Transit</h3>
+                <p>Modern railways powered by data, AI, and automation — that's the future we're building. These
+                    intelligent systems cut delays, boost safety, and create sustainable transit options for growing
+                    cities and urban centers globally.</p>
+                <p>We integrate sensor-based monitoring, dynamic scheduling, and user-focused digital platforms to
+                    create a fluid, accessible, and resilient transit ecosystem that supports urban life at scale.</p>
+            </div>
+            <div class="mobility-solution-image">
+                <img src="../static/img/mobility3" alt="Smart Traffic Systems">
+            </div>
+        </div>
+
+        <div class="mobility-solution-item">
+
+            <div class="mobility-solution-text">
+                <h3>Connected Highways</h3>
+                <p>Our smart highways are designed to connect people and goods like never before. Equipped with sensors
+                    and real-time data flows, they pave the way for autonomous driving, reduced emissions, and safer
+                    mobility corridors.</p>
+                <p>Through adaptive lighting, live traffic feedback, and EV-friendly infrastructure, we’re making
+                    highways not just conduits for travel, but intelligent networks that support greener and faster
+                    commutes.</p>
+            </div>
+            <div class="mobility-solution-image">
+                <img src="../static/img/mobility4" alt="Bike Sharing Infrastructure">
+            </div>
+        </div>
+
+        <div class="mobility-solution-item">
+
+            <div class="mobility-solution-text">
+                <h3>Resilient Ports & Transportation</h3>
+                <p>We’re building robust and flexible port infrastructure that adapts to climate risks and growing
+                    trade. With smart logistics and predictive operations, these hubs become the beating heart of modern
+                    global commerce.</p>
+                <p>Enhanced by AI-powered cargo tracking, energy-efficient cranes, and digital twin technologies, our
+                    ports are being transformed into smart, self-adjusting nodes of international mobility and supply
+                    chain resilience.</p>
+            </div>
+            <div class="mobility-solution-image">
+                <img src="../static/img/mobility2" alt="Autonomous Transport Hubs">
+            </div>
+        </div>
+    </section>
+
+    <section class="more-mobility">
+        <div class="more-mobility-container">
+            <div class="solutions-text">
+                <h2> Learn about More Solutions</h2>
+            </div>
+            <div class="solutions-grid">
+                <div class="solution-card card2">
+                    <div class="solution-card-content">
+                        <h3>Climage change</h3>
+                        <p>Advanced analytics to minimize costs while maintaining quality and compliance.</p>
+
+                        <a href="{% url 'climatechange' %}">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="solution-card card3">
+                    <div class="solution-card-content">
+                        <h3>Connected Highways</h3>
+                        <p>Streamlined labor management systems that improve productivity and oversight.</p>
+
+                        <a href="{% url 'connectedhighway' %}">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="solution-card card4">
+                    <div class="solution-card-content">
+                        <h3>Energy transition</h3>
+                        <p>Gain insights with real-time tracking and monitoring of your infrastructure projects.</p>
+
+                        <a href="{% url 'energy' %}">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="solution-card card5 extra-cards">
+                    <div class="solution-card-content">
+                        <h3>Places</h3>
+                        <p>Design smart infrastructure that enhances the livability, accessibility, and sustainability
+                            of public spaces.</p>
+
+                        <a href="">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="solution-card card6 extra-cards">
+                    <div class="solution-card-content">
+                        <h3>Resilience</h3>
+                        <p>Build systems that adapt to climate change and disruptive events through predictive
+                            technologies.</p>
+
+                        <a href="">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="solution-card card7 extra-cards">
+                    <div class="solution-card-content">
+                        <h3>Restroration</h3>
+                        <p>Utilize eco-centric strategies to restore degraded environments and promote long-term
+                            ecological balance.</p>
+
+                        <a href="">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="solution-card card8 extra-cards">
+                    <div class="solution-card-content">
+                        <h3>Urbanism</h3>
+                        <p>Transform urban development with integrated solutions for smart mobility, green buildings.
+                        </p>
+
+                        <a href="">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="footer">
+            <div class="footer-section">
+                <a href="{% url 'home' %}">
+                    <h3>InfraBuild</h3>
+                </a>
+                <p>"Building Tomorrow, <br> Strengthening Today."</p>
+                <p>Building sustainable <br>infrastructure solutions <br>that power cities, <br> industries, and lives
+                    across <br>the
+                    globe. <br>
+                    Your vision, our foundation.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="{% url 'investors' %}">Investors</a></li>
+                    <li><a href="{% url 'news' %}">News</a></li>
+                    <li><a href="{% url 'events' %}">Events</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                    <li><a href="{% url 'careers' %}">Careers</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="{% url 'about' %}">About Us</a></li>
+                    <li><a href="{% url 'expertise' %}">Expertise</a></li>
+                    <li><a href="{% url 'projects' %}">Projects</a></li>
+                    <li><a href="{% url 'digital' %}">Digital</a></li>
+                    <li><a href="{% url 'insights' %}">Insights</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><strong>Call:</strong> +0123 456 789 00</p>
+                <p><strong>Email:</strong> user@example.com</p>
+
+                <div class="subscribe-box">
+                    <input type="email" placeholder="Write Email" />
+                    <button>→</button>
+                </div>
+
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://wa.me/?text=Check%20this%20out!" target="_blank" rel="noopener noreferrer"
+                        title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div>
+                <a href="{% url 'privacy' %}">Privacy Policy</a>
+                <a href="{% url 'about' %}">Our History</a>
+                <a href="{% url 'expertise' %}">What We Do</a>
+            </div>
+            <div>
+                © 2025 InfraBuild. All images are for demo purposes only.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script>
+        window.addEventListener("scroll", function () {
+            const topbar = document.querySelector(".topbar");
+            const navbar = document.querySelector(".navbar");
+
+            if (window.scrollY > 10) {
+                topbar.classList.add("scrolled");
+                navbar.classList.add("scrolled");
+            } else {
+                topbar.classList.remove("scrolled");
+                navbar.classList.remove("scrolled");
+            }
+        });
+    </script>
+
+</body>
+
+</html>

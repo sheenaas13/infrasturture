@@ -1,0 +1,308 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capabilities - Contract Solution</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="contract_header">
+        <div class="topbar">
+            <div class="left">
+                <span><i class="fas fa-phone"></i> +91 98765-43210</span>
+                <span><i class="fas fa-envelope"></i> info@infrabuild.com</span>
+            </div>
+            <div class="right">
+                <a href="{% url 'investors' %}">Investors</a>
+                <a href="{% url 'news' %}">News</a>
+                <a href="{% url 'events' %}">events</a>
+                <a href="{% url 'contact' %}">Contact</a>
+                <a href="{% url 'careers' %}">Careers</a>
+            </div>
+        </div>
+        <hr class="nav-hr">
+
+        <div class="navbar">
+            <div class="logo">
+                <a href="{% url 'home' %}"><img src="../static/img/infralogo.png" alt=""></a>
+                InfraBuild
+            </div>
+            <nav>
+                <div class="dropdown">
+                    <a href="{% url 'about' %}">About Us <i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="{% url 'company_profile' %}">Company Profile</a>
+                        <a href="{% url 'leadership' %}">Leadership</a>
+                        <a href="{% url 'eco' %}">Ecosystem Partnership</a>
+                        <a href="{% url 'Business_Practice' %}">Business Practice</a>
+                        <a href="{% url 'governance' %}">Governance</a>
+                        <a href="{% url 'awards' %}">Awards</a>
+
+
+                        <button class="dropdown-btn" onclick="location.href='about'"> About <i
+                                class="fa fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <a href="{% url 'expertise' %}">Expertise</a>
+                <a href="{% url 'projects' %}">Projects</a>
+                <a href="{% url 'digital' %}">Digital</a>
+                <div class="dropdown">
+                    <a href="{% url 'insights' %}">Insights</a>
+                </div>
+                <a href="#search"><i class="fas fa-magnifying-glass"></i></a>
+            </nav>
+        </div>
+
+        <div class="header-content">
+            <h1 class="typewriter">Efficient & Reliable Contract Solutions</h1>
+            <p>We simplify contract processes to ensure clarity and compliance.
+                From creation to execution, every step is streamlined and secure.
+                Empower your teams with tools that reduce risk and boost confidence.</p>
+        </div>
+    </header>
+
+    <section class="contract-section1">
+        <h2>Seamless Oversight <span>for Contractual Success</span></h2>
+        <p>
+            Effective contract solutions form the foundation of organizational efficiency and legal clarity. We deliver
+            tools
+            and strategies that simplify the creation, negotiation, and management of contracts—ensuring compliance,
+            accountability, and seamless execution across projects and partners.
+        </p>
+    </section>
+
+    <section class="contract-section2">
+        <div class="contract-text">
+            <h2>Smart Contract Management <span>from Start to Finish</span></h2>
+            <p>
+                Our contract solutions guide every stage of the process—drafting, approvals, renewals, and audits.
+                With smart automation and secure digital workflows, we reduce bottlenecks, improve visibility,
+                and ensure all parties remain aligned throughout the contract lifecycle.
+            </p>
+        </div>
+        <div class="contract-image">
+            <img src="../static/img/contract1.avif" alt="Contract Management Visualization">
+        </div>
+    </section>
+
+    <section class="contract-section3">
+        <h2>Core Strengths of Our <span>Contract Solutions</span></h2>
+        <p class="contract-main-p">
+            Our approach to contract management is structured around key principles that foster legal precision,
+            operational clarity, and lasting partnerships. We streamline the entire lifecycle of contracts—from creation
+            and negotiation to execution and compliance—ensuring every agreement is handled with diligence and
+            transparency.
+        </p>
+
+        <div class="contract-point">
+            <div class="contract-number">1</div>
+            <div class="contract-point-content">
+                <h4>Standardization & Templates for Speed and Consistency</h4>
+                <p>We provide robust templates and clause libraries to ensure consistency and accuracy
+                    across contract types—minimizing risk and reducing drafting time. This standardization
+                    accelerates the initiation process and promotes clear, enforceable terms every time.</p>
+            </div>
+        </div>
+
+        <div class="contract-point">
+            <div class="contract-number">2</div>
+            <div class="contract-point-content">
+                <h4>Compliance & Tracking to Avoid Delays and Penalties</h4>
+                <p>Our solutions integrate tracking tools and alerts to ensure deadlines, obligations,
+                    and legal requirements are met—helping you stay ahead of audits and renewals. You gain full
+                    visibility and control over compliance at every stage of the contract lifecycle.</p>
+            </div>
+        </div>
+
+        <div class="contract-point">
+            <div class="contract-number">3</div>
+            <div class="contract-point-content">
+                <h4>Collaboration & Transparency for Smoother Negotiations</h4>
+                <p>We enable internal and external teams to work together in real-time—reducing errors,
+                    improving negotiation speed, and enhancing accountability through clear visibility. Everyone
+                    involved stays aligned, informed, and engaged from start to finish.</p>
+            </div>
+        </div>
+
+        <div class="contract-point">
+            <div class="contract-number">4</div>
+            <div class="contract-point-content">
+                <h4>Data-Driven Insights to Guide Smarter Decision-Making</h4>
+                <p>Advanced analytics deliver actionable insights on contract performance, risks, and trends—
+                    empowering leadership to make informed, proactive decisions. These insights help identify
+                    bottlenecks, opportunities, and strategic improvements across your portfolio.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="more-capabilities">
+        <div class="solutions-container">
+            <div class="solutions-text">
+                <h2 class="more-capabilities-h2"> More <span>Capabilities</span></h2>
+                <p>
+                    Infrubuild offers a full spectrum of capabilities to support every phase of infrastructure
+                    development —
+                    from strategy and design to execution and delivery — with deep domain knowledge and technical
+                    excellence.
+                </p>
+            </div>
+            <div class="solutions-grid">
+                <div class="solution-card card13">
+                    <div class="solution-card-content">
+                        <h3>Architecture</h3>
+                        <p>Shape the built environment with purposeful, resilient, and forward-thinking design
+                            principles.</p>
+                        <a href="{% url 'architecture' %}">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="solution-card card11">
+                    <div class="solution-card-content">
+                        <h3>Designing & Engineering</h3>
+                        <p>Deliver innovative engineering designs that meet both regulatory and operational performance
+                            needs.</p>
+                        <a href="{% url 'design' %}">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="solution-card card12">
+                    <div class="solution-card-content">
+                        <h3>Business Advisory</h3>
+                        <p>Drive better outcomes with expert guidance on strategy, operations, and financial
+                            structuring.</p>
+                        <a href="{% url 'business' %}">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="solution-card card14 extra-cards">
+                    <div class="solution-card-content">
+                        <h3>Prog. Management</h3>
+                        <p>Coordinate complex projects with agile planning, control systems, and stakeholder alignment.
+                        </p>
+                        <a href="#">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="solution-card card15 extra-cards">
+                    <div class="solution-card-content">
+                        <h3>Commercials</h3>
+                        <p>Ensure cost-efficiency and transparency through robust financial modeling and procurement
+                            control.</p>
+                        <a href="#">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="solution-card card16 extra-cards">
+                    <div class="solution-card-content">
+                        <h3>Health & Safety</h3>
+                        <p>Promote safe delivery environments with proactive compliance, audits, and training
+                            frameworks.</p>
+                        <a href="#">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-section">
+                <a href="{% url 'home' %}">
+                    <h3>InfraBuild</h3>
+                </a>
+                <p>"Building Tomorrow, <br> Strengthening Today."</p>
+                <p>Building sustainable <br>infrastructure solutions <br>that power cities, <br> industries, and lives
+                    across <br>the
+                    globe. <br>
+                    Your vision, our foundation.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="{% url 'investors' %}">Investors</a></li>
+                    <li><a href="{% url 'news' %}">News</a></li>
+                    <li><a href="{% url 'events' %}">Events</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                    <li><a href="{% url 'careers' %}">Careers</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="{% url 'about' %}">About Us</a></li>
+                    <li><a href="{% url 'expertise' %}">Expertise</a></li>
+                    <li><a href="{% url 'projects' %}">Projects</a></li>
+                    <li><a href="{% url 'digital' %}">Digital</a></li>
+                    <li><a href="{% url 'insights' %}">Insights</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><strong>Call:</strong> +0123 456 789 00</p>
+                <p><strong>Email:</strong> user@example.com</p>
+
+                <div class="subscribe-box">
+                    <input type="email" placeholder="Write Email" />
+                    <button>→</button>
+                </div>
+
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://wa.me/?text=Check%20this%20out!" target="_blank" rel="noopener noreferrer"
+                        title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div>
+                <a href="{% url 'privacy' %}">Privacy Policy</a>
+                <a href="{% url 'about' %}">Our History</a>
+                <a href="{% url 'expertise' %}">What We Do</a>
+            </div>
+            <div>
+                © 2025 InfraBuild. All images are for demo purposes only.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script>
+        window.addEventListener("scroll", function () {
+            const topbar = document.querySelector(".topbar");
+            const navbar = document.querySelector(".navbar");
+
+            if (window.scrollY > 10) {
+                topbar.classList.add("scrolled");
+                navbar.classList.add("scrolled");
+            } else {
+                topbar.classList.remove("scrolled");
+                navbar.classList.remove("scrolled");
+            }
+        });
+    </script>
+
+</body>
+
+</html>

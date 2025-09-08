@@ -1,0 +1,435 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ category.name }} Estimate</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="estimate-header">
+        <div class="topbar">
+            <div class="left">
+                <span><i class="fas fa-phone"></i> +91 98765-43210</span>
+                <span><i class="fas fa-envelope"></i> info@infrabuild.com</span>
+            </div>
+            <div class="right">
+                <a href="{% url 'investors' %}">Investors</a>
+                <a href="{% url 'news' %}">News</a>
+                <a href="{% url 'events' %}">events</a>
+                <a href="{% url 'contact' %}">Contact</a>
+                <a href="{% url 'careers' %}">Careers</a>
+            </div>
+        </div>
+        <hr class="nav-hr">
+
+        <div class="navbar">
+            <div class="logo">
+                <a href="{% url 'home' %}"><img src="{% static 'img/infralogo.png' %}" alt=""></a>
+                InfraBuild
+            </div>
+            <nav>
+                <div class="dropdown">
+                    <a href="{% url 'about' %}">About Us <i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="{% url 'company_profile' %}">Company Profile</a>
+                        <a href="{% url 'leadership' %}">Leadership</a>
+                        <a href="{% url 'eco' %}">Ecosystem Partnership</a>
+                        <a href="{% url 'Business_Practice' %}">Business Practice</a>
+                        <a href="{% url 'governance' %}">Governance</a>
+                        <a href="{% url 'awards' %}">Awards</a>
+
+
+                        <button class="dropdown-btn" onclick="location.href='about'"> About <i
+                                class="fa fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <a href="{% url 'expertise' %}">Expertise</a>
+                <a href="{% url 'projects' %}">Projects</a>
+                <a href="{% url 'digital' %}">Digital</a>
+                <div class="dropdown">
+                    <a href="{% url 'insights' %}">Insights </a>
+                    <!-- <div class="dropdown-content">
+                        <a href="#blog">Sustainablity & <br> Decarbonisation</a>
+                        <a href="#reports">Mobility</a>
+                        <a href="#news">Resilience</a>
+                        <a href="#news">places</a>
+
+                        <button class="dropdown-btn" onclick="location.href='insights'">All Insights<i
+                                class="fa fa-arrow-right"></i></button>
+                    </div> -->
+                </div>
+                <a href="#search"><i class="fas fa-magnifying-glass"></i></a>
+            </nav>
+        </div>
+
+        <div class="header-content">
+            <h1 class="typewriter">Plan Smart. Estimate Better.</h1>
+            <p>InfraBuild provide you a real-time estimate tailored to your project's specifications.
+                Simply fill in your development details and explore a detailed cost breakdown.
+                This helps you plan smarter and move forward with clarity and confidence.</p>
+        </div>
+    </header>
+
+    <section class="estimate-section1">
+        <h2>Accurate Development <span> Cost Estimation </span></h2>
+        <p>
+            Get a detailed breakdown of your project's expected costs based on type, size, location, and sustainability
+            features. Our estimator helps you plan ahead with confidence and make well-informed decisions before
+            starting your development journey. Get a detailed breakdown of your project's expected costs based on type,
+            size, location, and sustainability features. Our estimator helps you plan ahead with confidence and make
+            well-informed decisions before starting your development journey.
+        </p>
+        <br>
+        <p>You can get your personalized cost breakdown right now—no hassle, no delays. Just fill out the form below and
+            receive your detailed estimate instantly!</p>
+
+    </section>
+
+    <div class="estimate-section2-wrapper">
+
+        <div class="estimate-section2-info">
+            <h2 class="estimate-section2-heading"> About <span>{{ category.name }}</span></h2>
+
+            {% if category.name == "Urban Development" %}
+            <p><strong>Urban Development</strong> refers to the planning and transformation of city spaces to enhance
+                livability, infrastructure, and sustainability. It encompasses a wide range of projects such as the
+                construction of roads, public transportation systems, residential and commercial buildings, and
+                essential public amenities like schools, hospitals, and parks.</p>
+            <br>
+            <p> Urban development also integrates smart city technologies, efficient land use, and sustainable practices
+                to create livable, environmentally responsible communities. This process plays a crucial role in shaping
+                the future of cities, enhancing infrastructure, and improving overall quality of life for residents.</p>
+            <ul class="estimate-section2-list">
+                <li>Roads, bridges, and transportation systems</li>
+                <li>Public utilities (water, power, drainage)</li>
+                <li>Affordable and high-density housing</li>
+                <li>Parks, green spaces, and recreation</li>
+                <li>Smart city technologies and traffic systems</li>
+                <li>Waste management and urban sanitation</li>
+            </ul>
+
+            {% elif category.name == "Highway Construction" %}
+            <p><strong>Highway Construction</strong> involves the design and development of high-capacity roadways to
+                enhance regional connectivity, reduce travel time, and support economic growth. is a critical aspect of
+                infrastructure development that focuses on building wide, durable, and efficient road networks to
+                connect cities, towns, and remote areas.</p>
+            <br>
+            <p> It involves meticulous planning, land grading, layering of materials, and integration of bridges,
+                drainage systems, and safety features to ensure smooth and safe transportation. Highways play a vital
+                role in boosting economic activity, reducing travel time, and improving accessibility across regions.
+            </p>
+            <ul class="estimate-section2-list">
+                <li>Roadbed preparation and asphalt/concrete laying</li>
+                <li>Bridges, flyovers, and interchanges</li>
+                <li>Drainage and stormwater management systems</li>
+                <li>Signage, lane markings, and safety barriers</li>
+                <li>Lighting, toll booths, and smart traffic systems</li>
+            </ul>
+
+            {% elif category.name == "Electric Grid Setup" %}
+            <p><strong>Electric Grid Setup</strong> focuses on building the infrastructure necessary to transmit and
+                distribute electricity efficiently across regions. This includes the installation of substations,
+                transformers, and power lines, as well as advanced control systems to monitor and manage energy flow.
+            </p>
+            <br>
+            <p>With growing demand and the integration of renewable energy sources like solar and wind, modern electric
+                grid projects also emphasize smart grid technologies for efficient load balancing, energy storage, and
+                real-time system management to ensure a stable and sustainable power supply.</p>
+            <ul class="estimate-section2-list">
+                <li>Power substations and transformer installations</li>
+                <li>Transmission and distribution lines (overhead and underground)</li>
+                <li>Control centers and grid monitoring systems</li>
+                <li>Backup power systems and safety mechanisms</li>
+                <li>Integration of renewable energy sources</li>
+            </ul>
+
+            {% elif category.name == "Water Management" %}
+            <p><strong>Water Management</strong> involves the planning, development, distribution, and optimization of
+                water resources to meet the needs of communities, industries, and agriculture. It ensures safe, clean,
+                and sustainable water supply and wastewater treatment systems.</p>
+            <br>
+            <p>Modern water management projects integrate advanced technologies for conservation, filtration, and
+                recycling, along with infrastructure such as pipelines, storage tanks, and treatment plants. These
+                systems are critical for public health, environmental protection, and long-term water sustainability.
+            </p>
+            <ul class="estimate-section2-list">
+                <li>Water supply and distribution pipelines</li>
+                <li>Rainwater harvesting and storage systems</li>
+                <li>Wastewater treatment and recycling facilities</li>
+                <li>Stormwater drainage and flood control infrastructure</li>
+                <li>Smart water metering and monitoring solutions</li>
+            </ul>
+
+            {% elif category.name == "Commercial Buildings" %}
+            <p><strong>Commercial Building Development</strong> focuses on designing and constructing spaces intended
+                for business, retail, hospitality, and service-related activities. These projects aim to create
+                efficient, safe, and appealing environments that support economic activity and customer interaction.</p>
+            <br>
+            <p>From shopping malls and office complexes to hotels and convention centers, commercial developments
+                require thoughtful planning of structural design, energy systems, accessibility, and technological
+                integrations to ensure optimal performance, sustainability, and user experience.</p>
+            <ul class="estimate-section2-list">
+                <li>Office towers, retail shops, and mixed-use complexes</li>
+                <li>Heating, ventilation, and air conditioning (HVAC) systems</li>
+                <li>Elevators, escalators, and fire safety systems</li>
+                <li>Power backup, lighting, and water supply infrastructure</li>
+                <li>Smart building features and energy-efficient technologies</li>
+            </ul>
+
+            {% elif category.name == "Smart Parks" %}
+            <p><strong>Smart Park Development</strong> integrates technology with green space design to create
+                innovative, sustainable, and interactive public environments. These parks aim to enhance the quality of
+                life by providing eco-friendly recreational spaces enriched with digital infrastructure.</p>
+            <br>
+            <p>Smart parks go beyond traditional landscaping by incorporating IoT-enabled systems, renewable energy, and
+                smart lighting to ensure safety, energy efficiency, and community engagement. They support leisure,
+                environmental awareness, and social well-being through modern amenities and intelligent features.</p>
+            <ul class="estimate-section2-list">
+                <li>Wi-Fi-enabled green zones and seating areas</li>
+                <li>Smart lighting and surveillance systems</li>
+                <li>Interactive kiosks and digital signboards</li>
+                <li>Automated irrigation and rainwater harvesting systems</li>
+                <li>Solar-powered amenities and energy monitoring</li>
+            </ul>
+
+            {% else %}
+            <p><strong>{{ category.name }}</strong> development includes all major activities such as infrastructure,
+                amenities, and regulatory compliance.</p>
+            <ul class="estimate-section2-list">
+                <li>Construction and design planning</li>
+                <li>Legal approvals and documentation</li>
+                <li>Incorporation of modern technology</li>
+                <li>Environmental sustainability</li>
+            </ul>
+            {% endif %}
+
+            <p>Fill out the form to the right to estimate your project's cost based on its size, type, and selected
+                features.</p>
+        </div>
+
+        <hr>
+
+        <div class="estimate-section2-form-container">
+            <h2 class="estimate-section2-heading"> <span>{{ category.name }}</span> Development Project Estimator</h2>
+            <form id="projectForm" class="estimate-section2-form">
+                <label class="estimate-section2-label">Type of Development:</label>
+                <select id="type" class="estimate-section2-select" required>
+                    <option value="">Select</option>
+                    <option value="residential">Residential</option>
+                    <option value="commercial">Commercial</option>
+                    <option value="mixed">Mixed-Use</option>
+                </select>
+
+                <label class="estimate-section2-label">Total Area (in sq ft):</label>
+                <input type="number" id="area" class="estimate-section2-input" required />
+
+                <label class="estimate-section2-label">Location:</label>
+                <input type="text" id="location" class="estimate-section2-input" required />
+
+                <label class="estimate-section2-label">Preferred Green Features:</label>
+                <div class="estimate-section2-checkbox-group">
+                    <label><input type="checkbox" name="green" value="solar" /> Solar Panels</label>
+                    <label><input type="checkbox" name="green" value="rainwater" /> Rainwater Harvesting</label>
+                    <label><input type="checkbox" name="green" value="greenroof" /> Green Roof</label>
+                    <label><input type="checkbox" name="green" value="waste" /> Waste Recycling System</label>
+                </div>
+
+                <label class="estimate-section2-label">Project Timeline:</label>
+                <select id="timeline" class="estimate-section2-select" required>
+                    <option value="">Select</option>
+                    <option value="short">Less than 1 year</option>
+                    <option value="medium">1–3 years</option>
+                    <option value="long">More than 3 years</option>
+                </select>
+
+                <button type="submit" class="estimate-section2-button">Generate Estimate</button>
+            </form>
+
+            <div id="estimateSection" class="estimate-section2-container estimate-section2-hidden">
+                <h3 class="estimate-section2-heading">Estimated <span>Cost Breakdown</span></h3>
+                <table id="estimateTable" class="estimate-section2-table"></table>
+            </div>
+        </div>
+
+    </div>
+
+
+    <h2 class="gallery-section-h2">Some of our <span>previously acheived milestones</span></h2>
+
+    <div class="gallery-section">
+        {% for image in images %}
+        <div class="gallery-item">
+            <img src="{{ image.image.url }}" alt="{{ image.caption }}" class="shine-image">
+            {% if image.caption %}
+            <p>{{ image.caption }}</p>
+            {% endif %}
+        </div>
+        {% empty %}
+        <p>No images uploaded for this category yet.</p>
+        {% endfor %}
+    </div>
+
+    <script>
+        document.getElementById("projectForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const type = document.getElementById("type").value;
+            const area = parseInt(document.getElementById("area").value);
+            const greenCheckboxes = document.querySelectorAll("input[name='green']:checked");
+            const greenFeatures = Array.from(greenCheckboxes).map(cb => cb.value);
+
+            const selectedRates = costRates[type];
+
+            const baseRate = selectedRates.baseRate;
+            const greenCost = greenFeatures.length * selectedRates.greenCost;
+            const permitCost = selectedRates.permitCost;
+            const designPercentage = selectedRates.designPercentage;
+            const constructionCost = baseRate * area;
+            const designCost = constructionCost * (designPercentage / 100);
+            const total = constructionCost + greenCost + designCost + permitCost;
+
+            const table = document.getElementById("estimateTable");
+            table.innerHTML = `
+            <tr><th>Component</th><th>Estimated Cost (₹)</th></tr>
+            <tr><td>Construction (${area} sq ft)</td><td>₹${constructionCost.toLocaleString()}</td></tr>
+            <tr><td>Green Features (${greenFeatures.length})</td><td>₹${greenCost.toLocaleString()}</td></tr>
+            <tr><td>Design & Architecture (${designPercentage}%)</td><td>₹${designCost.toLocaleString()}</td></tr>
+            <tr><td>Permits & Legal</td><td>₹${permitCost.toLocaleString()}</td></tr>
+            <tr class="estimate-section2-total-row"><td>Total Estimated Cost</td><td>₹${total.toLocaleString()}</td></tr>
+        `;
+
+            const section = document.getElementById("estimateSection");
+            section.classList.remove("estimate-section2-hidden");
+            section.scrollIntoView({ behavior: "smooth" });
+        });
+    </script>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-section">
+                <a href="{% url 'home' %}">
+                    <h3>InfraBuild</h3>
+                </a>
+                <p>"Building Tomorrow, <br> Strengthening Today."</p>
+                <p>Building sustainable <br>infrastructure solutions <br>that power cities, <br> industries, and lives
+                    across <br>the
+                    globe. <br>
+                    Your vision, our foundation.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="{% url 'investors' %}">Investors</a></li>
+                    <li><a href="{% url 'news' %}">News</a></li>
+                    <li><a href="{% url 'events' %}">Events</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                    <li><a href="{% url 'careers' %}">Careers</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="{% url 'about' %}">About Us</a></li>
+                    <li><a href="{% url 'expertise' %}">Expertise</a></li>
+                    <li><a href="{% url 'projects' %}">Projects</a></li>
+                    <li><a href="{% url 'digital' %}">Digital</a></li>
+                    <li><a href="{% url 'insights' %}">Insights</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><strong>Call:</strong> +0123 456 789 00</p>
+                <p><strong>Email:</strong> user@example.com</p>
+
+                <div class="subscribe-box">
+                    <input type="email" placeholder="Write Email" />
+                    <button>→</button>
+                </div>
+
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://wa.me/?text=Check%20this%20out!" target="_blank" rel="noopener noreferrer"
+                        title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div>
+                <a href="{% url 'privacy' %}">Privacy Policy</a>
+                <a href="{% url 'about' %}">Our History</a>
+                <a href="{% url 'expertise' %}">What We Do</a>
+            </div>
+            <div>
+                © 2025 InfraBuild. All images are for demo purposes only.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script>
+        const costRates = {
+            residential: {
+                baseRate: parseFloat("{{ rates.residential.base_rate|default:'0' }}"),
+                greenCost: parseFloat("{{ rates.residential.green_feature_cost|default:'0' }}"),
+                designPercentage: parseFloat("{{ rates.residential.design_percentage|default:'0' }}"),  // ✅ updated key
+                permitCost: parseFloat("{{ rates.residential.permit_cost|default:'0' }}")
+            },
+            commercial: {
+                baseRate: parseFloat("{{ rates.commercial.base_rate|default:'0' }}"),
+                greenCost: parseFloat("{{ rates.commercial.green_feature_cost|default:'0' }}"),
+                designPercentage: parseFloat("{{ rates.commercial.design_percentage|default:'0' }}"),  // ✅ updated key
+                permitCost: parseFloat("{{ rates.commercial.permit_cost|default:'0' }}")
+            },
+            mixed: {
+                baseRate: parseFloat("{{ rates.mixed.base_rate|default:'0' }}"),
+                greenCost: parseFloat("{{ rates.mixed.green_feature_cost|default:'0' }}"),
+                designPercentage: parseFloat("{{ rates.mixed.design_percentage|default:'0' }}"),  // ✅ updated key
+                permitCost: parseFloat("{{ rates.mixed.permit_cost|default:'0' }}")
+            }
+        };
+    </script>
+
+    <script>
+        window.addEventListener("scroll", function () {
+            const topbar = document.querySelector(".topbar");
+            const navbar = document.querySelector(".navbar");
+
+            if (window.scrollY > 10) {
+                topbar.classList.add("scrolled");
+                navbar.classList.add("scrolled");
+            } else {
+                topbar.classList.remove("scrolled");
+                navbar.classList.remove("scrolled");
+            }
+        });
+    </script>
+
+</body>
+
+</html>

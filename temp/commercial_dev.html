@@ -1,0 +1,291 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sectors - Commercial Developers</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="commercial_dev-header">
+        <div class="topbar">
+            <div class="left">
+                <span><i class="fas fa-phone"></i> +91 98765-43210</span>
+                <span><i class="fas fa-envelope"></i> info@infrabuild.com</span>
+            </div>
+            <div class="right">
+                <a href="{% url 'investors' %}">Investors</a>
+                <a href="{% url 'news' %}">News</a>
+                <a href="{% url 'events' %}">events</a>
+                <a href="{% url 'contact' %}">Contact</a>
+                <a href="{% url 'careers' %}">Careers</a>
+            </div>
+        </div>
+        <hr class="nav-hr">
+
+        <div class="navbar">
+            <div class="logo">
+                <a href="{% url 'home' %}"><img src="../static/img/infralogo.png" alt=""></a>
+                InfraBuild
+            </div>
+            <nav>
+                <div class="dropdown">
+                    <a href="{% url 'about' %}">About Us <i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="{% url 'company_profile' %}">Company Profile</a>
+                        <a href="{% url 'leadership' %}">Leadership</a>
+                        <a href="{% url 'eco' %}">Ecosystem Partnership</a>
+                        <a href="{% url 'Business_Practice' %}">Business Practice</a>
+                        <a href="{% url 'governance' %}">Governance</a>
+                        <a href="{% url 'awards' %}">Awards</a>
+
+
+                        <button class="dropdown-btn" onclick="location.href='about'"> About <i
+                                class="fa fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <a href="{% url 'expertise' %}">Expertise</a>
+                <a href="{% url 'projects' %}">Projects</a>
+                <a href="{% url 'digital' %}">Digital</a>
+                <div class="dropdown">
+                    <a href="{% url 'insights' %}">Insights</a>
+                </div>
+                <a href="#search"><i class="fas fa-magnifying-glass"></i></a>
+            </nav>
+        </div>
+
+        <div class="header-content">
+            <h1 class="typewriter">Building Tomorrow’s Commercial Landmarks</h1>
+            <p>We design and deliver dynamic commercial spaces built for growth and impact.
+                From retail hubs to corporate campuses, our developments balance form, function, and future-readiness.
+            </p>
+        </div>
+    </header>
+
+    <section class="comm-dev-section1">
+        <div class="comm-dev-container">
+            <h1 class="comm-dev-heading">Transforming Visions into <span>Commercial Landmarks</span></h1>
+            <p class="comm-dev-paragraph">
+                From bustling retail centers to state-of-the-art office parks, our commercial infrastructure empowers
+                businesses to thrive. We specialize in delivering smart, scalable spaces that balance form, function,
+                and forward-looking design.
+            </p>
+            <p class="comm-dev-paragraph">
+                Our approach blends sustainability, flexibility, and modern amenities to meet evolving tenant and
+                investor expectations. Whether it’s urban high-rises or suburban business districts, we engineer
+                environments that grow with your goals.
+            </p>
+        </div>
+    </section>
+
+    <section class="comm-dev-section2">
+        <div class="comm-dev-text">
+            <h2>Facilities That Power Business <span>Future-Ready, Flexible & Efficient</span></h2>
+        </div>
+        <div class="comm-dev-card-container">
+            <div class="comm-dev-card">
+                <div class="comm-dev-card-icon"><i class="fas fa-building"></i></div>
+                <h3>Office Complexes</h3>
+                <p>Modern workspaces designed for comfort, connectivity, and collaboration across sectors.</p>
+            </div>
+            <div class="comm-dev-card">
+                <div class="comm-dev-card-icon"><i class="fas fa-store"></i></div>
+                <h3>Retail Hubs</h3>
+                <p>Vibrant commercial centers engineered for high footfall, tenant success, and customer experience.</p>
+            </div>
+            <div class="comm-dev-card">
+                <div class="comm-dev-card-icon"><i class="fas fa-warehouse"></i></div>
+                <h3>Warehousing Facilities</h3>
+                <p>Integrated storage and logistics hubs with optimized loading, ventilation, and safety features.</p>
+            </div>
+            <div class="comm-dev-card">
+                <div class="comm-dev-card-icon"><i class="fas fa-tree"></i></div>
+                <h3>Green Business Parks</h3>
+                <p>Sustainable campuses with eco-certified designs, green roofs, and efficient energy systems.</p>
+            </div>
+            <div class="comm-dev-card">
+                <div class="comm-dev-card-icon"><i class="fas fa-parking"></i></div>
+                <h3>Smart Parking Solutions</h3>
+                <p>Digitally managed parking systems that maximize convenience and space utilization.</p>
+            </div>
+            <div class="comm-dev-card">
+                <div class="comm-dev-card-icon"><i class="fas fa-briefcase"></i></div>
+                <h3>Startup Incubation Units</h3>
+                <p>Dynamic modular zones tailored for innovation hubs, co-working, and emerging businesses.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="comm-dev-section3">
+        <div class="comm-dev-text">
+            <h2>Smart, Sustainable Design <span>Built for Longevity & Impact</span></h2>
+            <p>
+                Our commercial developments integrate smart building systems, renewable energy sources, and adaptive
+                layouts that evolve with market needs. We prioritize environmental responsibility without compromising
+                commercial performance.
+            </p>
+        </div>
+        <div class="comm-dev-image">
+            <img src="../static/img/comm-dev1.webp" alt="Sustainable Commercial Infrastructure">
+        </div>
+    </section>
+
+    <section class="more-sectors">
+        <div class="solutions-container">
+            <div class="solutions-text">
+                <h2>More Sectors</h2>
+                <p>
+                    Infrubuild serves a broad range of sectors with tailored solutions that address unique industry
+                    needs — leveraging deep insights, specialized tools, and global expertise to drive excellence.
+                </p>
+            </div>
+            <div class="solutions-grid">
+                <div class="solution-card card21">
+                    <div class="solution-card-content">
+                        <h3>Contractors</h3>
+                        <p>Enhance project execution through scalable delivery models and centralized digital platforms.
+                        </p>
+                        <a href="{% url 'contractors' %}">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="solution-card card18">
+                    <div class="solution-card-content">
+                        <h3>Automotive</h3>
+                        <p>Accelerate infrastructure with advanced mobility, automation, and sustainable manufacturing
+                            support.</p>
+                        <a href="{% url 'automotive' %}">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="solution-card card19">
+                    <div class="solution-card-content">
+                        <h3>Chemical</h3>
+                        <p>Deliver safe, efficient facilities with risk-managed engineering and process-driven design
+                            solutions.</p>
+                        <a href="{% url 'chemical' %}">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="solution-card card20 extra-cards">
+                    <div class="solution-card-content">
+                        <h3>Commercial Developers</h3>
+                        <p>Streamline planning and delivery for commercial hubs through smart tools and integrated
+                            teams.</p>
+                        <a href="#">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="solution-card card22 extra-cards">
+                    <div class="solution-card-content">
+                        <h3>Power</h3>
+                        <p>Support energy systems with reliable infrastructure built for flexibility and operational
+                            uptime.</p>
+                        <a href="#">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-section">
+                <a href="{% url 'home' %}">
+                    <h3>InfraBuild</h3>
+                </a>
+                <p>"Building Tomorrow, <br> Strengthening Today."</p>
+                <p>Building sustainable <br>infrastructure solutions <br>that power cities, <br> industries, and lives
+                    across <br>the
+                    globe. <br>
+                    Your vision, our foundation.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="{% url 'investors' %}">Investors</a></li>
+                    <li><a href="{% url 'news' %}">News</a></li>
+                    <li><a href="{% url 'events' %}">Events</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                    <li><a href="{% url 'careers' %}">Careers</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="{% url 'about' %}">About Us</a></li>
+                    <li><a href="{% url 'expertise' %}">Expertise</a></li>
+                    <li><a href="{% url 'projects' %}">Projects</a></li>
+                    <li><a href="{% url 'digital' %}">Digital</a></li>
+                    <li><a href="{% url 'insights' %}">Insights</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><strong>Call:</strong> +0123 456 789 00</p>
+                <p><strong>Email:</strong> user@example.com</p>
+
+                <div class="subscribe-box">
+                    <input type="email" placeholder="Write Email" />
+                    <button>→</button>
+                </div>
+
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://wa.me/?text=Check%20this%20out!" target="_blank" rel="noopener noreferrer"
+                        title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div>
+                <a href="{% url 'privacy' %}">Privacy Policy</a>
+                <a href="{% url 'about' %}">Our History</a>
+                <a href="{% url 'expertise' %}">What We Do</a>
+            </div>
+            <div>
+                © 2025 InfraBuild. All images are for demo purposes only.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script>
+        window.addEventListener("scroll", function () {
+            const topbar = document.querySelector(".topbar");
+            const navbar = document.querySelector(".navbar");
+
+            if (window.scrollY > 10) {
+                topbar.classList.add("scrolled");
+                navbar.classList.add("scrolled");
+            } else {
+                topbar.classList.remove("scrolled");
+                navbar.classList.remove("scrolled");
+            }
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,444 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InfraBuild - Investors</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="investor_header">
+        <div class="topbar">
+            <div class="left">
+                <span><i class="fas fa-phone"></i> +91 98765-43210</span>
+                <span><i class="fas fa-envelope"></i> info@infrabuild.com</span>
+            </div>
+            <div class="right">
+                <a href="{% url 'investors' %}">Investors</a>
+                <a href="{% url 'news' %}">News</a>
+                <a href="{% url 'events' %}">events</a>
+                <a href="{% url 'contact' %}">Contact</a>
+                <a href="{% url 'careers' %}">Careers</a>
+            </div>
+        </div>
+        <hr class="nav-hr">
+
+        <div class="navbar">
+            <div class="logo">
+                <a href="{% url 'home' %}"><img src="../static/img/infralogo.png" alt=""></a>
+                InfraBuild
+            </div>
+
+            <div class="toggler" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav id="nav-menu">
+                <div class="dropdown">
+                    <a href="{% url 'about' %}">About Us <i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="{% url 'company_profile' %}">Company Profile</a>
+                        <a href="{% url 'leadership' %}">Leadership</a>
+                        <a href="{% url 'eco' %}">Ecosystem Partnership</a>
+                        <a href="{% url 'Business_Practice' %}">Business Practice</a>
+                        <a href="{% url 'governance' %}">Governance</a>
+                        <a href="{% url 'awards' %}">Awards</a>
+
+
+                        <button class="dropdown-btn" onclick="location.href='about'"> About <i
+                                class="fa fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <a href="{% url 'expertise' %}">Expertise</a>
+                <a href="{% url 'projects' %}">Projects</a>
+                <a href="{% url 'digital' %}">Digital</a>
+                <div class="dropdown">
+                    <a href="{% url 'insights' %}">Insights </a>
+                    <!-- <div class="dropdown-content">
+                        <a href="#blog">Sustainablity & <br> Decarbonisation</a>
+                        <a href="#reports">Mobility</a>
+                        <a href="#news">Resilience</a>
+                        <a href="#news">places</a>
+
+                        <button class="dropdown-btn" onclick="location.href='insights'"> All Insights <i
+                                class="fa fa-arrow-right"></i></button>
+                    </div> -->
+                </div>
+                <div class="mobile-topbar">
+                    <div class="mobile-links">
+                        <a href="{% url 'investors' %}">Investors</a>
+                        <a href="{% url 'news' %}">News</a>
+                        <a href="{% url 'events' %}">Events</a>
+                        <a href="{% url 'contact' %}">Contact</a>
+                        <a href="{% url 'careers' %}">Careers</a>
+                    </div>
+                    <hr>
+                    <div class="mobile-contact">
+                        <span><i class="fas fa-phone"></i> +91 98765-43210</span>
+                        <span><i class="fas fa-envelope"></i> info@infrabuild.com</span>
+                    </div>
+                </div>
+                <a href="#search"><i class="fas fa-magnifying-glass"></i></a>
+            </nav>
+        </div>
+
+        <div class="header-content">
+            <h1 class="typewriter">Be Part of the Vision: Invest in <br>Future We’re Creating Together</h1>
+            <p>Join a visionary team building innovative solutions for tomorrow.
+                We’re driven by impact, guided by growth, and backed by results. Discover how your investment fuels real
+                change and long-term value.
+            </p>
+        </div>
+    </header>
+
+    <section class="investor-section">
+        <div class="investor-container">
+            <h2 class="investor-heading">Invest in Innovation, <span>Empower the Future</span></h2>
+            <p class="investor-paragraph">
+                Our journey is rooted in a vision to create groundbreaking solutions that not only meet today’s demands
+                but also anticipate tomorrow’s challenges. Backed by a passionate team, robust technology, and a
+                scalable business model, we are positioned for exponential growth. By investing with us, you’re not just
+                funding a project — you’re becoming part of a movement that champions sustainability, innovation, and
+                real-world impact across industries.
+            </p>
+            <p class="investor-paragraph">
+                We believe in transparent partnerships, strategic growth, and building something that lasts. Our
+                commitment to delivering measurable returns is matched only by our ambition to drive positive change. As
+                an investor, you gain access to a dynamic ecosystem of opportunity and innovation. Together, we can push
+                boundaries, disrupt the status quo, and create a legacy of success for future generations.
+            </p>
+        </div>
+    </section>
+
+    <section class="board-section">
+        <h2 class="board-heading">Board Of Directors : <span>The People Steering Our Future</span></h2>
+        <div class="board-container">
+            <div class="board-card" style="background-image: url('../static/img/aarav.jfif');">
+                <div class="board-card-overlay">
+                    <div class="board-card-gradient"></div>
+                    <h3 class="board-card-name">Omar Mehri</h3>
+                    <p class="board-card-title">Chairman of the Board</p>
+                    <div class="board-social-icons">
+                        <i class="fab fa-linkedin-in"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="board-card" style="background-image: url('../static/img/download\ \(3\).jfif');">
+                <div class="board-card-overlay">
+                    <div class="board-card-gradient"></div>
+                    <h3 class="board-card-name">Layla Samuel</h3>
+                    <p class="board-card-title">Chief Executive Officer (CEO)</p>
+                    <div class="board-social-icons">
+                        <i class="fab fa-linkedin-in"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="board-card" style="background-image: url('../static/img/rohan.jfif');">
+                <div class="board-card-overlay">
+                    <div class="board-card-gradient"></div>
+                    <h3 class="board-card-name">Draper Timothy</h3>
+                    <p class="board-card-title">Chief Operating Officer (COO)</p>
+                    <div class="board-social-icons">
+                        <i class="fab fa-linkedin-in"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="board-card" style="background-image: url('../static/img/neha.jfif');">
+                <div class="board-card-overlay">
+                    <div class="board-card-gradient"></div>
+                    <h3 class="board-card-name">Mariam Shah</h3>
+                    <p class="board-card-title">Chief Financial Officer (CFO)</p>
+                    <div class="board-social-icons">
+                        <i class="fab fa-linkedin-in"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="board-card" style="background-image: url('../static/img/vikram.jfif');">
+                <div class="board-card-overlay">
+                    <div class="board-card-gradient"></div>
+                    <h3 class="board-card-name">James Lee</h3>
+                    <p class="board-card-title">Independent Director</p>
+                    <div class="board-social-icons">
+                        <i class="fab fa-linkedin-in"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="board-card"
+                style="background-image: url('../static/img/Business Headshot Poses_ How to Pose Professionally.jfif');">
+                <div class="board-card-overlay">
+                    <div class="board-card-gradient"></div>
+                    <h3 class="board-card-name">Emily Stone</h3>
+                    <p class="board-card-title">Director of Engineering
+                    </p>
+                    <div class="board-social-icons">
+                        <i class="fab fa-linkedin-in"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-facebook-f"></i>
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p class="board-description">
+            The Board of Directors at our organization serves as the cornerstone of strategic leadership and governance.
+            Comprised of distinguished industry leaders and visionaries, they bring decades of experience, insight, and
+            integrity to the table. Their guidance ensures that every decision aligns with our long-term mission and
+            values, driving sustainable growth and innovation. With a strong commitment to accountability, transparency,
+            and excellence, our board plays a pivotal role in shaping the future of our infrastructure development
+            initiatives.
+        </p>
+    </section>
+
+    <section class="news-section">
+        <h2 class="news-heading">Latest <span>News</span>
+            <span class="News-btn"><a href="{% url 'news' %}">View All News</a></span>
+        </h2>
+
+        <div class="news-content">
+            <div class="featured-news">
+                {% for news in all_news|slice:":2" %}
+                <div class="news-card">
+                    <a href="{% url 'news_detail' news.id %}">
+                        <img src="{{ news.image.url }}" alt="{{ news.title }}">
+                        <div class="news-info">
+                            <h3>{{ news.title }}</h3>
+                            <p>{{ news.description|truncatewords:20 }}</p>
+                            <div class="author-row">
+                                <img src="{% static 'img/neha.jfif' %}" alt="Author">
+                                <div>
+                                    <span>Admin</span>
+                                    <p>{{ news.created_at|date:"d M Y" }}</p>
+                                </div>
+                                <span class="category">{{ news.category }}</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+
+            <div class="popular-news">
+                <h4>Most Popular News</h4>
+                <ul>
+                    {% for item in all_news|slice:"2:5" %}
+                    <li>
+                        <a href="{% url 'news_detail' item.id %}">
+                            <img src="{{ item.image.url }}" alt="{{ item.title }}">
+                        </a>
+                        <div>
+                            <p>{{ item.title|truncatewords:10 }}</p>
+                            <span>Admin</span>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="learnmore-section">
+        <h2>Learn more <span>about InfraBuild</span></h2>
+        <p>
+            Discover how InfraBuild is shaping a more sustainable, innovative, and resilient future through responsible
+            investments and strategic initiatives.
+            Our commitment to transparency and long-term growth drives our vision forward.
+            Explore our reports, insights, and leadership efforts to stay informed.
+        </p>
+    </section>
+
+    <section class="investor-section">
+        <div class="card-grid">
+            <div class="highlight-card" style="background-image: url('../static/img/chemical-E.webp');">
+                <a href="{% url 'chemical' %}">
+                    <div class="text">chemical</div>
+                </a>
+            </div>
+            <div class="highlight-card" style="background-image: url('../static/img/places-E.webp');">
+                <a href="{% url 'places' %}">
+                    <div class="text">Places</div>
+                </a>
+            </div>
+            <div class="highlight-card" style="background-image: url('../static/img/Asset-Managem-E.webp');">
+                <a href="{% url 'asset' %}">
+                    <div class="text">Asset Management</div>
+                </a>
+            </div>
+            <div class="highlight-card" style="background-image: url('../static/img/Business-Advisory-E.webp');">
+                <a href="{% url 'business' %}">
+                    <div class="text">Business Advisory</div>
+                </a>
+            </div>
+            <div class="highlight-card" style="background-image: url('../static/img/aerospace-E.webp');">
+                <a href="{% url 'aerospace' %}">
+                    <div class="text">Aerospace</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="quick-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="{% url 'about' %}">Why Invest in Us</a></li>
+                <li><a href="{% url 'investors' %}">Leadership Team</a></li>
+                <li><a href="{% url 'contact' %}">Share Information</a></li>
+                <li><a href="{% url 'company_profile' %}">Company Profile</a></li>
+                <li><a href="{% url 'Business_Practice' %}">Business Practices</a></li>
+                <li><a href="{% url 'news' %}">Media Coverage</a></li>
+                <li><a href="{% url 'projects' %}">Projects & Highlights</a></li>
+                <li><a href="{% url 'careers' %}">Career Options</a></li>
+                <li><a href="{% url 'events' %}">Shared events</a></li>
+                <li><a href="{% url 'home' %}">know Your Estimate</a></li>
+                <li><a href="{% url 'leadership' %}">Leadership</a></li>
+                <li><a href="{% url 'governance' %}">Governance</a></li>
+            </ul>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="footer">
+            <div class="footer-section">
+                <a href="{% url 'home' %}">
+                    <h3>InfraBuild</h3>
+                </a>
+                <p>"Building Tomorrow, <br> Strengthening Today."</p>
+                <p>Building sustainable <br>infrastructure solutions <br>that power cities, <br> industries, and lives
+                    across <br>the
+                    globe. <br>
+                    Your vision, our foundation.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="{% url 'investors' %}">Investors</a></li>
+                    <li><a href="{% url 'news' %}">News</a></li>
+                    <li><a href="{% url 'events' %}">Events</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                    <li><a href="{% url 'careers' %}">Careers</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="{% url 'about' %}">About Us</a></li>
+                    <li><a href="{% url 'expertise' %}">Expertise</a></li>
+                    <li><a href="{% url 'projects' %}">Projects</a></li>
+                    <li><a href="{% url 'digital' %}">Digital</a></li>
+                    <li><a href="{% url 'insights' %}">Insights</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><strong>Call:</strong> +0123 456 789 00</p>
+                <p><strong>Email:</strong> user@example.com</p>
+
+                <div class="subscribe-box">
+                    <input type="email" placeholder="Write Email" />
+                    <button>→</button>
+                </div>
+
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://wa.me/?text=Check%20this%20out!" target="_blank" rel="noopener noreferrer"
+                        title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div>
+                <a href="{% url 'privacy' %}">Privacy Policy</a>
+                <a href="{% url 'about' %}">Our History</a>
+                <a href="{% url 'expertise' %}">What We Do</a>
+            </div>
+            <div>
+                © 2025 InfraBuild. All images are for demo purposes only.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function closeMoveBox() {
+            document.querySelector('.move-box').style.display = 'none';
+        }
+
+        function refreshForm() {
+            document.getElementById('projectForm').reset();
+            document.getElementById('estimateSection').classList.add('estimate-section2-hidden');
+            document.getElementById('formContainer').style.display = 'block';
+        }
+    </script>
+
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("nav-menu").classList.toggle("show");
+        }
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script>
+        window.addEventListener("scroll", function () {
+            const topbar = document.querySelector(".topbar");
+            const navbar = document.querySelector(".navbar");
+
+            if (window.scrollY > 10) {
+                topbar.classList.add("scrolled");
+                navbar.classList.add("scrolled");
+            } else {
+                topbar.classList.remove("scrolled");
+                navbar.classList.remove("scrolled");
+            }
+        });
+    </script>
+
+</body>
+
+</html>

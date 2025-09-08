@@ -1,0 +1,312 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capabilities - Architecture</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="architecture_header">
+        <div class="topbar">
+            <div class="left">
+                <span><i class="fas fa-phone"></i> +91 98765-43210</span>
+                <span><i class="fas fa-envelope"></i> info@infrabuild.com</span>
+            </div>
+            <div class="right">
+                <a href="{% url 'investors' %}">Investors</a>
+                <a href="{% url 'news' %}">News</a>
+                <a href="{% url 'events' %}">events</a>
+                <a href="{% url 'contact' %}">Contact</a>
+                <a href="{% url 'careers' %}">Careers</a>
+            </div>
+        </div>
+        <hr class="nav-hr">
+
+        <div class="navbar">
+            <div class="logo">
+                <a href="{% url 'home' %}"><img src="../static/img/infralogo.png" alt=""></a>
+                InfraBuild
+            </div>
+            <nav>
+                <div class="dropdown">
+                    <a href="{% url 'about' %}">About Us <i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="{% url 'company_profile' %}">Company Profile</a>
+                        <a href="{% url 'leadership' %}">Leadership</a>
+                        <a href="{% url 'eco' %}">Ecosystem Partnership</a>
+                        <a href="{% url 'Business_Practice' %}">Business Practice</a>
+                        <a href="{% url 'governance' %}">Governance</a>
+                        <a href="{% url 'awards' %}">Awards</a>
+
+
+                        <button class="dropdown-btn" onclick="location.href='about'"> About <i
+                                class="fa fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <a href="{% url 'expertise' %}">Expertise</a>
+                <a href="{% url 'projects' %}">Projects</a>
+                <a href="{% url 'digital' %}">Digital</a>
+                <div class="dropdown">
+                    <a href="{% url 'insights' %}">Insights</a>
+                </div>
+                <a href="#search"><i class="fas fa-magnifying-glass"></i></a>
+            </nav>
+        </div>
+
+        <div class="header-content">
+            <h1 class="typewriter">Architecture That Inspires and Endures</h1>
+            <p>We design thoughtful, functional spaces that reflect vision and purpose.
+                Our architectural approach blends creativity with structural precision.
+                From concept to completion, we build environments that stand the test of time.</p>
+        </div>
+    </header>
+
+    <section class="arch-section1">
+        <h2>Expert Guidance <span>for Inspired Architectural Solutions</span></h2>
+        <p>
+            In a world where design meets function, architectural success demands more than creativity—it requires
+            strategic insight,
+            technical mastery, and contextual awareness. Our architectural advisory services provide the clarity and
+            expertise
+            needed to envision, design, and deliver impactful spaces.
+        </p>
+        <br>
+        <p>
+            From conceptual planning and sustainable design to project execution and regulatory compliance,
+            we partner with you to navigate complex challenges and shape environments that are beautiful, functional,
+            and future-ready.
+        </p>
+    </section>
+
+    <section class="arch-section2">
+        <div class="arch-text">
+            <h2>Design-Driven Strategies <span>from Vision to Reality</span></h2>
+            <p>
+                Our architects and consultants blend design thinking with technical know-how to craft solutions
+                tailored to your project's context and goals. Whether residential, commercial, or institutional,
+                we guide your journey from early vision through final construction.
+            </p>
+            <br>
+            <p>
+                From feasibility studies and site analysis to BIM coordination and material selection,
+                we offer end-to-end support—ensuring that your architectural vision is executed with precision,
+                sustainability, and innovation.
+            </p>
+        </div>
+        <div class="arch-image">
+            <img src="../static/img/architecture1.avif" alt="Architectural Collaboration Visualization">
+        </div>
+    </section>
+
+    <section class="arch-section3">
+        <h2>Core Foundations of Our <span>Architectural Advisory</span></h2>
+        <p class="arch-main-p">
+            Our approach is grounded in creativity, integrity, and impact. With a deep commitment to architectural
+            excellence,
+            we support clients across every phase—from ideation to occupancy—ensuring that each project is grounded in
+            purpose,
+            performance, and timeless design.
+        </p>
+
+        <div class="arch-point">
+            <div class="arch-number">1</div>
+            <div class="arch-point-content">
+                <h4>Master Planning & Conceptual Development</h4>
+                <p>We help define project scope, establish design narratives, and translate vision into clear,
+                    actionable
+                    concepts that guide the entire architectural journey.</p>
+            </div>
+        </div>
+
+        <div class="arch-point">
+            <div class="arch-number">2</div>
+            <div class="arch-point-content">
+                <h4>Sustainable & Functional Design Excellence</h4>
+                <p>Our experts integrate environmentally responsible practices with efficient space planning to create
+                    designs
+                    that are both beautiful and sustainable for generations to come.</p>
+            </div>
+        </div>
+
+        <div class="arch-point">
+            <div class="arch-number">3</div>
+            <div class="arch-point-content">
+                <h4>Regulatory Navigation & Technical Oversight</h4>
+                <p>We ensure projects meet zoning, code, and compliance standards—offering guidance through permitting
+                    processes
+                    and coordinating with consultants to resolve technical complexities.</p>
+            </div>
+        </div>
+
+        <div class="arch-point">
+            <div class="arch-number">4</div>
+            <div class="arch-point-content">
+                <h4>Project Leadership & Design Execution</h4>
+                <p>From detailed drawings to site supervision, we lead with precision—aligning teams,
+                    resolving issues in real-time, and upholding the design integrity through to completion.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="more-capabilities">
+        <div class="solutions-container">
+            <div class="solutions-text">
+                <h2 class="more-capabilities-h2"> More <span>Capabilities</span></h2>
+                <p>
+                    Infrubuild offers a full spectrum of capabilities to support every phase of infrastructure
+                    development —
+                    from strategy and design to execution and delivery — with deep domain knowledge and technical
+                    excellence.
+                </p>
+            </div>
+            <div class="solutions-grid">
+                <div class="solution-card card15">
+                    <div class="solution-card-content">
+                        <h3>Commercials</h3>
+                        <p>Ensure cost-efficiency and transparency through robust financial modeling and procurement
+                            control.</p>
+                        <a href="{% url 'commercials' %}">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="solution-card card14">
+                    <div class="solution-card-content">
+                        <h3>Prog. Management</h3>
+                        <p>Coordinate complex projects with agile planning, control systems, and stakeholder alignment.
+                        </p>
+                        <a href="{% url 'prog' %}">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="solution-card card12">
+                    <div class="solution-card-content">
+                        <h3>Business Advisory</h3>
+                        <p>Drive better outcomes with expert guidance on strategy, operations, and financial
+                            structuring.</p>
+                        <a href="{% url 'business' %}">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="solution-card card15 extra-cards">
+                    <div class="solution-card-content">
+                        <h3>Commercials</h3>
+                        <p>Ensure cost-efficiency and transparency through robust financial modeling and procurement
+                            control.</p>
+                        <a href="#">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="solution-card card16 extra-cards">
+                    <div class="solution-card-content">
+                        <h3>Health & Safety</h3>
+                        <p>Promote safe delivery environments with proactive compliance, audits, and training
+                            frameworks.</p>
+                        <a href="#">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-section">
+                <a href="{% url 'home' %}">
+                    <h3>InfraBuild</h3>
+                </a>
+                <p>"Building Tomorrow, <br> Strengthening Today."</p>
+                <p>Building sustainable <br>infrastructure solutions <br>that power cities, <br> industries, and lives
+                    across <br>the
+                    globe. <br>
+                    Your vision, our foundation.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="{% url 'investors' %}">Investors</a></li>
+                    <li><a href="{% url 'news' %}">News</a></li>
+                    <li><a href="{% url 'events' %}">Events</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                    <li><a href="{% url 'careers' %}">Careers</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="{% url 'about' %}">About Us</a></li>
+                    <li><a href="{% url 'expertise' %}">Expertise</a></li>
+                    <li><a href="{% url 'projects' %}">Projects</a></li>
+                    <li><a href="{% url 'digital' %}">Digital</a></li>
+                    <li><a href="{% url 'insights' %}">Insights</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><strong>Call:</strong> +0123 456 789 00</p>
+                <p><strong>Email:</strong> user@example.com</p>
+
+                <div class="subscribe-box">
+                    <input type="email" placeholder="Write Email" />
+                    <button>→</button>
+                </div>
+
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://wa.me/?text=Check%20this%20out!" target="_blank" rel="noopener noreferrer"
+                        title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div>
+                <a href="{% url 'privacy' %}">Privacy Policy</a>
+                <a href="{% url 'about' %}">Our History</a>
+                <a href="{% url 'expertise' %}">What We Do</a>
+            </div>
+            <div>
+                © 2025 InfraBuild. All images are for demo purposes only.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script>
+        window.addEventListener("scroll", function () {
+            const topbar = document.querySelector(".topbar");
+            const navbar = document.querySelector(".navbar");
+
+            if (window.scrollY > 10) {
+                topbar.classList.add("scrolled");
+                navbar.classList.add("scrolled");
+            } else {
+                topbar.classList.remove("scrolled");
+                navbar.classList.remove("scrolled");
+            }
+        });
+    </script>
+
+</body>
+
+</html>

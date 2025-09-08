@@ -1,0 +1,315 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AboutUs - Company Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="company_profile_header">
+        <div class="topbar">
+            <div class="left">
+                <span><i class="fas fa-phone"></i> +91 98765-43210</span>
+                <span><i class="fas fa-envelope"></i> info@infrabuild.com</span>
+            </div>
+            <div class="right">
+                <a href="{% url 'investors' %}">Investors</a>
+                <a href="{% url 'news' %}">News</a>
+                <a href="{% url 'events' %}">events</a>
+                <a href="{% url 'contact' %}">Contact</a>
+                <a href="{% url 'careers' %}">Careers</a>
+            </div>
+        </div>
+        <hr class="nav-hr">
+
+        <div class="navbar">
+            <div class="logo">
+                <a href="{% url 'home' %}"><img src="../static/img/infralogo.png" alt=""></a>
+                InfraBuild
+            </div>
+            <nav>
+                <div class="dropdown">
+                    <a href="{% url 'about' %}">About Us <i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="{% url 'company_profile' %}">Company Profile</a>
+                        <a href="{% url 'leadership' %}">Leadership</a>
+                        <a href="{% url 'eco' %}">Ecosystem Partnership</a>
+                        <a href="{% url 'Business_Practice' %}">Business Practice</a>
+                        <a href="{% url 'governance' %}">Governance</a>
+                        <a href="{% url 'awards' %}">Awards</a>
+
+                        <button class="dropdown-btn" onclick="location.href='about'"> About <i
+                                class="fa fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <a href="{% url 'expertise' %}">Expertise</a>
+                <a href="{% url 'projects' %}">Projects</a>
+                <a href="{% url 'digital' %}">Digital</a>
+                <div class="dropdown">
+                    <a href="{% url 'insights' %}">Insights </a>
+                    <!-- <div class="dropdown-content">
+                        <a href="#blog">Sustainablity & <br> Decarbonisation</a>
+                        <a href="#reports">Mobility</a>
+                        <a href="#news">Resilience</a>
+                        <a href="#news">places</a>
+
+                        <button class="dropdown-btn" onclick="location.href='insights'">All Insights<i
+                                class="fa fa-arrow-right"></i></button>
+                    </div> -->
+                </div>
+                <a href="#search"><i class="fas fa-magnifying-glass"></i></a>
+            </nav>
+        </div>
+
+        <div class="header-content">
+            <h1 class="typewriter">Company Profile – Empowering Progress </h1>
+            <p>Our solutions are crafted to meet modern challenges and drive long-term value.
+                We believe in building a better future—together, with purpose and vision.</p>
+        </div>
+    </header>
+
+    <section class="cp-section1-container">
+        <h2 class="cp-section1-heading">
+            Innovating the Future with Integrity, Excellence, <span>and a Global Vision for Sustainable Growth</span>
+        </h2>
+        <p class="cp-section1-paragraph">
+            At InfraBuild, we believe innovation should be meaningful—driven by integrity, guided by
+            excellence, and built for long-term sustainability.
+            We combine cutting-edge technologies with proven strategies to ensure our clients always stay ahead of the
+            curve.
+            Our diverse team of experts collaborates across industries, creating tailored solutions that align with the
+            goals of every partner we serve.
+        </p>
+        <p class="cp-section1-paragraph">
+            Our commitment is to help clients, partners, and communities thrive in a changing world through bold ideas,
+            smart solutions, and purposeful collaboration.
+            From strategy to execution, we ensure our efforts contribute to a more connected, efficient, and sustainable
+            future.
+            Together, we transform visions into value and challenges into opportunities.
+        </p>
+    </section>
+
+    <div class="cp-table">
+        <div class="cp-table-title">
+            <h2>Facts and <span> Focuses </span></h2>
+            <p>As a leader in infrastructure, we bring decades of experience, a diverse project portfolio, and a strong
+                foundation in global best practices. Our strengths lie in combining advanced technologies with
+                sustainable methodologies to build projects that stand the test of time while meeting the evolving needs
+                of modern communities.</p>
+        </div>
+        <table class="cp-table-info">
+            <tr>
+                <td class="cp-table-left-column">Years of Experience</td>
+                <td class="cp-table-right-column">Over 25 years of excellence in delivering large-scale infrastructure
+                    and civil engineering projects across the country.</td>
+            </tr>
+            <tr>
+                <td class="cp-table-left-column">Completed Projects</td>
+                <td class="cp-table-right-column">Successfully executed more than 300 government and private sector
+                    infrastructure projects, including roads, bridges, and industrial zones.</td>
+            </tr>
+            <tr>
+                <td class="cp-table-left-column">Core Specialization</td>
+                <td class="cp-table-right-column">Specialized in sustainable infrastructure development, smart city
+                    planning, and high-efficiency public utilities.</td>
+            </tr>
+            <tr>
+                <td class="cp-table-left-column">Certifications & Standards</td>
+                <td class="cp-table-right-column">ISO 9001, ISO 14001, and ISO 45001 certified, ensuring quality,
+                    environmental responsibility, and workplace safety at every level.</td>
+            </tr>
+            <tr>
+                <td class="cp-table-left-column">Workforce Strength</td>
+                <td class="cp-table-right-column">A team of over 2,000 skilled professionals, including engineers,
+                    project managers, and technical staff dedicated to quality delivery.</td>
+            </tr>
+            <tr>
+                <td class="cp-table-left-column">Global Reach</td>
+                <td class="cp-table-right-column">Operations and partnerships extending across Asia, the Middle East,
+                    and Africa, with regional offices in five countries.</td>
+            </tr>
+            <tr>
+                <td class="cp-table-left-column">Sustainability Focus</td>
+                <td class="cp-table-right-column">Committed to green building practices and carbon footprint reduction
+                    through innovation in material use and energy efficiency.</td>
+            </tr>
+            <tr>
+                <td class="cp-table-left-column">Awards & Recognition</td>
+                <td class="cp-table-right-column">Recipient of multiple national awards for engineering excellence and
+                    infrastructure innovation over the past decade.</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="cp-awards">
+        <div class="cp-awards-title">Awards & <span> Recognitions </span></div>
+        <p class="cp-p">Over the years, our commitment to innovation, sustainability, and excellence in infrastructure
+            development
+            has earned us prestigious accolades across the industry. From national honors in engineering to
+            international awards in environmental responsibility, each recognition reflects our unwavering focus on
+            quality, safety, and future-ready solutions.</p>
+        <div class="cp-awards-grid">
+            <div class="cp-awards-item">
+                <img src="../static/img/award1.avif" alt="Award 1" class="cp-awards-image">
+                <div class="cp-awards-content">
+                    <h3>Best Infrastructure Innovator 2023</h3>
+                    <p>Awarded for pioneering smart infrastructure solutions and delivering sustainable, future-ready
+                        development projects.</p>
+                </div>
+            </div>
+
+            <div class="cp-awards-item">
+                <img src="../static/img/awards2.avif" alt="Award 2" class="cp-awards-image">
+                <div class="cp-awards-content">
+                    <h3>Green Builder Excellence</h3>
+                    <p>Recognized for outstanding commitment to eco-friendly practices and green construction
+                        methodologies across major projects.</p>
+                </div>
+            </div>
+
+            <div class="cp-awards-item">
+                <img src="../static/img/award3.avif" alt="Award 3" class="cp-awards-image">
+                <div class="cp-awards-content">
+                    <h3>National Safety Gold Standard</h3>
+                    <p>Honored for exceptional safety performance and adherence to international safety regulations
+                        across all project sites.</p>
+                </div>
+            </div>
+
+            <div class="cp-awards-item">
+                <img src="../static/img/award4.webp" alt="Award 4" class="cp-awards-image">
+                <div class="cp-awards-content">
+                    <h3>Engineering Excellence Award</h3>
+                    <p>Presented for engineering innovation and leadership in executing complex infrastructure
+                        developments on time and on budget.</p>
+                </div>
+            </div>
+        </div>
+        <a href="{% url 'awards' %}" class="awards-btn">See More <i class="fa fa-arrow-right"></i></a>
+    </div>
+
+    <section class="cp-history">
+        <div class="cp-history-title">History & <span>Journey</span></div>
+        <div class="cp-history-content">
+            <p>
+                Founded over two decades ago, our company began as a small civil engineering firm with a bold vision —
+                to shape the nation's infrastructure landscape with integrity and innovation. In our early years, we
+                focused on regional development projects, steadily building a reputation for reliability, precision, and
+                commitment to excellence. Each milestone we reached became a stepping stone toward larger, more complex
+                endeavors.
+            </p>
+            <p>
+                Today, our journey reflects a legacy of transformation and growth. With hundreds of completed projects
+                across continents, strategic global partnerships, and a team of world-class professionals, we continue
+                to lead the way in sustainable infrastructure. Our history is not just about what we’ve built, but how
+                we’ve evolved — embracing technology, empowering communities, and engineering the future.
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-section">
+                <a href="{% url 'home' %}">
+                    <h3>InfraBuild</h3>
+                </a>
+                <p>"Building Tomorrow, <br> Strengthening Today."</p>
+                <p>Building sustainable <br>infrastructure solutions <br>that power cities, <br> industries, and lives
+                    across <br>the
+                    globe. <br>
+                    Your vision, our foundation.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="{% url 'investors' %}">Investors</a></li>
+                    <li><a href="{% url 'news' %}">News</a></li>
+                    <li><a href="{% url 'events' %}">Events</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                    <li><a href="{% url 'careers' %}">Careers</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="{% url 'about' %}">About Us</a></li>
+                    <li><a href="{% url 'expertise' %}">Expertise</a></li>
+                    <li><a href="{% url 'projects' %}">Projects</a></li>
+                    <li><a href="{% url 'digital' %}">Digital</a></li>
+                    <li><a href="{% url 'insights' %}">Insights</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><strong>Call:</strong> +0123 456 789 00</p>
+                <p><strong>Email:</strong> user@example.com</p>
+
+                <div class="subscribe-box">
+                    <input type="email" placeholder="Write Email" />
+                    <button>→</button>
+                </div>
+
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://wa.me/?text=Check%20this%20out!" target="_blank" rel="noopener noreferrer"
+                        title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div>
+                <a href="{% url 'privacy' %}">Privacy Policy</a>
+                <a href="{% url 'about' %}">Our History</a>
+                <a href="{% url 'expertise' %}">What We Do</a>
+            </div>
+            <div>
+                © 2025 InfraBuild. All images are for demo purposes only.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script>
+        window.addEventListener("scroll", function () {
+            const topbar = document.querySelector(".topbar");
+            const navbar = document.querySelector(".navbar");
+
+            if (window.scrollY > 10) {
+                topbar.classList.add("scrolled");
+                navbar.classList.add("scrolled");
+            } else {
+                topbar.classList.remove("scrolled");
+                navbar.classList.remove("scrolled");
+            }
+        });
+    </script>
+
+</body>
+
+</html>

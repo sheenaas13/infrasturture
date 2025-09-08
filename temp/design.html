@@ -1,0 +1,309 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capabilities - Design & Engineering</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="design_header">
+        <div class="topbar">
+            <div class="left">
+                <span><i class="fas fa-phone"></i> +91 98765-43210</span>
+                <span><i class="fas fa-envelope"></i> info@infrabuild.com</span>
+            </div>
+            <div class="right">
+                <a href="{% url 'investors' %}">Investors</a>
+                <a href="{% url 'news' %}">News</a>
+                <a href="{% url 'events' %}">events</a>
+                <a href="{% url 'contact' %}">Contact</a>
+                <a href="{% url 'careers' %}">Careers</a>
+            </div>
+        </div>
+        <hr class="nav-hr">
+
+        <div class="navbar">
+            <div class="logo">
+                <a href="{% url 'home' %}"><img src="../static/img/infralogo.png" alt=""></a>
+                InfraBuild
+            </div>
+            <nav>
+                <div class="dropdown">
+                    <a href="{% url 'about' %}">About Us <i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="{% url 'company_profile' %}">Company Profile</a>
+                        <a href="{% url 'leadership' %}">Leadership</a>
+                        <a href="{% url 'eco' %}">Ecosystem Partnership</a>
+                        <a href="{% url 'Business_Practice' %}">Business Practice</a>
+                        <a href="{% url 'governance' %}">Governance</a>
+                        <a href="{% url 'awards' %}">Awards</a>
+
+
+                        <button class="dropdown-btn" onclick="location.href='about'"> About <i
+                                class="fa fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <a href="{% url 'expertise' %}">Expertise</a>
+                <a href="{% url 'projects' %}">Projects</a>
+                <a href="{% url 'digital' %}">Digital</a>
+                <div class="dropdown">
+                    <a href="{% url 'insights' %}">Insights</a>
+                </div>
+                <a href="#search"><i class="fas fa-magnifying-glass"></i></a>
+            </nav>
+        </div>
+
+        <div class="header-content">
+            <h1 class="typewriter">Design & Engineering Excellence</h1>
+            <p>Our team blends creativity with precision to deliver innovative, user-centered solutions.
+                From concept to completion, every detail is engineered with purpose and care.</p>
+        </div>
+    </header>
+
+    <section class="design-section1">
+        <h2>Innovative Design <span>Backed by Engineering Precision</span></h2>
+        <p>
+            Great design begins with bold ideas and thrives on flawless execution. Our design and engineering team
+            delivers
+            future-ready solutions by merging creativity with technical depth—ensuring each project is functional,
+            scalable, and aesthetically refined from day one.
+        </p>
+        <br>
+        <p>
+            At the heart of every successful solution lies a balance between bold creativity and meticulous engineering.
+            Our approach unites imaginative design thinking with precise technical execution, ensuring every concept
+            not only inspires but performs flawlessly in the real world. Whether we're building digital platforms,
+            physical products, or integrated systems, our team ensures beauty, usability, and functionality
+            are woven seamlessly into every layer of the process.
+        </p>
+    </section>
+
+    <section class="design-section2">
+        <div class="design-text">
+            <h2>From Concept to Creation <span>with End-to-End Expertise</span></h2>
+            <p>
+                We offer a full spectrum of design and engineering services—from initial concept sketches and system
+                architecture to detailed prototypes and final implementation. With seamless collaboration between teams,
+                we ensure technical excellence and design integrity throughout every phase.
+            </p>
+            <br>
+            <p>
+                We handle every phase of the design and engineering journey—from initial ideation to final delivery.
+            </p>
+        </div>
+        <div class="design-image">
+            <img src="../static/img/design1.avif" alt="Design and Engineering Process Visualization">
+        </div>
+    </section>
+
+
+    <section class="design-section3">
+        <h2>Our Cornerstones of <span>Design & Engineering</span></h2>
+        <p class="design-main-p">
+            Our solutions are grounded in principles that ensure innovation, reliability, and seamless delivery. Whether
+            it's digital platforms, physical products, or infrastructure systems, we apply cross-disciplinary thinking
+            to engineer outcomes that exceed expectations.
+        </p>
+
+        <div class="design-point">
+            <div class="design-number">1</div>
+            <div class="design-point-content">
+                <h4>Human-Centered Design for Real-World Impact</h4>
+                <p>We prioritize user needs, accessibility, and behavior in every design choice—ensuring the final
+                    outcome
+                    is not just beautiful but highly functional and inclusive for everyone it serves.</p>
+            </div>
+        </div>
+
+        <div class="design-point">
+            <div class="design-number">2</div>
+            <div class="design-point-content">
+                <h4>Integrated Engineering Across Disciplines</h4>
+                <p>Mechanical, electrical, civil, or digital—we bring all engineering domains together to deliver
+                    unified
+                    solutions. Our multidisciplinary approach strengthens design coherence and implementation speed.</p>
+            </div>
+        </div>
+
+        <div class="design-point">
+            <div class="design-number">3</div>
+            <div class="design-point-content">
+                <h4>Rapid Prototyping & Iteration for Agility</h4>
+                <p>We believe in testing early and often. Our rapid prototyping methods allow for quick iterations,
+                    helping
+                    refine concepts and reduce costly errors before final execution begins.</p>
+            </div>
+        </div>
+
+        <div class="design-point">
+            <div class="design-number">4</div>
+            <div class="design-point-content">
+                <h4>Data & Simulation-Driven Optimization</h4>
+                <p>By harnessing simulations and performance analytics, we refine designs with precision—identifying
+                    stress points, inefficiencies, and optimization paths that drive better results and reduce risk.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="more-capabilities">
+        <div class="solutions-container">
+            <div class="solutions-text">
+                <h2 class="more-capabilities-h2"> More <span>Capabilities</span></h2>
+                <p>
+                    Infrubuild offers a full spectrum of capabilities to support every phase of infrastructure
+                    development —
+                    from strategy and design to execution and delivery — with deep domain knowledge and technical
+                    excellence.
+                </p>
+            </div>
+            <div class="solutions-grid">
+                <div class="solution-card card13">
+                    <div class="solution-card-content">
+                        <h3>Architecture</h3>
+                        <p>Shape the built environment with purposeful, resilient, and forward-thinking design
+                            principles.</p>
+                        <a href="{% url 'architecture' %}">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="solution-card card14">
+                    <div class="solution-card-content">
+                        <h3>Prog. Management</h3>
+                        <p>Coordinate complex projects with agile planning, control systems, and stakeholder alignment.
+                        </p>
+                        <a href="{% url 'prog' %}">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="solution-card card12">
+                    <div class="solution-card-content">
+                        <h3>Business Advisory</h3>
+                        <p>Drive better outcomes with expert guidance on strategy, operations, and financial
+                            structuring.</p>
+                        <a href="{% url 'business' %}">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="solution-card card15 extra-cards">
+                    <div class="solution-card-content">
+                        <h3>Commercials</h3>
+                        <p>Ensure cost-efficiency and transparency through robust financial modeling and procurement
+                            control.</p>
+                        <a href="#">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="solution-card card16 extra-cards">
+                    <div class="solution-card-content">
+                        <h3>Health & Safety</h3>
+                        <p>Promote safe delivery environments with proactive compliance, audits, and training
+                            frameworks.</p>
+                        <a href="#">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-section">
+                <a href="{% url 'home' %}">
+                    <h3>InfraBuild</h3>
+                </a>
+                <p>"Building Tomorrow, <br> Strengthening Today."</p>
+                <p>Building sustainable <br>infrastructure solutions <br>that power cities, <br> industries, and lives
+                    across <br>the
+                    globe. <br>
+                    Your vision, our foundation.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="{% url 'investors' %}">Investors</a></li>
+                    <li><a href="{% url 'news' %}">News</a></li>
+                    <li><a href="{% url 'events' %}">Events</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                    <li><a href="{% url 'careers' %}">Careers</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="{% url 'about' %}">About Us</a></li>
+                    <li><a href="{% url 'expertise' %}">Expertise</a></li>
+                    <li><a href="{% url 'projects' %}">Projects</a></li>
+                    <li><a href="{% url 'digital' %}">Digital</a></li>
+                    <li><a href="{% url 'insights' %}">Insights</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><strong>Call:</strong> +0123 456 789 00</p>
+                <p><strong>Email:</strong> user@example.com</p>
+
+                <div class="subscribe-box">
+                    <input type="email" placeholder="Write Email" />
+                    <button>→</button>
+                </div>
+
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://wa.me/?text=Check%20this%20out!" target="_blank" rel="noopener noreferrer"
+                        title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div>
+                <a href="{% url 'privacy' %}">Privacy Policy</a>
+                <a href="{% url 'about' %}">Our History</a>
+                <a href="{% url 'expertise' %}">What We Do</a>
+            </div>
+            <div>
+                © 2025 InfraBuild. All images are for demo purposes only.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script>
+        window.addEventListener("scroll", function () {
+            const topbar = document.querySelector(".topbar");
+            const navbar = document.querySelector(".navbar");
+
+            if (window.scrollY > 10) {
+                topbar.classList.add("scrolled");
+                navbar.classList.add("scrolled");
+            } else {
+                topbar.classList.remove("scrolled");
+                navbar.classList.remove("scrolled");
+            }
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,354 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InfraBuild - AboutUs</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <header
+        style=" background: linear-gradient(to right, rgb(28 40 51 / 55%), rgb(28 40 51 / 54%)), url(../static/img/aboutusheader2.avif) center / cover no-repeat;">
+        <div class="topbar">
+            <div class="left">
+                <span><i class="fas fa-phone"></i> +91 98765-43210</span>
+                <span><i class="fas fa-envelope"></i> info@infrabuild.com</span>
+            </div>
+            <div class="right">
+                <a href="{% url 'investors' %}">Investors</a>
+                <a href="{% url 'news' %}">News</a>
+                <a href="{% url 'events' %}">events</a>
+                <a href="{% url 'contact' %}">Contact</a>
+                <a href="{% url 'careers' %}">Careers</a>
+            </div>
+        </div>
+        <hr class="nav-hr">
+
+        <div class="navbar">
+            <div class="logo">
+                <a href="{% url 'home' %}"><img src="../static/img/infralogo.png" alt=""></a>
+                InfraBuild
+            </div>
+
+            <div class="toggler" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav id="nav-menu">
+                <div class="dropdown">
+                    <a href="{% url 'about' %}">About Us <i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="{% url 'company_profile' %}">Company Profile</a>
+                        <a href="{% url 'leadership' %}">Leadership</a>
+                        <a href="{% url 'eco' %}">Ecosystem Partnership</a>
+                        <a href="{% url 'Business_Practice' %}">Business Practice</a>
+                        <a href="{% url 'governance' %}">Governance</a>
+                        <a href="{% url 'awards' %}">Awards</a>
+
+
+                        <button class="dropdown-btn" onclick="location.href='about'"> About <i
+                                class="fa fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <a href="{% url 'expertise' %}">Expertise</a>
+                <a href="{% url 'projects' %}">Projects</a>
+                <a href="{% url 'digital' %}">Digital</a>
+                <div class="dropdown">
+                    <a href="{% url 'insights' %}">Insights </a>
+                    <!-- <div class="dropdown-content">
+                        <a href="#blog">Sustainablity & <br> Decarbonisation</a>
+                        <a href="#reports">Mobility</a>
+                        <a href="#news">Resilience</a>
+                        <a href="#news">places</a>
+
+                        <button class="dropdown-btn" onclick="location.href='insights'"> All Insights <i
+                                class="fa fa-arrow-right"></i></button>
+                    </div> -->
+                </div>
+                <div class="mobile-topbar">
+                    <div class="mobile-links">
+                        <a href="{% url 'investors' %}">Investors</a>
+                        <a href="{% url 'news' %}">News</a>
+                        <a href="{% url 'events' %}">Events</a>
+                        <a href="{% url 'contact' %}">Contact</a>
+                        <a href="{% url 'careers' %}">Careers</a>
+                    </div>
+                    <hr>
+                    <div class="mobile-contact">
+                        <span><i class="fas fa-phone"></i> +91 98765-43210</span>
+                        <span><i class="fas fa-envelope"></i> info@infrabuild.com</span>
+                    </div>
+                </div>
+                <a href="#search"><i class="fas fa-magnifying-glass"></i></a>
+            </nav>
+        </div>
+
+        <div class="header-content">
+            <h1 class="typewriter">Empowering Progress Through Smart <br> Infrastructure Solutions</h1>
+            <p>At InfraBuild, we engineer the foundations of progress. From resilient cities to cutting-edge transport
+                networks, we deliver infrastructure solutions that empower communities and transform the future.</p>
+        </div>
+    </header>
+
+    <section class="aboutsection1">
+        <h2>Building the Future of <span> Infrastructure Together </span></h2>
+        <p>
+            At InfraBuild, we are committed to shaping a stronger tomorrow through forward-thinking infrastructure. Our
+            mission is to design and deliver sustainable solutions that support economic development, urban growth, and
+            environmental responsibility across the globe.
+        </p>
+        <p>
+            With a legacy of excellence and a passion for innovation, we collaborate with stakeholders to build smarter,
+            safer, and more resilient systems. From highways and bridges to energy and digital infrastructure, we bring
+            vision and reliability to every project we undertake.
+        </p>
+    </section>
+
+    <section class="section-mission">
+        <div class="section-content">
+            <h2>Our Mission</h2>
+            <p>
+                At InfraBuild, our mission is to deliver infrastructure that enhances the quality of life, supports
+                innovation, and connects people and communities. We strive to create systems that not only meet today’s
+                demands but also anticipate tomorrow’s challenges.
+            </p>
+            <p>
+                Through collaboration, cutting-edge technology, and sustainable practices, we aim to empower cities and
+                industries with infrastructure that lasts generations and drives progress in every dimension.
+            </p>
+
+            <a href="{% url 'company_profile' %}"> See our company Profile <i class="fa fa-arrow-right"></i></a>
+        </div>
+        <div class="section-image" data-aos="fade-left" data-aos-duration="1200">
+            <img src="../static/img/missionimage.avif" alt="Mission Image">
+        </div>
+    </section>
+
+    <section class="section-vision">
+        <div class="section-content">
+            <h2>Our Vision</h2>
+            <p>
+                We envision a future where infrastructure is intelligent, adaptive, and deeply rooted in sustainability.
+                InfraBuild aims to lead the transformation of global infrastructure, setting new standards for design,
+                execution, and environmental responsibility.
+            </p>
+            <p>
+                By embracing innovation and prioritizing resilience, our vision is to build a world where infrastructure
+                empowers opportunity, safeguards the environment, and inspires generations to come.
+            </p>
+
+            <a href="{% url 'eco' %}"> See our Ecosystem Partnerships <i class="fa fa-arrow-right"></i></a>
+        </div>
+        <div class="section-image" data-aos="fade-left" data-aos-duration="1200">
+            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" alt="Vision Image">
+        </div>
+    </section>
+
+    <section class="about-service-section">
+        <h2>Purpose-driven <span>Transformation</span></h2>
+        <div class="about-service-grid">
+            <div class="about-service-card">
+                <img src="../static/img/boy-fatherabout.webp" alt="Smart Infrastructure">
+                <div class="about-overlay">
+                    <div class="about-icon"><i class="fas fa-city"></i></div>
+                    <h3>Mobility</h3>
+                    <p>Integrating technology into urban infrastructure for better efficiency and sustainability.</p>
+                    <a href="{% url 'mobility' %}">Read More</a>
+                </div>
+            </div>
+            <div class="about-service-card">
+                <img src="../static/img/Asset-Managem-E.webp" alt="Smart Infrastructure">
+                <div class="about-overlay">
+                    <div class="about-icon"><i class="fas fa-seedling"></i></div>
+                    <h3>Asset Management</h3>
+                    <p>Maximize infrastructure value through lifecycle analysis and smart asset optimization
+                        strategies.</p>
+                    <a href="{% url 'asset' %}">Read More</a>
+                </div>
+            </div>
+            <div class="about-service-card">
+                <img src="../static/img/connecthighways-E.webp" alt="Sustainable Development">
+                <div class="about-overlay">
+                    <div class="about-icon"><i class="fas fa-hard-hat"></i></div>
+                    <h3>Connected Highways</h3>
+                    <p>Streamlined labor management systems that improve productivity and oversight.</p>
+                    <a href="{% url 'connectedhighway' %}">Read More</a>
+                </div>
+            </div>
+            <div class="about-service-card">
+                <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914" alt="Urban Planning">
+                <div class="about-overlay">
+                    <div class="about-icon"><i class="fas fa-drafting-compass"></i></div>
+                    <h3>Places</h3>
+                    <p>Designing resilient cities with infrastructure that supports growing urban populations.</p>
+                    <a href="{% url 'places' %}">Read More</a>
+                </div>
+            </div>
+        </div>
+        <div class="about-extra-content">
+            <p>
+                At InfraBuild, our mission is to reshape the future by engineering infrastructure that is not only
+                functional but also resilient and forward-thinking. We focus on long-term impact, ensuring every project
+                contributes to the development of smarter, more sustainable communities. From energy-efficient
+                construction methods to integrated smart systems, our projects are built with purpose and precision.
+            </p>
+            <br>
+            <p>
+                We believe that infrastructure should do more than just serve—it should inspire and empower. Our team is
+                dedicated to harnessing innovation, technology, and deep industry expertise to design and deliver
+                infrastructure that adapts to the changing needs of society. By working closely with partners and
+                stakeholders, we create environments that foster growth, connectivity, and well-being for generations to
+                come.
+            </p>
+        </div>
+    </section>
+
+    <section class="about-highlight-section">
+        <div class="about-highlight-container">
+            <div class="about-highlight-text">
+                <h2><span>Transforming Infrastructure</span> for Tomorrow</h2>
+                <p>
+                    We're building a more connected, resilient world by unlocking the power of modern infrastructure.
+                    Our projects
+                    span sustainable transportation systems, smart cities, and energy-efficient solutions—designed to
+                    shape a better future.
+                </p>
+                <ul>
+                    <li>✅ 500+ Completed Infrastructure Projects</li>
+                    <li>✅ 90% Client Satisfaction Rate</li>
+                    <li>✅ Net-Zero Design Integration</li>
+                </ul>
+                <a href="{% url 'Business_Practice' %}" class="about-highlight-btn">See our Business Practices</a>
+            </div>
+
+            <div class="about-highlight-images">
+                <img src="../static/img/abouthighlight1.avif" alt="Modern Bridge" class="about-image image-one">
+                <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be" alt="Smart City"
+                    class="about-image image-two" >
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-section">
+                <a href="{% url 'home' %}">
+                    <h3>InfraBuild</h3>
+                </a>
+                <p>"Building Tomorrow, <br> Strengthening Today."</p>
+                <p>Building sustainable <br>infrastructure solutions <br>that power cities, <br> industries, and lives
+                    across <br>the
+                    globe. <br>
+                    Your vision, our foundation.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="{% url 'investors' %}">Investors</a></li>
+                    <li><a href="{% url 'news' %}">News</a></li>
+                    <li><a href="{% url 'events' %}">Events</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                    <li><a href="{% url 'careers' %}">Careers</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="{% url 'about' %}">About Us</a></li>
+                    <li><a href="{% url 'expertise' %}">Expertise</a></li>
+                    <li><a href="{% url 'projects' %}">Projects</a></li>
+                    <li><a href="{% url 'digital' %}">Digital</a></li>
+                    <li><a href="{% url 'insights' %}">Insights</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><strong>Call:</strong> +0123 456 789 00</p>
+                <p><strong>Email:</strong> user@example.com</p>
+
+                <div class="subscribe-box">
+                    <input type="email" placeholder="Write Email" />
+                    <button>→</button>
+                </div>
+
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://wa.me/?text=Check%20this%20out!" target="_blank" rel="noopener noreferrer"
+                        title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div>
+                <a href="{% url 'privacy' %}">Privacy Policy</a>
+                <a href="{% url 'about' %}">Our History</a>
+                <a href="{% url 'expertise' %}">What We Do</a>
+            </div>
+            <div>
+                © 2025 InfraBuild. All images are for demo purposes only.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function closeMoveBox() {
+            document.querySelector('.move-box').style.display = 'none';
+        }
+
+        function refreshForm() {
+            document.getElementById('projectForm').reset();
+            document.getElementById('estimateSection').classList.add('estimate-section2-hidden');
+            document.getElementById('formContainer').style.display = 'block';
+        }
+    </script>
+
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("nav-menu").classList.toggle("show");
+        }
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script>
+        window.addEventListener("scroll", function () {
+            const topbar = document.querySelector(".topbar");
+            const navbar = document.querySelector(".navbar");
+
+            if (window.scrollY > 10) {
+                topbar.classList.add("scrolled");
+                navbar.classList.add("scrolled");
+            } else {
+                topbar.classList.remove("scrolled");
+                navbar.classList.remove("scrolled");
+            }
+        });
+    </script>
+
+</body>
+
+</html>

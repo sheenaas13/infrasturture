@@ -1,0 +1,287 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solution - Restoration</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="restoration_header">
+        <div class="topbar">
+            <div class="left">
+                <span><i class="fas fa-phone"></i> +91 98765-43210</span>
+                <span><i class="fas fa-envelope"></i> info@infrabuild.com</span>
+            </div>
+            <div class="right">
+                <a href="{% url 'investors' %}">Investors</a>
+                <a href="{% url 'news' %}">News</a>
+                <a href="{% url 'events' %}">events</a>
+                <a href="{% url 'contact' %}">Contact</a>
+                <a href="{% url 'careers' %}">Careers</a>
+            </div>
+        </div>
+        <hr class="nav-hr">
+
+        <div class="navbar">
+            <div class="logo">
+                <a href="{% url 'home' %}"><img src="../static/img/infralogo.png" alt=""></a>
+                InfraBuild
+            </div>
+            <nav>
+                <div class="dropdown">
+                    <a href="{% url 'about' %}">About Us <i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="{% url 'company_profile' %}">Company Profile</a>
+                        <a href="{% url 'leadership' %}">Leadership</a>
+                        <a href="{% url 'eco' %}">Ecosystem Partnership</a>
+                        <a href="{% url 'Business_Practice' %}">Business Practice</a>
+                        <a href="{% url 'governance' %}">Governance</a>
+                        <a href="{% url 'awards' %}">Awards</a>
+
+
+                        <button class="dropdown-btn" onclick="location.href='about'"> About <i
+                                class="fa fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <a href="{% url 'expertise' %}">Expertise</a>
+                <a href="{% url 'projects' %}">Projects</a>
+                <a href="{% url 'digital' %}">Digital</a>
+                <div class="dropdown">
+                    <a href="{% url 'insights' %}">Insights</a>
+                </div>
+                <a href="#search"><i class="fas fa-magnifying-glass"></i></a>
+            </nav>
+        </div>
+
+        <div class="header-content">
+            <h1 class="typewriter">Reviving What Matters Most</h1>
+            <p>We believe in bringing life back to the things that matter — your spaces, your community, and your peace
+                of mind.
+                Our restoration services are rooted in care, precision, and resilience.
+                Together, let's rebuild stronger, safer, and more beautifully than before.</p>
+        </div>
+    </header>
+
+    <section class="restorationsection1">
+        <div class="restorationsection1-container">
+            <h2 class="restorationsection1-heading">Restoring Balance <span>to Our Built and Natural Environments</span>
+            </h2>
+            <p class="restorationsection1-para">
+                Restoration goes beyond repair—it’s about renewal. As our world faces degradation from overuse and
+                neglect,
+                we work to heal landscapes, revitalize ecosystems, and breathe new life into urban and rural spaces. Our
+                approach blends ecological insight with human-centered design to restore harmony between people and
+                planet.
+            </p>
+        </div>
+    </section>
+
+    <section class="restorationsection2">
+        <h2>Our Holistic <span>Restoration Strategies</span></h2>
+        <p class="restorationsection2-subheading">
+            True restoration is about more than returning things to the way they were—it's about reimagining healthier,
+            more sustainable futures. Through ecological regeneration, adaptive reuse, and inclusive design, we bring
+            new
+            value to neglected spaces. Our projects help nature recover and communities flourish together.
+        </p>
+
+        <div class="restorationsection2-item">
+            <div class="restorationsection2-image">
+                <img src="../static/img/restoration1" alt="Ecological Restoration">
+            </div>
+            <div class="restorationsection2-text">
+                <h3>Ecological Restoration</h3>
+                <p>We restore degraded habitats—replanting native species, improving soil health, and reviving water
+                    bodies
+                    to rebuild resilient ecosystems that support biodiversity and carbon capture.</p>
+                <p>Our nature-based restoration work ensures healthier landscapes that sustain both people and wildlife
+                    for
+                    generations to come.</p>
+            </div>
+        </div>
+
+        <div class="restorationsection2-item">
+            <div class="restorationsection2-text">
+                <h3>Urban Renewal & Adaptive Reuse</h3>
+                <p>We breathe new life into abandoned and underutilized urban areas by transforming them into vibrant,
+                    multifunctional spaces. Our designs respect the past while serving the needs of the present.</p>
+                <p>By repurposing structures and revitalizing neighborhoods, we create sustainable cities that honor
+                    culture,
+                    community, and continuity.</p>
+            </div>
+            <div class="restorationsection2-image">
+                <img src="../static/img/restoration2" alt="Urban Restoration">
+            </div>
+        </div>
+
+        <div class="restorationsection2-item">
+            <div class="restorationsection2-image">
+                <img src="../static/img/restoration3" alt="Watershed Rehabilitation">
+            </div>
+            <div class="restorationsection2-text">
+                <h3>Watershed Rehabilitation</h3>
+                <p>Healthy watersheds are lifelines for communities. We restore riverbanks, wetlands, and aquifers to
+                    improve water quality, reduce erosion, and build flood resilience through ecological engineering.
+                </p>
+                <p>This work supports sustainable agriculture, wildlife habitats, and climate adaptation efforts
+                    simultaneously.</p>
+            </div>
+        </div>
+
+        <div class="restorationsection2-item">
+            <div class="restorationsection2-text">
+                <h3>Community-Led Restoration</h3>
+                <p>We empower local communities to lead restoration efforts—building skills, fostering stewardship, and
+                    creating shared value through participatory design and implementation.</p>
+                <p>True restoration is inclusive. It thrives when people feel ownership, pride, and connection to the
+                    landscapes they help renew.</p>
+            </div>
+            <div class="restorationsection2-image">
+                <img src="../static/img/restoration4.jpg" alt="Community Restoration Projects">
+            </div>
+        </div>
+    </section>
+
+    <section class="more-mobility">
+        <div class="more-mobility-container">
+            <div class="solutions-text">
+                <h2> Learn about More Solutions</h2>
+            </div>
+            <div class="solutions-grid">
+                <div class="solution-card card2">
+                    <div class="solution-card-content">
+                        <h3>Climage change</h3>
+                        <p>Advanced analytics to minimize costs while maintaining quality and compliance.</p>
+
+                        <a href="{% url 'climatechange' %}">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="solution-card card8">
+                    <div class="solution-card-content">
+                        <h3>Urbanism</h3>
+                        <p>Transform urban development with integrated solutions for smart mobility, green buildings.
+                        </p>
+
+                        <a href="{% url 'urbanism' %}">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="solution-card card7">
+                    <div class="solution-card-content">
+                        <h3>Restoration</h3>
+                        <p>Utilize eco-centric strategies to restore degraded environments and promote long-term
+                            ecological balance.</p>
+
+                        <a href="{% url 'restoration' %}">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="footer">
+            <div class="footer-section">
+                <a href="{% url 'home' %}">
+                    <h3>InfraBuild</h3>
+                </a>
+                <p>"Building Tomorrow, <br> Strengthening Today."</p>
+                <p>Building sustainable <br>infrastructure solutions <br>that power cities, <br> industries, and lives
+                    across <br>the
+                    globe. <br>
+                    Your vision, our foundation.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="{% url 'investors' %}">Investors</a></li>
+                    <li><a href="{% url 'news' %}">News</a></li>
+                    <li><a href="{% url 'events' %}">Events</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                    <li><a href="{% url 'careers' %}">Careers</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="{% url 'about' %}">About Us</a></li>
+                    <li><a href="{% url 'expertise' %}">Expertise</a></li>
+                    <li><a href="{% url 'projects' %}">Projects</a></li>
+                    <li><a href="{% url 'digital' %}">Digital</a></li>
+                    <li><a href="{% url 'insights' %}">Insights</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><strong>Call:</strong> +0123 456 789 00</p>
+                <p><strong>Email:</strong> user@example.com</p>
+
+                <div class="subscribe-box">
+                    <input type="email" placeholder="Write Email" />
+                    <button>→</button>
+                </div>
+
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://wa.me/?text=Check%20this%20out!" target="_blank" rel="noopener noreferrer"
+                        title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div>
+                <a href="{% url 'privacy' %}">Privacy Policy</a>
+                <a href="{% url 'about' %}">Our History</a>
+                <a href="{% url 'expertise' %}">What We Do</a>
+            </div>
+            <div>
+                © 2025 InfraBuild. All images are for demo purposes only.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script>
+        window.addEventListener("scroll", function () {
+            const topbar = document.querySelector(".topbar");
+            const navbar = document.querySelector(".navbar");
+
+            if (window.scrollY > 10) {
+                topbar.classList.add("scrolled");
+                navbar.classList.add("scrolled");
+            } else {
+                topbar.classList.remove("scrolled");
+                navbar.classList.remove("scrolled");
+            }
+        });
+    </script>
+
+</body>
+
+</html>

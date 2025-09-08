@@ -1,0 +1,279 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sectors - Contractors</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="contractors_header">
+        <div class="topbar">
+            <div class="left">
+                <span><i class="fas fa-phone"></i> +91 98765-43210</span>
+                <span><i class="fas fa-envelope"></i> info@infrabuild.com</span>
+            </div>
+            <div class="right">
+                <a href="{% url 'investors' %}">Investors</a>
+                <a href="{% url 'news' %}">News</a>
+                <a href="{% url 'events' %}">events</a>
+                <a href="{% url 'contact' %}">Contact</a>
+                <a href="{% url 'careers' %}">Careers</a>
+            </div>
+        </div>
+        <hr class="nav-hr">
+
+        <div class="navbar">
+            <div class="logo">
+                <a href="{% url 'home' %}"><img src="../static/img/infralogo.png" alt=""></a>
+                InfraBuild
+            </div>
+            <nav>
+                <div class="dropdown">
+                    <a href="{% url 'about' %}">About Us <i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="{% url 'company_profile' %}">Company Profile</a>
+                        <a href="{% url 'leadership' %}">Leadership</a>
+                        <a href="{% url 'eco' %}">Ecosystem Partnership</a>
+                        <a href="{% url 'Business_Practice' %}">Business Practice</a>
+                        <a href="{% url 'governance' %}">Governance</a>
+                        <a href="{% url 'awards' %}">Awards</a>
+
+
+                        <button class="dropdown-btn" onclick="location.href='about'"> About <i
+                                class="fa fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <a href="{% url 'expertise' %}">Expertise</a>
+                <a href="{% url 'projects' %}">Projects</a>
+                <a href="{% url 'digital' %}">Digital</a>
+                <div class="dropdown">
+                    <a href="{% url 'insights' %}">Insights</a>
+                </div>
+                <a href="#search"><i class="fas fa-magnifying-glass"></i></a>
+            </nav>
+        </div>
+
+        <div class="header-content">
+            <h1 class="typewriter">Partnering for Construction Excellence</h1>
+            <p>We work hand-in-hand with contractors to deliver infrastructure that’s efficient, scalable, and
+                future-ready.
+                From complex builds to fast-track developments, our collaborative approach drives success at every
+                stage.</p>
+        </div>
+    </header>
+
+    <section class="contractors-section1">
+        <div class="contractors-container">
+            <h1 class="contractors-heading">Building Success with <span>Trusted Partnerships</span></h1>
+            <p class="contractors-paragraph">
+                Contractors are the backbone of infrastructure delivery—and we design with their needs in mind. From
+                pre-construction planning to on-site efficiency, our solutions streamline timelines, enhance safety,
+                and minimize complexity.
+            </p>
+            <p class="contractors-paragraph">
+                Our infrastructure is tailored to real-world challenges: clear logistics, durable materials, and
+                adaptable
+                frameworks that make execution faster and smoother. We align with contractors at every step to bring
+                visions
+                to life with precision.
+            </p>
+        </div>
+    </section>
+
+    <section class="contractors-section2">
+        <div class="contractors-text">
+            <h2>Designed for Builders <span>Streamlined, Practical & Scalable</span></h2>
+        </div>
+        <div class="contractors-card-container">
+            <div class="contractors-card">
+                <div class="contractors-card-icon"><i class="fas fa-hard-hat"></i></div>
+                <h3>Pre-Fab Zones</h3>
+                <p>Optimized areas for modular construction, reducing time and on-site complexity.</p>
+            </div>
+            <div class="contractors-card">
+                <div class="contractors-card-icon"><i class="fas fa-drafting-compass"></i></div>
+                <h3>Planning Support Units</h3>
+                <p>Dedicated rooms for reviewing blueprints, schedules, and resource allocation.</p>
+            </div>
+            <div class="contractors-card">
+                <div class="contractors-card-icon"><i class="fas fa-truck-loading"></i></div>
+                <h3>Material Handling Bays</h3>
+                <p>Efficiently designed for storing and moving raw materials with minimal waste.</p>
+            </div>
+            <div class="contractors-card">
+                <div class="contractors-card-icon"><i class="fas fa-shield-alt"></i></div>
+                <h3>Safety Briefing Centers</h3>
+                <p>Spaces built for safety inductions, gear checks, and compliance briefings.</p>
+            </div>
+            <div class="contractors-card">
+                <div class="contractors-card-icon"><i class="fas fa-plug"></i></div>
+                <h3>Tool Charging Stations</h3>
+                <p>Centralized, secure stations for charging power tools and storing equipment.</p>
+            </div>
+            <div class="contractors-card">
+                <div class="contractors-card-icon"><i class="fas fa-users-cog"></i></div>
+                <h3>On-Site Coordination Hubs</h3>
+                <p>Integrated areas for team sync-ups, digital scheduling, and real-time tracking.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contractors-section3">
+        <div class="contractors-text">
+            <h2>Infrastructure that Works <span>Aligned with On-Site Needs</span></h2>
+            <p>
+                Our contractor-first mindset ensures infrastructure that performs in the field. With clear logistics,
+                access routes, and real-time communication systems, our developments make site execution smoother,
+                faster, and safer—from groundbreaking to grand opening.
+            </p>
+        </div>
+        <div class="contractors-image">
+            <img src="../static/img/contractors1.webp" alt="Contractor-Centric Infrastructure">
+        </div>
+    </section>
+
+    <section class="more-sectors">
+        <div class="solutions-container">
+            <div class="solutions-text">
+                <h2>More Sectors</h2>
+                <p>
+                    Infrabuild serves a broad range of sectors with tailored solutions that address unique industry
+                    needs — leveraging deep insights, specialized tools, and global expertise to drive excellence.
+                </p>
+            </div>
+
+            <div class="solutions-grid">
+                <div class="solution-card card19">
+                    <div class="solution-card-content">
+                        <h3>Chemical</h3>
+                        <p>Deliver safe, efficient facilities with risk-managed engineering and process-driven design
+                            solutions.</p>
+                        <a href="{% url 'chemical' %}">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="solution-card card18">
+                    <div class="solution-card-content">
+                        <h3>Automotive</h3>
+                        <p>Accelerate infrastructure with advanced mobility, automation, and sustainable manufacturing
+                            support.</p>
+                        <a href="{% url 'automotive' %}">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="solution-card card22">
+                    <div class="solution-card-content">
+                        <h3>Power</h3>
+                        <p>Support energy systems with reliable infrastructure built for flexibility and operational
+                            uptime.</p>
+                        <a href="{% url 'power' %}">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-section">
+                <a href="{% url 'home' %}">
+                    <h3>InfraBuild</h3>
+                </a>
+                <p>"Building Tomorrow, <br> Strengthening Today."</p>
+                <p>Building sustainable <br>infrastructure solutions <br>that power cities, <br> industries, and lives
+                    across <br>the
+                    globe. <br>
+                    Your vision, our foundation.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="{% url 'investors' %}">Investors</a></li>
+                    <li><a href="{% url 'news' %}">News</a></li>
+                    <li><a href="{% url 'events' %}">Events</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                    <li><a href="{% url 'careers' %}">Careers</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="{% url 'about' %}">About Us</a></li>
+                    <li><a href="{% url 'expertise' %}">Expertise</a></li>
+                    <li><a href="{% url 'projects' %}">Projects</a></li>
+                    <li><a href="{% url 'digital' %}">Digital</a></li>
+                    <li><a href="{% url 'insights' %}">Insights</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><strong>Call:</strong> +0123 456 789 00</p>
+                <p><strong>Email:</strong> user@example.com</p>
+
+                <div class="subscribe-box">
+                    <input type="email" placeholder="Write Email" />
+                    <button>→</button>
+                </div>
+
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://wa.me/?text=Check%20this%20out!" target="_blank" rel="noopener noreferrer"
+                        title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div>
+                <a href="{% url 'privacy' %}">Privacy Policy</a>
+                <a href="{% url 'about' %}">Our History</a>
+                <a href="{% url 'expertise' %}">What We Do</a>
+            </div>
+            <div>
+                © 2025 InfraBuild. All images are for demo purposes only.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script>
+        window.addEventListener("scroll", function () {
+            const topbar = document.querySelector(".topbar");
+            const navbar = document.querySelector(".navbar");
+
+            if (window.scrollY > 10) {
+                topbar.classList.add("scrolled");
+                navbar.classList.add("scrolled");
+            } else {
+                topbar.classList.remove("scrolled");
+                navbar.classList.remove("scrolled");
+            }
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,395 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InfraBuild - Digital</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <header
+        style=" background: linear-gradient(to right, rgb(28 40 51 / 55%), rgb(28 40 51 / 54%)), url(../static/img/digitalheader.avif) center / cover no-repeat;">
+        <div class="topbar">
+            <div class="left">
+                <span><i class="fas fa-phone"></i> +91 98765-43210</span>
+                <span><i class="fas fa-envelope"></i> info@infrabuild.com</span>
+            </div>
+            <div class="right">
+                <a href="{% url 'investors' %}">Investors</a>
+                <a href="{% url 'news' %}">News</a>
+                <a href="{% url 'events' %}">events</a>
+                <a href="{% url 'contact' %}">Contact</a>
+                <a href="{% url 'careers' %}">Careers</a>
+            </div>
+        </div>
+        <hr class="nav-hr">
+
+        <div class="navbar">
+            <div class="logo">
+                <a href="{% url 'home' %}"><img src="../static/img/infralogo.png" alt=""></a>
+                InfraBuild
+            </div>
+
+            <div class="toggler" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav id="nav-menu">
+                <div class="dropdown">
+                    <a href="{% url 'about' %}">About Us <i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="{% url 'company_profile' %}">Company Profile</a>
+                        <a href="{% url 'leadership' %}">Leadership</a>
+                        <a href="{% url 'eco' %}">Ecosystem Partnership</a>
+                        <a href="{% url 'Business_Practice' %}">Business Practice</a>
+                        <a href="{% url 'governance' %}">Governance</a>
+                        <a href="{% url 'awards' %}">Awards</a>
+
+
+                        <button class="dropdown-btn" onclick="location.href='about'"> About <i
+                                class="fa fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <a href="{% url 'expertise' %}">Expertise</a>
+                <a href="{% url 'projects' %}">Projects</a>
+                <a href="{% url 'digital' %}">Digital</a>
+                <div class="dropdown">
+                    <a href="{% url 'insights' %}">Insights </a>
+                    <!-- <div class="dropdown-content">
+                        <a href="#blog">Sustainablity & <br> Decarbonisation</a>
+                        <a href="#reports">Mobility</a>
+                        <a href="#news">Resilience</a>
+                        <a href="#news">places</a>
+
+                        <button class="dropdown-btn" onclick="location.href='insights'"> All Insights <i
+                                class="fa fa-arrow-right"></i></button>
+                    </div> -->
+                </div>
+                <div class="mobile-topbar">
+                    <div class="mobile-links">
+                        <a href="{% url 'investors' %}">Investors</a>
+                        <a href="{% url 'news' %}">News</a>
+                        <a href="{% url 'events' %}">Events</a>
+                        <a href="{% url 'contact' %}">Contact</a>
+                        <a href="{% url 'careers' %}">Careers</a>
+                    </div>
+                    <hr>
+                    <div class="mobile-contact">
+                        <span><i class="fas fa-phone"></i> +91 98765-43210</span>
+                        <span><i class="fas fa-envelope"></i> info@infrabuild.com</span>
+                    </div>
+                </div>
+                <a href="#search"><i class="fas fa-magnifying-glass"></i></a>
+            </nav>
+        </div>
+
+        <div class="header-content">
+            <h1 class="typewriter">Laying the Digital Groundwork  <br>for Future-Ready Cities</h1>
+            <p>At InfraBuild, we digitize the core of connection. From smart networks to future-ready systems, we craft
+                digital infrastructure that drives innovation and empowers modern living.</p>
+        </div>
+    </header>
+
+    <section class="digital-section1">
+        <div class="container">
+            <h2 class="digital-heading">Empowering Progress with <span> Digital Infrastructure </span></h2>
+            <p class="digital-paragraph">
+                At InfraBuild, we believe that true progress begins with intelligent connectivity. Our digital
+                infrastructure projects are designed to support smart cities, efficient governance, and future-proof
+                economies. Whether it’s high-speed broadband, integrated data systems, or secure cloud platforms, we lay
+                the groundwork for communities to thrive in a digital-first world.
+            </p>
+            <p class="digital-paragraph">
+                By blending innovation with reliability, we ensure our digital solutions are scalable, sustainable, and
+                secure. From real-time traffic management to IoT-powered utilities, every system we deploy is engineered
+                to enhance the way people live and work. Our vision is to build digital infrastructure that not only
+                connects — but empowers.
+            </p>
+        </div>
+    </section>
+
+    <section class="values-proposition-section">
+        <div class="values-container">
+            <div class="values-grid">
+                <h2 class="values-heading">Driving Digital Growth at InfraBuild</h2>
+
+                <div class="value-box">
+                    <div class="icon"><i class="bi bi-laptop"></i></div>
+                    <p>Digitally transform infrastructure delivery with modern tech tools.</p>
+                </div>
+
+                <div class="value-box">
+                    <div class="icon"><i class="bi bi-bar-chart-line"></i></div>
+                    <p>Leverage data analytics for strategic planning and scalability.</p>
+                </div>
+
+                <div class="value-box highlight">
+                    <div class="icon"><i class="bi bi-globe"></i></div>
+                    <p>Expand our digital ecosystem to connect communities efficiently.</p>
+                </div>
+
+                <div class="value-box">
+                    <div class="icon"><i class="bi bi-rocket-takeoff"></i></div>
+                    <p>Innovate with emerging technologies to future-proof our services.</p>
+                </div>
+            </div>
+
+            <div class="values-image">
+                <img src="../static/img/digital2.avif" alt="Digital growth at InfraBuild">
+            </div>
+        </div>
+    </section>
+
+    <section class="line-chart-section">
+        <h2>InfraBuild's <span> Digital Growth </span> Journey</h2>
+        <p>Since its inception in 2019, InfraBuild has rapidly evolved from an idea to a dynamic force in digital
+            infrastructure. Through continuous innovation and strategic vision, our digital capabilities have expanded
+            significantly by 2025, enabling smarter, faster, and more sustainable solutions.</p>
+        <canvas id="growthChart" height="300"></canvas>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let animated = false;
+
+            function animateChart() {
+                if (animated) return;
+                const canvas = document.getElementById('growthChart');
+                if (!canvas) return;
+                const ctx = canvas.getContext('2d');
+
+                new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: ['2019', '2020', '2021', '2022', '2023', '2024', '2025'],
+                        datasets: [{
+                            label: 'Digital Growth (%)',
+                            data: [5, 20, 35, 50, 70, 85, 100],
+                            backgroundColor: 'rgba(229, 93, 0, 0.1)',
+                            borderColor: '#e55d00',
+                            pointBackgroundColor: '#e55d00',
+                            pointBorderColor: '#fff',
+                            borderWidth: 3,
+                            tension: 0.4,
+                            fill: true,
+                        }]
+                    },
+                    options: {
+                        animation: {
+                            duration: 2000
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                max: 100,
+                                ticks: {
+                                    stepSize: 20
+                                }
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                display: false
+                            }
+                        }
+                    }
+                });
+                animated = true;
+            }
+
+            window.addEventListener('scroll', function () {
+                const chartSection = document.querySelector('.line-chart-section');
+                if (!chartSection) return;
+                const rect = chartSection.getBoundingClientRect();
+                if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+                    animateChart();
+                }
+            });
+
+
+            const rect = document.querySelector('.line-chart-section').getBoundingClientRect();
+            if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+                animateChart();
+            }
+        });
+    </script>
+
+    <section class="digital-offer-intro">
+        <h2>What We Offer <span>Digitally </span> </h2>
+        <p>InfraBuild is committed to reshaping the future through digital innovation—delivering smarter infrastructure,
+            seamless connectivity, and transformative solutions.</p>
+    </section>
+
+    <section class="digital-section2">
+        <div class="image">
+            <img src="../static/img/digitalsec2.webp" alt="Digital Solution">
+        </div>
+        <div class="content">
+            <h2>Digital Solution</h2>
+            <p>InfraBuild provides robust digital solutions that streamline project workflows, enhance collaboration,
+                and ensure timely delivery through intelligent platforms.</p>
+            <p>By embracing emerging tech, we empower our teams to deliver visionary infrastructure solutions.</p>
+            <button onclick="window.location.href='expertise#solutions'">Learn More <i
+                    class="fa fa-arrow-right"></i></button>
+        </div>
+    </section>
+
+    <hr class="digi-hr">
+
+    <section class="digital-section3">
+        <div class="image">
+            <img src="../static/img/digitalsec3.webp" alt="Digital Project">
+        </div>
+        <div class="content">
+            <h2>Digital Project</h2>
+            <p>We embrace smart technology integration in every infrastructure project, ensuring transparency, real-time
+                monitoring, and operational efficiency.</p>
+
+            <p>Our solutions adapt to project complexity, ensuring seamless coordination and reduced downtime.</p>
+            <button onclick="window.location.href='projects#Projects'">Learn More <i
+                    class="fa fa-arrow-right"></i></button>
+        </div>
+    </section>
+
+    <hr class="digi-hr">
+
+    <section class="digital-section4">
+        <div class="image">
+            <img src="../static/img/digitalsec4.png" alt="Digital Leadership">
+        </div>
+        <div class="content">
+            <h2>Digital Insights</h2>
+            <p>Our leadership is rooted in a digital-first mindset, driving innovation and agility to lead the future of
+                smart infrastructure development.</p>
+            <p>We prioritize efficiency, accountability, and innovation across our project portfolio.</p>
+            <button onclick="window.location.href='insights#insights'">Learn More <i
+                    class="fa fa-arrow-right"></i></button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-section">
+                <a href="{% url 'home' %}">
+                    <h3>InfraBuild</h3>
+                </a>
+                <p>"Building Tomorrow, <br> Strengthening Today."</p>
+                <p>Building sustainable <br>infrastructure solutions <br>that power cities, <br> industries, and lives
+                    across <br>the
+                    globe. <br>
+                    Your vision, our foundation.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="{% url 'investors' %}">Investors</a></li>
+                    <li><a href="{% url 'news' %}">News</a></li>
+                    <li><a href="{% url 'events' %}">Events</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                    <li><a href="{% url 'careers' %}">Careers</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="{% url 'about' %}">About Us</a></li>
+                    <li><a href="{% url 'expertise' %}">Expertise</a></li>
+                    <li><a href="{% url 'projects' %}">Projects</a></li>
+                    <li><a href="{% url 'digital' %}">Digital</a></li>
+                    <li><a href="{% url 'insights' %}">Insights</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><strong>Call:</strong> +0123 456 789 00</p>
+                <p><strong>Email:</strong> user@example.com</p>
+
+                <div class="subscribe-box">
+                    <input type="email" placeholder="Write Email" />
+                    <button>→</button>
+                </div>
+
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://wa.me/?text=Check%20this%20out!" target="_blank" rel="noopener noreferrer"
+                        title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div>
+                <a href="{% url 'privacy' %}">Privacy Policy</a>
+                <a href="{% url 'about' %}">Our History</a>
+                <a href="{% url 'expertise' %}">What We Do</a>
+            </div>
+            <div>
+                © 2025 InfraBuild. All images are for demo purposes only.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function closeMoveBox() {
+            document.querySelector('.move-box').style.display = 'none';
+        }
+
+        function refreshForm() {
+            document.getElementById('projectForm').reset();
+            document.getElementById('estimateSection').classList.add('estimate-section2-hidden');
+            document.getElementById('formContainer').style.display = 'block';
+        }
+    </script>
+
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("nav-menu").classList.toggle("show");
+        }
+    </script>
+
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script>
+        window.addEventListener("scroll", function () {
+            const topbar = document.querySelector(".topbar");
+            const navbar = document.querySelector(".navbar");
+
+            if (window.scrollY > 10) {
+                topbar.classList.add("scrolled");
+                navbar.classList.add("scrolled");
+            } else {
+                topbar.classList.remove("scrolled");
+                navbar.classList.remove("scrolled");
+            }
+        });
+    </script>
+
+</body>
+
+</html>

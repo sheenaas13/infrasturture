@@ -1,0 +1,289 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solutions - Resilience</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="resilience_header">
+        <div class="topbar">
+            <div class="left">
+                <span><i class="fas fa-phone"></i> +91 98765-43210</span>
+                <span><i class="fas fa-envelope"></i> info@infrabuild.com</span>
+            </div>
+            <div class="right">
+                <a href="{% url 'investors' %}">Investors</a>
+                <a href="{% url 'news' %}">News</a>
+                <a href="{% url 'events' %}">events</a>
+                <a href="{% url 'contact' %}">Contact</a>
+                <a href="{% url 'careers' %}">Careers</a>
+            </div>
+        </div>
+        <hr class="nav-hr">
+
+        <div class="navbar">
+            <div class="logo">
+                <a href="{% url 'home' %}"><img src="../static/img/infralogo.png" alt=""></a>
+                InfraBuild
+            </div>
+            <nav>
+                <div class="dropdown">
+                    <a href="{% url 'about' %}">About Us <i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="{% url 'company_profile' %}">Company Profile</a>
+                        <a href="{% url 'leadership' %}">Leadership</a>
+                        <a href="{% url 'eco' %}">Ecosystem Partnership</a>
+                        <a href="{% url 'Business_Practice' %}">Business Practice</a>
+                        <a href="{% url 'governance' %}">Governance</a>
+                        <a href="{% url 'awards' %}">Awards</a>
+
+                        <button class="dropdown-btn" onclick="location.href='about'"> About <i
+                                class="fa fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <a href="{% url 'expertise' %}">Expertise</a>
+                <a href="{% url 'projects' %}">Projects</a>
+                <a href="{% url 'digital' %}">Digital</a>
+                <div class="dropdown">
+                    <a href="{% url 'insights' %}">Insights</a>
+                </div>
+                <a href="#search"><i class="fas fa-magnifying-glass"></i></a>
+            </nav>
+        </div>
+
+        <div class="header-content">
+            <h1 class="typewriter">Designing Resilience for a Changing World</h1>
+            <p>In the face of climate shifts, urban stress, and uncertainty, resilience isn't optional — it's essential.
+                We build infrastructure and communities that can adapt, recover, and thrive in every challenge.</p>
+        </div>
+    </header>
+
+    <section class="resiliencesection1">
+        <div class="resiliencesection1-container">
+            <h2 class="resiliencesection1-heading">Designing Resilience <span>for a Changing World</span></h2>
+            <p class="resiliencesection1-para">
+                In an era marked by environmental shifts, growing populations, and unforeseen disruptions, resilience is
+                not just a strategy—it’s a necessity. We build systems, cities, and communities that adapt, absorb
+                shocks, and emerge stronger. From climate-ready infrastructure to inclusive planning, we shape spaces
+                that thrive amid challenge and change.
+            </p>
+        </div>
+    </section>
+
+    <section class="resiliencesection2">
+        <h2>Our Resilience-Driven <span>Development Solutions</span></h2>
+        <p class="resiliencesection2-subheading">
+            True resilience is about foresight, flexibility, and the strength to recover quickly. Our work is rooted in
+            sustainable engineering, disaster-preparedness, and community-centered design that strengthens the social
+            and physical fabric of every space. We design for longevity, equity, and protection—ensuring that people and
+            places can stand firm in the face of adversity.
+        </p>
+
+        <div class="resiliencesection2-item">
+            <div class="resiliencesection2-image">
+                <img src="../static/img/resilience1.avif" alt="Climate-Resilient Infrastructure">
+            </div>
+            <div class="resiliencesection2-text">
+                <h3>Climate-Resilient Infrastructure</h3>
+                <p>We build to withstand extremes—whether it’s flooding, heatwaves, or rising sea levels. Our
+                    climate-adaptive designs integrate drainage systems, elevated structures, and heat-reducing
+                    materials to ensure safety and performance.</p>
+                <p>These infrastructures reduce vulnerability and enable continuity during environmental disruptions,
+                    protecting both people and economies.</p>
+            </div>
+        </div>
+
+        <div class="resiliencesection2-item">
+            <div class="resiliencesection2-text">
+                <h3>Disaster Preparedness & Emergency Design</h3>
+                <p>We embed risk assessments and early-warning systems into the core of our planning. From evacuation
+                    routes to resilient shelters, every detail is crafted for rapid, effective response when it matters
+                    most.</p>
+                <p>Our projects empower communities to respond, recover, and rebuild quickly — minimizing damage and
+                    maximizing safety.</p>
+            </div>
+            <div class="resiliencesection2-image">
+                <img src="../static/img/resilience4.jpg" alt="Disaster Response Infrastructure">
+            </div>
+        </div>
+
+        <div class="resiliencesection2-item">
+            <div class="resiliencesection2-image">
+                <img src="../static/img/resilience3.jpg" alt="Social & Economic Resilience">
+            </div>
+            <div class="resiliencesection2-text">
+                <h3>Social & Economic Resilience</h3>
+                <p>Beyond physical systems, we strengthen communities by supporting inclusive services, local
+                    employment, and equitable access to resources. Resilience means everyone thrives—especially the most
+                    vulnerable.</p>
+                <p>We design policies, spaces, and programs that boost social cohesion and economic stability over the
+                    long term.</p>
+            </div>
+        </div>
+
+        <div class="resiliencesection2-item">
+            <div class="resiliencesection2-text">
+                <h3>Nature-Based Solutions</h3>
+                <p>By harnessing ecosystems like wetlands, forests, and green belts, we offer natural protection against
+                    disasters while preserving biodiversity. Nature is both our partner and protector in building
+                    resilience.</p>
+                <p>These solutions offer dual benefits—safeguarding communities and enhancing environmental
+                    sustainability in the most organic way.</p>
+            </div>
+            <div class="resiliencesection2-image">
+                <img src="../static/img/resilience2.jpg" alt="Nature-Based Resilience">
+            </div>
+        </div>
+    </section>
+
+    <section class="more-mobility">
+        <div class="more-mobility-container">
+            <div class="solutions-text">
+                <h2> Learn about More Solutions</h2>
+            </div>
+            <div class="solutions-grid">
+                <div class="solution-card card2">
+                    <div class="solution-card-content">
+                        <h3>Climage change</h3>
+                        <p>Advanced analytics to minimize costs while maintaining quality and compliance.</p>
+
+                        <a href="{% url 'climatechange' %}">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="solution-card card1">
+                    <div class="solution-card-content">
+                        <h3>Mobility</h3>
+                        <p>Leverage intelligent planning tools to increase project efficiency and reduce delays.</p>
+
+                        <a href="{% url 'mobility' %}">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="solution-card card7">
+                    <div class="solution-card-content">
+                        <h3>Restoration</h3>
+                        <p>Utilize eco-centric strategies to restore degraded environments and promote long-term
+                            ecological balance.</p>
+
+                        <a href="{% url 'restoration' %}">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="solution-card card8 extra-cards">
+                    <div class="solution-card-content">
+                        <h3>Urbanism</h3>
+                        <p>Transform urban development with integrated solutions for smart mobility, green buildings.
+                        </p>
+
+                        <a href="">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-section">
+                <a href="{% url 'home' %}">
+                    <h3>InfraBuild</h3>
+                </a>
+                <p>"Building Tomorrow, <br> Strengthening Today."</p>
+                <p>Building sustainable <br>infrastructure solutions <br>that power cities, <br> industries, and lives
+                    across <br>the
+                    globe. <br>
+                    Your vision, our foundation.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="{% url 'investors' %}">Investors</a></li>
+                    <li><a href="{% url 'news' %}">News</a></li>
+                    <li><a href="{% url 'events' %}">Events</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                    <li><a href="{% url 'careers' %}">Careers</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="{% url 'about' %}">About Us</a></li>
+                    <li><a href="{% url 'expertise' %}">Expertise</a></li>
+                    <li><a href="{% url 'projects' %}">Projects</a></li>
+                    <li><a href="{% url 'digital' %}">Digital</a></li>
+                    <li><a href="{% url 'insights' %}">Insights</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><strong>Call:</strong> +0123 456 789 00</p>
+                <p><strong>Email:</strong> user@example.com</p>
+
+                <div class="subscribe-box">
+                    <input type="email" placeholder="Write Email" />
+                    <button>→</button>
+                </div>
+
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://wa.me/?text=Check%20this%20out!" target="_blank" rel="noopener noreferrer"
+                        title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div>
+                <a href="{% url 'privacy' %}">Privacy Policy</a>
+                <a href="{% url 'about' %}">Our History</a>
+                <a href="{% url 'expertise' %}">What We Do</a>
+            </div>
+            <div>
+                © 2025 InfraBuild. All images are for demo purposes only.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script>
+        window.addEventListener("scroll", function () {
+            const topbar = document.querySelector(".topbar");
+            const navbar = document.querySelector(".navbar");
+
+            if (window.scrollY > 10) {
+                topbar.classList.add("scrolled");
+                navbar.classList.add("scrolled");
+            } else {
+                topbar.classList.remove("scrolled");
+                navbar.classList.remove("scrolled");
+            }
+        });
+    </script>
+
+</body>
+
+</html>

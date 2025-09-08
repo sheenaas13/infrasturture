@@ -1,0 +1,282 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sector - Chemical</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="chemical_header">
+        <div class="topbar">
+            <div class="left">
+                <span><i class="fas fa-phone"></i> +91 98765-43210</span>
+                <span><i class="fas fa-envelope"></i> info@infrabuild.com</span>
+            </div>
+            <div class="right">
+                <a href="{% url 'investors' %}">Investors</a>
+                <a href="{% url 'news' %}">News</a>
+                <a href="{% url 'events' %}">events</a>
+                <a href="{% url 'contact' %}">Contact</a>
+                <a href="{% url 'careers' %}">Careers</a>
+            </div>
+        </div>
+        <hr class="nav-hr">
+
+        <div class="navbar">
+            <div class="logo">
+                <a href="{% url 'home' %}"><img src="../static/img/infralogo.png" alt=""></a>
+                InfraBuild
+            </div>
+            <nav>
+                <div class="dropdown">
+                    <a href="{% url 'about' %}">About Us <i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="{% url 'company_profile' %}">Company Profile</a>
+                        <a href="{% url 'leadership' %}">Leadership</a>
+                        <a href="{% url 'eco' %}">Ecosystem Partnership</a>
+                        <a href="{% url 'Business_Practice' %}">Business Practice</a>
+                        <a href="{% url 'governance' %}">Governance</a>
+                        <a href="{% url 'awards' %}">Awards</a>
+
+
+                        <button class="dropdown-btn" onclick="location.href='about'"> About <i
+                                class="fa fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <a href="{% url 'expertise' %}">Expertise</a>
+                <a href="{% url 'projects' %}">Projects</a>
+                <a href="{% url 'digital' %}">Digital</a>
+                <div class="dropdown">
+                    <a href="{% url 'insights' %}">Insights</a>
+                </div>
+                <a href="#search"><i class="fas fa-magnifying-glass"></i></a>
+            </nav>
+        </div>
+
+        <div class="header-content">
+            <h1 class="typewriter">Chemistry Built for Progress</h1>
+            <p>We specialize in engineering robust, compliant environments for chemical manufacturing and processing.
+                From laboratories to large-scale plants, our infrastructure solutions focus on safety, precision, and
+                sustainability.</p>
+        </div>
+    </header>
+
+    <section class="chemical-section1">
+        <div class="chemical-container">
+            <h1 class="chemical-heading">Enabling Excellence in <span>Chemical Infrastructure</span></h1>
+            <p class="chemical-paragraph">
+                The chemical industry demands precision, safety, and regulatory alignment — and our infrastructure
+                solutions meet
+                those needs with distinction. From process plants to laboratory hubs, we deliver environments designed
+                to handle
+                hazardous materials, extreme conditions, and scalable innovation.
+            </p>
+            <p class="chemical-paragraph">
+                Whether it's supporting petrochemical operations, fine chemical synthesis, or sustainable chemistry R&D,
+                we offer
+                the expertise to build spaces that are efficient, compliant, and future-ready. Our designs integrate
+                advanced
+                automation, modular flexibility, and strict safety protocols from the ground up.
+            </p>
+        </div>
+    </section>
+
+    <section class="chemical-section2">
+        <div class="chemical-text">
+            <h2>Labs & Testing Facilities <span>Precision-Built for Chemical Research</span></h2>
+        </div>
+        <div class="chemical-card-container">
+            <div class="chemical-card">
+                <div class="chemical-card-icon"><i class="fas fa-vial"></i></div>
+                <h3>Analytical Labs</h3>
+                <p>Dedicated spaces for high-precision analysis of raw materials, compounds, and finished products.</p>
+            </div>
+            <div class="chemical-card">
+                <div class="chemical-card-icon"><i class="fas fa-flask"></i></div>
+                <h3>R&D Laboratories</h3>
+                <p>Flexible and scalable lab environments for synthesis, testing, and chemical innovation.</p>
+            </div>
+            <div class="chemical-card">
+                <div class="chemical-card-icon"><i class="fas fa-fire-extinguisher"></i></div>
+                <h3>Hazardous Testing Bays</h3>
+                <p>Controlled testing zones for handling flammable, corrosive, or reactive chemical substances.</p>
+            </div>
+            <div class="chemical-card">
+                <div class="chemical-card-icon"><i class="fas fa-microscope"></i></div>
+                <h3>Microbiology Labs</h3>
+                <p>Sterile facilities supporting chemical-biological research, testing, and contamination control.</p>
+            </div>
+            <div class="chemical-card">
+                <div class="chemical-card-icon"><i class="fas fa-tools"></i></div>
+                <h3>Equipment Calibration Units</h3>
+                <p>Specialized rooms for instrument validation, tuning, and calibration under GMP standards.</p>
+            </div>
+            <div class="chemical-card">
+                <div class="chemical-card-icon"><i class="fas fa-industry"></i></div>
+                <h3>Pilot Plant Modules</h3>
+                <p>Scalable facilities for transitioning chemical processes from lab bench to industrial production.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="chemical-section3">
+        <div class="chemical-text">
+            <h2>Green Chemistry Solutions <span>Driving Sustainable Transformation</span></h2>
+            <p>
+                Our infrastructure is engineered to support eco-conscious chemical production, from solvent recovery to
+                waste
+                heat reuse. We enable closed-loop systems, green process technologies, and energy-efficient
+                designs—reducing
+                environmental impact while enhancing operational excellence.
+            </p>
+        </div>
+        <div class="chemical-image">
+            <img src="../static/img/chemical1.webp" alt="Sustainable Chemical Solutions">
+        </div>
+    </section>
+
+    <section class="more-sectors">
+        <div class="solutions-container">
+            <div class="solutions-text">
+                <h2>More Sectors</h2>
+                <p>
+                    Infrabuild serves a broad range of sectors with tailored solutions that address unique industry
+                    needs — leveraging deep insights, specialized tools, and global expertise to drive excellence.
+                </p>
+            </div>
+
+            <div class="solutions-grid">
+                <div class="solution-card card20">
+                    <div class="solution-card-content">
+                        <h3>Commercial Developers</h3>
+                        <p>Streamline planning and delivery for commercial hubs through smart tools and integrated
+                            teams.</p>
+                        <a href="{% url 'commercial_dev' %}">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                 <div class="solution-card card21">
+                    <div class="solution-card-content">
+                        <h3>Contractors</h3>
+                        <p>Enhance project execution through scalable delivery models and centralized digital platforms.
+                        </p>
+                        <a href="{% url 'contractors' %}">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="solution-card card22">
+                    <div class="solution-card-content">
+                        <h3>Power</h3>
+                        <p>Support energy systems with reliable infrastructure built for flexibility and operational
+                            uptime.</p>
+                        <a href="{% url 'power' %}">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-section">
+                <a href="{% url 'home' %}">
+                    <h3>InfraBuild</h3>
+                </a>
+                <p>"Building Tomorrow, <br> Strengthening Today."</p>
+                <p>Building sustainable <br>infrastructure solutions <br>that power cities, <br> industries, and lives
+                    across <br>the
+                    globe. <br>
+                    Your vision, our foundation.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="{% url 'investors' %}">Investors</a></li>
+                    <li><a href="{% url 'news' %}">News</a></li>
+                    <li><a href="{% url 'events' %}">Events</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                    <li><a href="{% url 'careers' %}">Careers</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="{% url 'about' %}">About Us</a></li>
+                    <li><a href="{% url 'expertise' %}">Expertise</a></li>
+                    <li><a href="{% url 'projects' %}">Projects</a></li>
+                    <li><a href="{% url 'digital' %}">Digital</a></li>
+                    <li><a href="{% url 'insights' %}">Insights</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><strong>Call:</strong> +0123 456 789 00</p>
+                <p><strong>Email:</strong> user@example.com</p>
+
+                <div class="subscribe-box">
+                    <input type="email" placeholder="Write Email" />
+                    <button>→</button>
+                </div>
+
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://wa.me/?text=Check%20this%20out!" target="_blank" rel="noopener noreferrer"
+                        title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div>
+                <a href="{% url 'privacy' %}">Privacy Policy</a>
+                <a href="{% url 'about' %}">Our History</a>
+                <a href="{% url 'expertise' %}">What We Do</a>
+            </div>
+            <div>
+                © 2025 InfraBuild. All images are for demo purposes only.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script>
+        window.addEventListener("scroll", function () {
+            const topbar = document.querySelector(".topbar");
+            const navbar = document.querySelector(".navbar");
+
+            if (window.scrollY > 10) {
+                topbar.classList.add("scrolled");
+                navbar.classList.add("scrolled");
+            } else {
+                topbar.classList.remove("scrolled");
+                navbar.classList.remove("scrolled");
+            }
+        });
+    </script>
+
+</body>
+
+</html>

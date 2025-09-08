@@ -1,0 +1,295 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AboutUs - Ecosystem Partnership</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="eco-header">
+        <div class="topbar">
+            <div class="left">
+                <span><i class="fas fa-phone"></i> +91 98765-43210</span>
+                <span><i class="fas fa-envelope"></i> info@infrabuild.com</span>
+            </div>
+            <div class="right">
+                <a href="{% url 'investors' %}">Investors</a>
+                <a href="{% url 'news' %}">News</a>
+                <a href="{% url 'events' %}">events</a>
+                <a href="{% url 'contact' %}">Contact</a>
+                <a href="{% url 'careers' %}">Careers</a>
+            </div>
+        </div>
+        <hr class="nav-hr">
+
+        <div class="navbar">
+            <div class="logo">
+                <a href="{% url 'home' %}"><img src="../static/img/infralogo.png" alt=""></a>
+                InfraBuild
+            </div>
+            <nav>
+                <div class="dropdown">
+                    <a href="{% url 'about' %}">About Us <i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="{% url 'company_profile' %}">Company Profile</a>
+                        <a href="{% url 'leadership' %}">Leadership</a>
+                        <a href="{% url 'eco' %}">Ecosystem Partnership</a>
+                        <a href="{% url 'Business_Practice' %}">Business Practice</a>
+                        <a href="{% url 'governance' %}">Governance</a>
+                        <a href="{% url 'awards' %}">Awards</a>
+
+
+                        <button class="dropdown-btn" onclick="location.href='about'"> About <i
+                                class="fa fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <a href="{% url 'expertise' %}">Expertise</a>
+                <a href="{% url 'projects' %}">Projects</a>
+                <a href="{% url 'digital' %}">Digital</a>
+                <div class="dropdown">
+                    <a href="{% url 'insights' %}">Insights </a>
+                    <!-- <div class="dropdown-content">
+                        <a href="#blog">Sustainablity & <br> Decarbonisation</a>
+                        <a href="#reports">Mobility</a>
+                        <a href="#news">Resilience</a>
+                        <a href="#news">places</a>
+
+                        <button class="dropdown-btn" onclick="location.href='insights'">All Insights<i
+                                class="fa fa-arrow-right"></i></button>
+                    </div> -->
+                </div>
+                <a href="#search"><i class="fas fa-magnifying-glass"></i></a>
+            </nav>
+        </div>
+        <div class="header-content">
+            <h1 class="typewriter">Ecosystem Partnerships: Growing Together</h1>
+            <p>Our strength lies not just within, but in the powerful bonds we build outside our walls.
+                Through trusted collaborations and shared values.</p>
+        </div>
+    </header>
+
+    <section class="eco-section1">
+        <h2>Empowering Innovation Through <span>Ecosystem Partnerships</span> </h2>
+        <p>
+            In an increasingly interconnected world, ecosystem partnerships are essential for driving innovation and
+            accelerating growth. By collaborating with a diverse network of organizations—including startups,
+            enterprises, research institutions, and technology providers—we’re able to deliver more comprehensive,
+            future-ready solutions.
+        </p>
+        <p>
+            These partnerships go beyond transactional relationships. They are built on shared goals, mutual trust, and
+            a commitment to long-term success. Through open collaboration and co-creation, we amplify our impact and
+            unlock new opportunities that benefit everyone in the ecosystem.
+        </p>
+    </section>
+
+    <section class="eco-section2">
+        <h2>Trusted by Leading <span> Industry Partners </span></h2>
+        <div class="partner-logos">
+            <img src="../static/img/company1.png" alt="Company 1">
+            <img src="../static/img/compnay2.png" alt="Company 2">
+            <img src="../static/img/company3.png" alt="Company 3">
+            <img src="../static/img/company4.png" alt="Company 4">
+            <img src="../static/img/company5.jpg" alt="Company 5">
+        </div>
+        <p>
+            We’re proud to collaborate with a diverse range of companies who share our vision for innovation,
+            sustainability, and growth. These partnerships are more than symbolic—they represent real-world cooperation,
+            shared success, and the collective drive to shape a better future.
+        </p>
+    </section>
+
+    <section class="eco-section3">
+        <h2>Collaborative <span>Project Highlights</span></h2>
+
+        <div class="eco-section3-row" dat-aos="fade-left" data-aos-duration="1200">
+            <div class="eco-section3-image">
+                <img src="../static/img/Architecture-E.webp" alt="Smart City Development">
+            </div>
+            <div class="eco-section3-content" >
+                <h3><span class="eco-section3-number">01.</span> Smart City Development with Bechtel</h3>
+                <p>
+                    Partnered with Bechtel to develop cutting-edge smart infrastructure across urban centers. This
+                    initiative boosted energy efficiency, public safety, and digital connectivity.
+                </p>
+                <br>
+                <p>
+                    Partnered with Bechtel, we embarked on a mission to reshape urban living through smart city
+                    development. The collaboration focused on integrating digital infrastructure, IoT solutions, and
+                    green technologies to create more efficient, responsive, and sustainable cities. Our joint effort
+                    brought smart lighting, waste management, and real-time traffic systems to life, transforming how
+                    residents interact with their environment.
+                </p>
+            </div>
+        </div>
+
+        <div class="eco-section3-row" dat-aos="fade-right" data-aos-duration="1400">
+            <div class="eco-section3-image">
+                <img src="../static/img/abouthighlight1.avif" alt="Highway Expansion Project">
+            </div>
+            <div class="eco-section3-content">
+                <h3><span class="eco-section3-number">02.</span> Highway Expansion with L&T</h3>
+                <p>
+                    In collaboration with Larsen & Toubro, we expanded 500+ kilometers of highway, improving trade
+                    routes and reducing traffic congestion across states.
+                </p>
+                <br>
+                <p>
+                    In collaboration with Larsen & Toubro, we led a massive highway expansion initiative aimed at
+                    improving regional and national connectivity. The project added over 500 kilometers of new roadways,
+                    enhanced safety features, and introduced modernized tolling systems. This joint venture
+                    significantly boosted trade logistics and cut travel times for millions of commuters.
+                </p>
+            </div>
+        </div>
+
+        <div class="eco-section3-row" dat-aos="fade-left" data-aos-duration="1600">
+            <div class="eco-section3-image">
+                <img src="../static/img/missionimage.avif" alt="Green Energy Plant">
+            </div>
+            <div class="eco-section3-content">
+                <h3><span class="eco-section3-number">03.</span> Green Energy Plant with Kiewit</h3>
+                <p>
+                    Together with Kiewit, we launched a solar and wind hybrid energy facility, pushing boundaries in
+                    renewable resource management and clean energy innovation.
+                </p>
+                <br>
+                <p>
+                    Together with Kiewit, we launched a groundbreaking hybrid renewable energy plant that harnesses both
+                    solar and wind power. Designed with efficiency and scalability in mind, the facility represents a
+                    major leap in clean energy generation. This partnership not only strengthened our commitment to
+                    sustainability but also helped local communities transition toward more reliable and eco-conscious
+                    energy sources.
+                </p>
+            </div>
+        </div>
+
+        <div class="eco-section3-row" dat-aos="fade-right" data-aos-duration="1800">
+            <div class="eco-section3-image">
+                <img src="../static/img/Contract-Solutions-E.webp" alt="Urban Metro Integration">
+            </div>
+            <div class="eco-section3-content">
+                <h3><span class="eco-section3-number">04.</span> Urban Metro Integration with Turner</h3>
+                <p>
+                    Partnering with Turner Construction, we integrated modern metro lines across three cities, enabling
+                    faster, cleaner, and safer public transport solutions.
+                </p>
+                <br>
+                <p>
+                    Our partnership with Turner Construction brought new life to metropolitan transit systems by
+                    expanding and integrating metro lines across three key cities. The project introduced smart
+                    ticketing, energy-efficient trains, and user-friendly connectivity between lines. As a result,
+                    public transportation became faster, safer, and more accessible—improving the daily commute for
+                    thousands.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="footer">
+            <div class="footer-section">
+                <a href="{% url 'home' %}">
+                    <h3>InfraBuild</h3>
+                </a>
+                <p>"Building Tomorrow, <br> Strengthening Today."</p>
+                <p>Building sustainable <br>infrastructure solutions <br>that power cities, <br> industries, and lives
+                    across <br>the
+                    globe. <br>
+                    Your vision, our foundation.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="{% url 'investors' %}">Investors</a></li>
+                    <li><a href="{% url 'news' %}">News</a></li>
+                    <li><a href="{% url 'events' %}">Events</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                    <li><a href="{% url 'careers' %}">Careers</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="{% url 'about' %}">About Us</a></li>
+                    <li><a href="{% url 'expertise' %}">Expertise</a></li>
+                    <li><a href="{% url 'projects' %}">Projects</a></li>
+                    <li><a href="{% url 'digital' %}">Digital</a></li>
+                    <li><a href="{% url 'insights' %}">Insights</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><strong>Call:</strong> +0123 456 789 00</p>
+                <p><strong>Email:</strong> user@example.com</p>
+
+                <div class="subscribe-box">
+                    <input type="email" placeholder="Write Email" />
+                    <button>→</button>
+                </div>
+
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://wa.me/?text=Check%20this%20out!" target="_blank" rel="noopener noreferrer"
+                        title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div>
+                <a href="{% url 'privacy' %}">Privacy Policy</a>
+                <a href="{% url 'about' %}">Our History</a>
+                <a href="{% url 'expertise' %}">What We Do</a>
+            </div>
+            <div>
+                © 2025 InfraBuild. All images are for demo purposes only.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script>
+        window.addEventListener("scroll", function () {
+            const topbar = document.querySelector(".topbar");
+            const navbar = document.querySelector(".navbar");
+
+            if (window.scrollY > 10) {
+                topbar.classList.add("scrolled");
+                navbar.classList.add("scrolled");
+            } else {
+                topbar.classList.remove("scrolled");
+                navbar.classList.remove("scrolled");
+            }
+        });
+    </script>
+
+</body>
+
+</html>

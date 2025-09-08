@@ -1,0 +1,297 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InfraBuild - ContactUs</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <header
+        style=" background: linear-gradient(to right, rgb(28 40 51 / 55%), rgb(28 40 51 / 54%)), url(../static/img/contactheader.webp) center / cover no-repeat;">
+        <div class="topbar">
+            <div class="left">
+                <span><i class="fas fa-phone"></i> +91 98765-43210</span>
+                <span><i class="fas fa-envelope"></i> info@infrabuild.com</span>
+            </div>
+            <div class="right">
+                <a href="{% url 'investors' %}">Investors</a>
+                <a href="{% url 'news' %}">News</a>
+                <a href="{% url 'events' %}">events</a>
+                <a href="{% url 'contact' %}">Contact</a>
+                <a href="{% url 'careers' %}">Careers</a>
+            </div>
+        </div>
+        <hr class="nav-hr">
+
+        <div class="navbar">
+            <div class="logo">
+                <a href="{% url 'home' %}"><img src="../static/img/infralogo.png" alt=""></a>
+                InfraBuild
+            </div>
+            <nav>
+                <div class="dropdown">
+                    <a href="{% url 'about' %}">About Us <i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="{% url 'company_profile' %}">Company Profile</a>
+                        <a href="{% url 'leadership' %}">Leadership</a>
+                        <a href="{% url 'eco' %}">Ecosystem Partnership</a>
+                        <a href="{% url 'Business_Practice' %}">Business Practice</a>
+                        <a href="{% url 'governance' %}">Governance</a>
+                        <a href="{% url 'awards' %}">Awards</a>
+
+
+                        <button class="dropdown-btn" onclick="location.href='about'"> About <i
+                                class="fa fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <a href="{% url 'expertise' %}">Expertise</a>
+                <a href="{% url 'projects' %}">Projects</a>
+                <a href="{% url 'digital' %}">Digital</a>
+                <div class="dropdown">
+                    <a href="{% url 'insights' %}">Insights </a>
+                    <!-- <div class="dropdown-content">
+                        <a href="#blog">Sustainablity & <br> Decarbonisation</a>
+                        <a href="#reports">Mobility</a>
+                        <a href="#news">Resilience</a>
+                        <a href="#news">places</a>
+
+                        <button class="dropdown-btn" onclick="location.href='insights'">All Insights<i
+                                class="fa fa-arrow-right"></i></button>
+                    </div> -->
+                </div>
+                <a href="#search"><i class="fas fa-magnifying-glass"></i></a>
+            </nav>
+        </div>
+
+        <div class="header-content">
+            <h1 class="typewriter">We’d Love to Hear From You – <br> Let’s Connect!</h1>
+            <p>We’d love to hear from you! Whether you have questions, feedback, or just want to say hello, feel free to
+                reach out. Our team is here to help and will respond as soon as possible.</p>
+        </div>
+    </header>
+
+    <section class="contact-section">
+        <div class="contact-boxes">
+            <div class="contact-box">
+                <i class="fas fa-phone"></i></i>
+                <h3>Call Us!</h3>
+                <p>+1 (123) 456-7890</p>
+            </div>
+            <div class="contact-box">
+                <i class="fas fa-envelope"></i>
+                <h3>Email Us!</h3>
+                <p>hello@example.com</p>
+            </div>
+            <div class="contact-box">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Find Us At!</h3>
+                <p>123 Main Street, City, Country</p>
+            </div>
+        </div>
+    </section>
+
+    {% if submitted %}
+    <section class="contact-popup-section">
+        <div class="contact-popup-overlay" id="modalOverlay">
+            <div class="contact-popup-box">
+                <span class="contact-popup-close-button" onclick="closeModal()">×</span>
+                <div class="contact-popup-check-icon">✔</div>
+                <h2>Query Submitted</h2>
+                <p>Thank you for reaching out!<br>
+                    Our team will contact you shortly.<br>
+                    Please keep checking your email 📧.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        function closeModal() {
+            document.getElementById('modalOverlay').style.display = 'none';
+        }
+    </script>
+    {% endif %}
+
+    <section class="contact-section2">
+        <div class="contact-section2-text">
+            <h4>WE’RE HERE TO SUPPORT YOU</h4>
+            <h2>Connect with InfraBuild’s<br><span>Infrastructure Experts</span></h2>
+            <p>Whether you're planning a new project or need customized steel and infrastructure solutions, our team is
+                ready to assist you with expert guidance and support.</p>
+
+            <div class="contact-section2-details">
+                <div><i class="fas fa-envelope"></i> support@infrabuild.com</div>
+                <div><i class="fas fa-phone"></i> +1800 - 111 - 222</div>
+            </div>
+        </div>
+
+        <div class="contact-section2-form" data-aos="fade-left" data-aos-duration="1200">
+            <form id="contactForm" method="post" action="{% url 'contact_view' %}">
+                {% csrf_token %}
+                <input type="text" name="name" placeholder="Name" required />
+                <input type="email" name="email" placeholder="Email" required />
+                <select name="sector" required>
+                    <option value="">Select Your Sector</option>
+                    <option value="construction">Construction</option>
+                    <option value="mining">Mining</option>
+                    <option value="transport">Transport</option>
+                </select>
+                <textarea name="message" rows="4" placeholder="How can we help you?"></textarea>
+                <button type="submit"><i class="fas fa-paper-plane"></i> Contact InfraBuild</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="office-section">
+        <div class="office-header">
+            <h2>Our Offices <span>Around the World</span></h2>
+        </div>
+
+        <div class="office-grid">
+            <div class="office-card">
+                <div class="icon"><i class="fas fa-paper-plane"></i></div>
+                <h3>New York Office</h3>
+                <p>90 Abia Martin Drive, Ocean Beach, New York, NY 94105, United States</p>
+                <a href="#">Get Direction →</a>
+            </div>
+            <div class="office-card">
+                <div class="icon"><i class="fas fa-paper-plane"></i></div>
+                <h3>San Francisco Office</h3>
+                <p>90 Abia Martin Drive, Ocean Beach, New York, NY 94105, United States</p>
+                <a href="#">Get Direction →</a>
+            </div>
+            <div class="office-card">
+                <div class="icon"><i class="fas fa-paper-plane"></i></div>
+                <h3>Dublin Office</h3>
+                <p>90 Abia Martin Drive, Ocean Beach, New York, NY 94105, United States</p>
+                <a href="#">Get Direction →</a>
+            </div>
+            <div class="office-card">
+                <div class="icon"><i class="fas fa-paper-plane"></i></div>
+                <h3>Boston Office</h3>
+                <p>90 Abia Martin Drive, Ocean Beach, New York, NY 94105, United States</p>
+                <a href="#">Get Direction →</a>
+            </div>
+            <div class="office-card">
+                <div class="icon"><i class="fas fa-paper-plane"></i></div>
+                <h3>Nashville Office</h3>
+                <p>90 Abia Martin Drive, Ocean Beach, New York, NY 94105, United States</p>
+                <a href="#">Get Direction →</a>
+            </div>
+            <div class="office-card">
+                <div class="icon"><i class="fas fa-paper-plane"></i></div>
+                <h3>Los Angeles Office</h3>
+                <p>90 Abia Martin Drive, Ocean Beach, New York, NY 94105, United States</p>
+                <a href="#">Get Direction →</a>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="footer">
+            <div class="footer-section">
+                <a href="{% url 'home' %}">
+                    <h3>InfraBuild</h3>
+                </a>
+                <p>"Building Tomorrow, <br> Strengthening Today."</p>
+                <p>Building sustainable <br>infrastructure solutions <br>that power cities, <br> industries, and lives
+                    across <br>the
+                    globe. <br>
+                    Your vision, our foundation.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="{% url 'investors' %}">Investors</a></li>
+                    <li><a href="{% url 'news' %}">News</a></li>
+                    <li><a href="{% url 'events' %}">Events</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                    <li><a href="{% url 'careers' %}">Careers</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="{% url 'about' %}">About Us</a></li>
+                    <li><a href="{% url 'expertise' %}">Expertise</a></li>
+                    <li><a href="{% url 'projects' %}">Projects</a></li>
+                    <li><a href="{% url 'digital' %}">Digital</a></li>
+                    <li><a href="{% url 'insights' %}">Insights</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><strong>Call:</strong> +0123 456 789 00</p>
+                <p><strong>Email:</strong> user@example.com</p>
+
+                <div class="subscribe-box">
+                    <input type="email" placeholder="Write Email" />
+                    <button>→</button>
+                </div>
+
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://wa.me/?text=Check%20this%20out!" target="_blank" rel="noopener noreferrer"
+                        title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div>
+                <a href="{% url 'privacy' %}">Privacy Policy</a>
+                <a href="{% url 'about' %}">Our History</a>
+                <a href="{% url 'expertise' %}">What We Do</a>
+            </div>
+            <div>
+                © 2025 InfraBuild. All images are for demo purposes only.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script>
+        window.addEventListener("scroll", function () {
+            const topbar = document.querySelector(".topbar");
+            const navbar = document.querySelector(".navbar");
+
+            if (window.scrollY > 10) {
+                topbar.classList.add("scrolled");
+                navbar.classList.add("scrolled");
+            } else {
+                topbar.classList.remove("scrolled");
+                navbar.classList.remove("scrolled");
+            }
+        });
+    </script>
+
+</body>
+
+</html>

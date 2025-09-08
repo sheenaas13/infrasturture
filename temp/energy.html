@@ -1,0 +1,301 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solutions - Energy Transition</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="energy_header">
+        <div class="topbar">
+            <div class="left">
+                <span><i class="fas fa-phone"></i> +91 98765-43210</span>
+                <span><i class="fas fa-envelope"></i> info@infrabuild.com</span>
+            </div>
+            <div class="right">
+                <a href="{% url 'investors' %}">Investors</a>
+                <a href="{% url 'news' %}">News</a>
+                <a href="{% url 'events' %}">events</a>
+                <a href="{% url 'contact' %}">Contact</a>
+                <a href="{% url 'careers' %}">Careers</a>
+            </div>
+        </div>
+        <hr class="nav-hr">
+
+        <div class="navbar">
+            <div class="logo">
+                <a href="{% url 'home' %}"><img src="../static/img/infralogo.png" alt=""></a>
+                InfraBuild
+            </div>
+            <nav>
+                <div class="dropdown">
+                    <a href="{% url 'about' %}">About Us <i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="{% url 'company_profile' %}">Company Profile</a>
+                        <a href="{% url 'leadership' %}">Leadership</a>
+                        <a href="{% url 'eco' %}">Ecosystem Partnership</a>
+                        <a href="{% url 'Business_Practice' %}">Business Practice</a>
+                        <a href="{% url 'governance' %}">Governance</a>
+                        <a href="{% url 'awards' %}">Awards</a>
+
+
+                        <button class="dropdown-btn" onclick="location.href='about'"> About <i
+                                class="fa fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <a href="{% url 'expertise' %}">Expertise</a>
+                <a href="{% url 'projects' %}">Projects</a>
+                <a href="{% url 'digital' %}">Digital</a>
+                <div class="dropdown">
+                    <a href="{% url 'insights' %}">Insights</a>
+                </div>
+                <a href="#search"><i class="fas fa-magnifying-glass"></i></a>
+            </nav>
+        </div>
+
+        <div class="header-content">
+            <h1 class="typewriter">Powering Tomorrow: The Energy Transition</h1>
+            <p>The global shift to clean, renewable energy is not just a trend — it’s a necessity.
+                From fossil fuels to sustainable power sources, we’re driving change for a greener planet.
+                Join the movement toward resilient, low-carbon infrastructure and a brighter future.
+            </p>
+        </div>
+    </header>
+
+    <section class="energysection1">
+        <div class="energysection1-container">
+            <h2 class="energysection1-heading">Powering Progress <span>Through Energy Transition</span></h2>
+
+            <p class="energysection1-para">
+                The energy transition is reshaping the global landscape, shifting from fossil fuels to sustainable,
+                renewable sources. Through smart infrastructure, clean technologies, and community-driven innovation,
+                we are creating a resilient energy future. Our mission is to reduce carbon emissions, modernize the
+                grid,
+                and empower cities with intelligent, efficient power systems.
+            </p>
+        </div>
+    </section>
+
+    <section class="energysection2">
+        <h2>Our Energy <span>Transition Solutions</span></h2>
+
+        <div class="energysection2-item">
+            
+            <div class="energysection2-text">
+                <h3>Smart Grid Modernization</h3>
+                <p>We implement next-gen grid systems with IoT sensors, AI analytics, and decentralized energy sources
+                    to ensure real-time energy monitoring, load balancing, and outage prevention.</p>
+                <p>Through adaptive energy distribution, we enable better demand forecasting, optimize energy flow,
+                    and reduce transmission losses for a more stable and intelligent power network.</p>
+            </div>
+            <div class="energysection2-image">
+                <img src="../static/img/energy1.webp" alt="Smart Grid Technology">
+            </div>
+        </div>
+
+        <div class="energysection2-item">
+            <div class="energysection2-text">
+                <h3>Renewable Energy Integration</h3>
+                <p>Our infrastructure is designed to seamlessly integrate solar, wind, and hydro energy into national
+                    grids,
+                    enhancing reliability while reducing dependence on fossil fuels.</p>
+                <p>With energy storage systems and digital control platforms, we ensure maximum efficiency from
+                    renewable
+                    sources and support round-the-clock clean power delivery.</p>
+            </div>
+            <div class="energysection2-image">
+                <img src="../static/img/energy2.webp" alt="Renewable Energy Integration">
+            </div>
+        </div>
+
+        <div class="energysection2-item">
+            
+            <div class="energysection2-text">
+                <h3>Energy-Efficient Infrastructure</h3>
+                <p>From smart lighting to zero-emission buildings, we’re designing energy-conscious spaces
+                    that consume less and deliver more — cutting costs while preserving the environment.</p>
+                <p>These innovations not only improve public infrastructure performance but also contribute
+                    significantly
+                    to nationwide sustainability goals.</p>
+            </div>
+            <div class="energysection2-image">
+                <img src="../static/img/energy3.webp" alt="Energy-Efficient Lighting">
+            </div>
+        </div>
+
+        <div class="energysection2-item">
+            <div class="energysection2-text">
+                <h3>Decentralized Energy & Community Microgrids</h3>
+                <p>We empower communities with localized microgrids and distributed energy resources (DERs)
+                    that provide energy independence, reliability, and resilience during grid outages.</p>
+                <p>Our microgrid solutions combine solar, battery storage, and demand-response systems for
+                    a cleaner, community-driven power future.</p>
+            </div>
+            <div class="energysection2-image">
+                <img src="../static/img/energy4.avif" alt="Microgrid and Community Energy">
+            </div>
+        </div>
+    </section>
+
+    <section class="more-mobility">
+        <div class="more-mobility-container">
+            <div class="solutions-text">
+                <h2> Learn about More Solutions</h2>
+            </div>
+            <div class="solutions-grid">
+                <div class="solution-card card2">
+                    <div class="solution-card-content">
+                        <h3>Climage change</h3>
+                        <p>Advanced analytics to minimize costs while maintaining quality and compliance.</p>
+
+                        <a href="{% url 'climatechange' %}">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="solution-card card5">
+                    <div class="solution-card-content">
+                        <h3>Places</h3>
+                        <p>Design smart infrastructure that enhances the livability, accessibility, and sustainability
+                            of public spaces.</p>
+
+                        <a href="{% url 'places' %}">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="solution-card card6">
+                    <div class="solution-card-content">
+                        <h3>Resilience</h3>
+                        <p>Build systems that adapt to climate change and disruptive events through predictive
+                            technologies.</p>
+
+                        <a href="{% url 'resilience' %}">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="solution-card card7 extra-cards">
+                    <div class="solution-card-content">
+                        <h3>Restoration</h3>
+                        <p>Utilize eco-centric strategies to restore degraded environments and promote long-term
+                            ecological balance.</p>
+
+                        <a href="">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="solution-card card8 extra-cards">
+                    <div class="solution-card-content">
+                        <h3>Urbanism</h3>
+                        <p>Transform urban development with integrated solutions for smart mobility, green buildings.
+                        </p>
+
+                        <a href="">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer>
+        <div class="footer">
+            <div class="footer-section">
+                <a href="{% url 'home' %}">
+                    <h3>InfraBuild</h3>
+                </a>
+                <p>"Building Tomorrow, <br> Strengthening Today."</p>
+                <p>Building sustainable <br>infrastructure solutions <br>that power cities, <br> industries, and lives
+                    across <br>the
+                    globe. <br>
+                    Your vision, our foundation.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="{% url 'investors' %}">Investors</a></li>
+                    <li><a href="{% url 'news' %}">News</a></li>
+                    <li><a href="{% url 'events' %}">Events</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                    <li><a href="{% url 'careers' %}">Careers</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="{% url 'about' %}">About Us</a></li>
+                    <li><a href="{% url 'expertise' %}">Expertise</a></li>
+                    <li><a href="{% url 'projects' %}">Projects</a></li>
+                    <li><a href="{% url 'digital' %}">Digital</a></li>
+                    <li><a href="{% url 'insights' %}">Insights</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><strong>Call:</strong> +0123 456 789 00</p>
+                <p><strong>Email:</strong> user@example.com</p>
+
+                <div class="subscribe-box">
+                    <input type="email" placeholder="Write Email" />
+                    <button>→</button>
+                </div>
+
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://wa.me/?text=Check%20this%20out!" target="_blank" rel="noopener noreferrer"
+                        title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div>
+                <a href="{% url 'privacy' %}">Privacy Policy</a>
+                <a href="{% url 'about' %}">Our History</a>
+                <a href="{% url 'expertise' %}">What We Do</a>
+            </div>
+            <div>
+                © 2025 InfraBuild. All images are for demo purposes only.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script>
+        window.addEventListener("scroll", function () {
+            const topbar = document.querySelector(".topbar");
+            const navbar = document.querySelector(".navbar");
+
+            if (window.scrollY > 10) {
+                topbar.classList.add("scrolled");
+                navbar.classList.add("scrolled");
+            } else {
+                topbar.classList.remove("scrolled");
+                navbar.classList.remove("scrolled");
+            }
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,299 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solutions - Places</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="places_header">
+        <div class="topbar">
+            <div class="left">
+                <span><i class="fas fa-phone"></i> +91 98765-43210</span>
+                <span><i class="fas fa-envelope"></i> info@infrabuild.com</span>
+            </div>
+            <div class="right">
+                <a href="{% url 'investors' %}">Investors</a>
+                <a href="{% url 'news' %}">News</a>
+                <a href="{% url 'events' %}">events</a>
+                <a href="{% url 'contact' %}">Contact</a>
+                <a href="{% url 'careers' %}">Careers</a>
+            </div>
+        </div>
+        <hr class="nav-hr">
+
+        <div class="navbar">
+            <div class="logo">
+                <a href="{% url 'home' %}"><img src="../static/img/infralogo.png" alt=""></a>
+                InfraBuild
+            </div>
+            <nav>
+                <div class="dropdown">
+                    <a href="{% url 'about' %}">About Us <i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="{% url 'company_profile' %}">Company Profile</a>
+                        <a href="{% url 'leadership' %}">Leadership</a>
+                        <a href="{% url 'eco' %}">Ecosystem Partnership</a>
+                        <a href="{% url 'Business_Practice' %}">Business Practice</a>
+                        <a href="{% url 'governance' %}">Governance</a>
+                        <a href="{% url 'awards' %}">Awards</a>
+
+
+                        <button class="dropdown-btn" onclick="location.href='about'"> About <i
+                                class="fa fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <a href="{% url 'expertise' %}">Expertise</a>
+                <a href="{% url 'projects' %}">Projects</a>
+                <a href="{% url 'digital' %}">Digital</a>
+                <div class="dropdown">
+                    <a href="{% url 'insights' %}">Insights</a>
+                </div>
+                <a href="#search"><i class="fas fa-magnifying-glass"></i></a>
+            </nav>
+        </div>
+
+        <div class="header-content">
+            <h1 class="typewriter">Transforming Places, Empowering Communities</h1>
+            <p>From bustling urban centers to remote rural landscapes, every place holds unique potential.
+                We design and develop environments that uplift lives, connect people, and support growth.
+                Whether it's a smart city or a serene village, our solutions bring progress closer to home.</p>
+        </div>
+    </header>
+
+    <section class="placessection1">
+        <div class="placessection1-container">
+            <h2 class="placessection1-heading">Transforming Places <span>for a Better Tomorrow</span></h2>
+            <p class="placessection1-para">
+                Every place tells a story — from vibrant cities to quiet villages. We craft infrastructure that adapts
+                to
+                local needs, celebrates identity, and drives progress. By blending innovation with purpose, we’re
+                building
+                spaces that uplift communities and support sustainable living for all.
+            </p>
+        </div>
+    </section>
+
+    <section class="placessection2">
+        <h2>Our Place-Based <span>Development Solutions</span></h2>
+        <p class="placessection2-subheading">
+            Every place tells a story — of people, culture, and potential. Through thoughtful planning and local
+            engagement,
+            we craft spaces that reflect community identity and support future-ready living. Whether enhancing
+            cityscapes
+            or uplifting rural landscapes, our solutions are rooted in sustainability, resilience, and inclusivity.
+        </p>
+
+        <div class="placessection2-item">
+            <div class="placessection2-image">
+                <img src="../static/img/places1.avif" alt="Smart City Infrastructure">
+            </div>
+            <div class="placessection2-text">
+                <h3>Smart City Infrastructure</h3>
+                <p>We create intelligent urban environments equipped with digital tools, efficient mobility systems,
+                    and eco-conscious utilities to improve everyday life and governance.</p>
+                <p>From data-driven traffic systems to green buildings, our smart city projects promote livability,
+                    connectivity, and growth for future generations.</p>
+            </div>
+        </div>
+
+        <div class="placessection2-item">
+            <div class="placessection2-text">
+                <h3>Rural & Remote Development</h3>
+                <p>We bring essential services and infrastructure to underserved regions, ensuring no place is left
+                    behind in the development journey.</p>
+                <p>Our work includes water access, digital connectivity, rural roads, and local power solutions —
+                    empowering communities with opportunity and dignity.</p>
+            </div>
+            <div class="placessection2-image">
+                <img src="../static/img/places2.avif" alt="Rural Infrastructure">
+            </div>
+        </div>
+
+        <div class="placessection2-item">
+            <div class="placessection2-image">
+                <img src="../static/img/places3.avif" alt="Urban Green Park">
+            </div>
+            <div class="placessection2-text">
+                <h3>Public Spaces & Green Areas</h3>
+                <p>We design inclusive, safe, and vibrant public spaces that foster community connection, leisure,
+                    and well-being for all age groups.</p>
+                <p>Whether it’s a park, a plaza, or a cultural corridor — our projects prioritize beauty, utility,
+                    and sustainability in every square foot.</p>
+            </div>
+        </div>
+
+        <div class="placessection2-item">
+            <div class="placessection2-text">
+                <h3>Resilient & Adaptive Design</h3>
+                <p>Our developments are built to withstand climate change, population growth, and evolving community
+                    needs — making every place future-proof.</p>
+                <p>We incorporate flood resistance, modular layouts, and local materials to ensure long-term
+                    functionality and cultural relevance.</p>
+            </div>
+            <div class="placessection2-image">
+                <img src="../static/img/places4.avif" alt="Resilient Urban Design">
+            </div>
+        </div>
+    </section>
+
+
+    <section class="more-mobility">
+        <div class="more-mobility-container">
+            <div class="solutions-text">
+                <h2> Learn about More Solutions</h2>
+            </div>
+            <div class="solutions-grid">
+                <div class="solution-card card2">
+                    <div class="solution-card-content">
+                        <h3>Climage change</h3>
+                        <p>Advanced analytics to minimize costs while maintaining quality and compliance.</p>
+
+                        <a href="{% url 'climatechange' %}">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="solution-card card1">
+                    <div class="solution-card-content">
+                        <h3>Mobility</h3>
+                        <p>Leverage intelligent planning tools to increase project efficiency and reduce delays.</p>
+
+                        <a href="{% url 'mobility' %}">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="solution-card card6">
+                    <div class="solution-card-content">
+                        <h3>Resilience</h3>
+                        <p>Build systems that adapt to climate change and disruptive events through predictive
+                            technologies.</p>
+
+                        <a href="{% url 'resilience' %}">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="solution-card card7 extra-cards">
+                    <div class="solution-card-content">
+                        <h3>Restoration</h3>
+                        <p>Utilize eco-centric strategies to restore degraded environments and promote long-term
+                            ecological balance.</p>
+
+                        <a href="">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="solution-card card8 extra-cards">
+                    <div class="solution-card-content">
+                        <h3>Urbanism</h3>
+                        <p>Transform urban development with integrated solutions for smart mobility, green buildings.
+                        </p>
+
+                        <a href="">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-section">
+                <a href="{% url 'home' %}">
+                    <h3>InfraBuild</h3>
+                </a>
+                <p>"Building Tomorrow, <br> Strengthening Today."</p>
+                <p>Building sustainable <br>infrastructure solutions <br>that power cities, <br> industries, and lives
+                    across <br>the
+                    globe. <br>
+                    Your vision, our foundation.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="{% url 'investors' %}">Investors</a></li>
+                    <li><a href="{% url 'news' %}">News</a></li>
+                    <li><a href="{% url 'events' %}">Events</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                    <li><a href="{% url 'careers' %}">Careers</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="{% url 'about' %}">About Us</a></li>
+                    <li><a href="{% url 'expertise' %}">Expertise</a></li>
+                    <li><a href="{% url 'projects' %}">Projects</a></li>
+                    <li><a href="{% url 'digital' %}">Digital</a></li>
+                    <li><a href="{% url 'insights' %}">Insights</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><strong>Call:</strong> +0123 456 789 00</p>
+                <p><strong>Email:</strong> user@example.com</p>
+
+                <div class="subscribe-box">
+                    <input type="email" placeholder="Write Email" />
+                    <button>→</button>
+                </div>
+
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://wa.me/?text=Check%20this%20out!" target="_blank" rel="noopener noreferrer"
+                        title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div>
+                <a href="{% url 'privacy' %}">Privacy Policy</a>
+                <a href="{% url 'about' %}">Our History</a>
+                <a href="{% url 'expertise' %}">What We Do</a>
+            </div>
+            <div>
+                © 2025 InfraBuild. All images are for demo purposes only.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script>
+        window.addEventListener("scroll", function () {
+            const topbar = document.querySelector(".topbar");
+            const navbar = document.querySelector(".navbar");
+
+            if (window.scrollY > 10) {
+                topbar.classList.add("scrolled");
+                navbar.classList.add("scrolled");
+            } else {
+                topbar.classList.remove("scrolled");
+                navbar.classList.remove("scrolled");
+            }
+        });
+    </script>
+
+</body>
+
+</html>

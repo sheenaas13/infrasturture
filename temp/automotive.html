@@ -1,0 +1,296 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sectors - Automotive</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="automotive_header">
+        <div class="topbar">
+            <div class="left">
+                <span><i class="fas fa-phone"></i> +91 98765-43210</span>
+                <span><i class="fas fa-envelope"></i> info@infrabuild.com</span>
+            </div>
+            <div class="right">
+                <a href="{% url 'investors' %}">Investors</a>
+                <a href="{% url 'news' %}">News</a>
+                <a href="{% url 'events' %}">events</a>
+                <a href="{% url 'contact' %}">Contact</a>
+                <a href="{% url 'careers' %}">Careers</a>
+            </div>
+        </div>
+        <hr class="nav-hr">
+
+        <div class="navbar">
+            <div class="logo">
+                <a href="{% url 'home' %}"><img src="../static/img/infralogo.png" alt=""></a>
+                InfraBuild
+            </div>
+            <nav>
+                <div class="dropdown">
+                    <a href="{% url 'about' %}">About Us <i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="{% url 'company_profile' %}">Company Profile</a>
+                        <a href="{% url 'leadership' %}">Leadership</a>
+                        <a href="{% url 'eco' %}">Ecosystem Partnership</a>
+                        <a href="{% url 'Business_Practice' %}">Business Practice</a>
+                        <a href="{% url 'governance' %}">Governance</a>
+                        <a href="{% url 'awards' %}">Awards</a>
+
+
+                        <button class="dropdown-btn" onclick="location.href='about'"> About <i
+                                class="fa fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <a href="{% url 'expertise' %}">Expertise</a>
+                <a href="{% url 'projects' %}">Projects</a>
+                <a href="{% url 'digital' %}">Digital</a>
+                <div class="dropdown">
+                    <a href="{% url 'insights' %}">Insights</a>
+                </div>
+                <a href="#search"><i class="fas fa-magnifying-glass"></i></a>
+            </nav>
+        </div>
+
+        <div class="header-content">
+            <h1 class="typewriter">Innovating Automotive Spaces</h1>
+            <p>Our infrastructure accelerates electric, autonomous, and sustainable vehicle development.
+                With precision, scalability, and resilience, we empower automotive evolution from concept to road.</p>
+        </div>
+    </header>
+
+    <section class="automotive-section1">
+        <div class="automotive-container">
+            <h1 class="automotive-heading">Engineering Excellence in <span>Automotive Infrastructure</span></h1>
+            <p class="automotive-paragraph">
+                The automotive industry thrives on precision, speed, and relentless innovation — and so should the
+                infrastructure that supports it. From electric vehicle (EV) production lines to cutting-edge R&D hubs,
+                our infrastructure solutions are tailored to meet the unique demands of tomorrow’s mobility landscape.
+                Whether it's developing smart testing tracks or climate-controlled manufacturing zones, we engineer
+                spaces that drive performance and reliability from the ground up.
+            </p>
+            <p class="automotive-paragraph">
+                Our commitment to the future of mobility includes seamless integration of digital tools,
+                sustainability-focused design, and scalable modular frameworks. We partner with OEMs, Tier 1 suppliers,
+                and tech innovators to deliver environments where human ingenuity and automotive technology intersect.
+                Together, we’re building the physical backbone of future transport — efficient, adaptable, and ready for
+                what comes next.
+            </p>
+        </div>
+    </section>
+
+    <section class="automotive-section2">
+        <div class="automotive-text">
+            <h2>R&D & Testing Environments <span>Driving Innovation from Concept to Road</span></h2>
+        </div>
+        <div class="automotive-card-container">
+            <div class="automotive-card">
+                <div class="automotive-card-icon"><i class="fas fa-wind"></i></div>
+                <h3>Wind Tunnels</h3>
+                <p>High-precision tunnels for testing aerodynamics and vehicle performance under controlled airflow.</p>
+            </div>
+            <div class="automotive-card">
+                <div class="automotive-card-icon"><i class="fas fa-battery-three-quarters"></i></div>
+                <h3>Battery Testing Labs</h3>
+                <p>Labs for lifecycle validation, stress testing, and thermal behavior analysis of EV batteries.</p>
+            </div>
+            <div class="automotive-card">
+                <div class="automotive-card-icon"><i class="fas fa-road"></i></div>
+                <h3>Autonomous Test Tracks</h3>
+                <p>Closed-loop tracks for validating sensors, navigation systems, and safety features in AVs.</p>
+            </div>
+            <div class="automotive-card">
+                <div class="automotive-card-icon"><i class="fas fa-robot"></i></div>
+                <h3>Simulation Labs</h3>
+                <p>High-fidelity simulators for virtual prototyping, driving scenarios, and performance modeling.</p>
+            </div>
+            <div class="automotive-card">
+                <div class="automotive-card-icon"><i class="fas fa-tools"></i></div>
+                <h3>Component Durability Rigs</h3>
+                <p>Automated stations for fatigue testing of parts under thermal, mechanical, and vibration loads.</p>
+            </div>
+            <div class="automotive-card">
+                <div class="automotive-card-icon"><i class="fas fa-network-wired"></i></div>
+                <h3>Vehicle Systems Integration Bays</h3>
+                <p>Controlled bays for full vehicle integration, electrical systems calibration, and diagnostics.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="automotive-section3">
+        <div class="automotive-text">
+            <h2>Smart Mobility Infrastructure <span>Enabling the Future of Transport</span></h2>
+            <p>
+                As vehicles become smarter, so must the infrastructure around them. We develop connected
+                ecosystems that support autonomous fleets, EV charging networks, and integrated transport hubs—
+                creating smarter cities through intelligent automotive infrastructure.
+            </p>
+        </div>
+        <div class="automotive-image">
+            <img src="../static/img/automotive1.webp" alt="Smart Automotive Mobility">
+        </div>
+    </section>
+
+    <section class="more-sectors">
+        <div class="solutions-container">
+            <div class="solutions-text">
+                <h2>More Sectors</h2>
+                <p>
+                    Infrabuild serves a broad range of sectors with tailored solutions that address unique industry
+                    needs — leveraging deep insights, specialized tools, and global expertise to drive excellence.
+                </p>
+            </div>
+
+            <div class="solutions-grid">
+                <div class="solution-card card17">
+                    <div class="solution-card-content">
+                        <h3>Aerospace</h3>
+                        <p>Support mission-critical projects with systems built for precision, scale, and operational
+                            integrity.</p>
+                        <a href="{% url 'aerospace' %}">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="solution-card card19">
+                    <div class="solution-card-content">
+                        <h3>Chemical</h3>
+                        <p>Deliver safe, efficient facilities with risk-managed engineering and process-driven design
+                            solutions.</p>
+                        <a href="{% url 'chemical' %}">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="solution-card card20">
+                    <div class="solution-card-content">
+                        <h3>Commercial Developers</h3>
+                        <p>Streamline planning and delivery for commercial hubs through smart tools and integrated
+                            teams.</p>
+                        <a href="{% url 'commercial_dev' %}">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="solution-card card21 extra-cards">
+                    <div class="solution-card-content">
+                        <h3>Contractors</h3>
+                        <p>Enhance project execution through scalable delivery models and centralized digital platforms.
+                        </p>
+                        <a href="{% url 'contractors' %}">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="solution-card card22 extra-cards">
+                    <div class="solution-card-content">
+                        <h3>Power</h3>
+                        <p>Support energy systems with reliable infrastructure built for flexibility and operational
+                            uptime.</p>
+                        <a href="#">Learn More <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="footer">
+            <div class="footer-section">
+                <a href="{% url 'home' %}">
+                    <h3>InfraBuild</h3>
+                </a>
+                <p>"Building Tomorrow, <br> Strengthening Today."</p>
+                <p>Building sustainable <br>infrastructure solutions <br>that power cities, <br> industries, and lives
+                    across <br>the
+                    globe. <br>
+                    Your vision, our foundation.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="{% url 'investors' %}">Investors</a></li>
+                    <li><a href="{% url 'news' %}">News</a></li>
+                    <li><a href="{% url 'events' %}">Events</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                    <li><a href="{% url 'careers' %}">Careers</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="{% url 'about' %}">About Us</a></li>
+                    <li><a href="{% url 'expertise' %}">Expertise</a></li>
+                    <li><a href="{% url 'projects' %}">Projects</a></li>
+                    <li><a href="{% url 'digital' %}">Digital</a></li>
+                    <li><a href="{% url 'insights' %}">Insights</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><strong>Call:</strong> +0123 456 789 00</p>
+                <p><strong>Email:</strong> user@example.com</p>
+
+                <div class="subscribe-box">
+                    <input type="email" placeholder="Write Email" />
+                    <button>→</button>
+                </div>
+
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://wa.me/?text=Check%20this%20out!" target="_blank" rel="noopener noreferrer"
+                        title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div>
+                <a href="{% url 'privacy' %}">Privacy Policy</a>
+                <a href="{% url 'about' %}">Our History</a>
+                <a href="{% url 'expertise' %}">What We Do</a>
+            </div>
+            <div>
+                © 2025 InfraBuild. All images are for demo purposes only.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script>
+        window.addEventListener("scroll", function () {
+            const topbar = document.querySelector(".topbar");
+            const navbar = document.querySelector(".navbar");
+
+            if (window.scrollY > 10) {
+                topbar.classList.add("scrolled");
+                navbar.classList.add("scrolled");
+            } else {
+                topbar.classList.remove("scrolled");
+                navbar.classList.remove("scrolled");
+            }
+        });
+    </script>
+
+</body>
+
+</html>

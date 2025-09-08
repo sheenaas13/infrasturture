@@ -1,0 +1,596 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to InfraBuild</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <div class="topbar">
+            <div class="left">
+                <span><i class="fas fa-phone"></i> +91 98765-43210</span>
+                <span><i class="fas fa-envelope"></i> info@infrabuild.com</span>
+            </div>
+            <div class="right">
+                <a href="{% url 'investors' %}">Investors</a>
+                <a href="{% url 'news' %}">News</a>
+                <a href="{% url 'events' %}">events</a>
+                <a href="{% url 'contact' %}">Contact</a>
+                <a href="{% url 'careers' %}">Careers</a>
+            </div>
+        </div>
+        <hr class="nav-hr">
+
+        <div class="navbar">
+            <div class="logo">
+                <a href="{% url 'home' %}"><img src="../static/img/infralogo.png" alt=""></a>
+                InfraBuild
+            </div>
+
+            <div class="toggler" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav id="nav-menu">
+                <div class="dropdown">
+                    <a href="{% url 'about' %}">About Us <i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="{% url 'company_profile' %}">Company Profile</a>
+                        <a href="{% url 'leadership' %}">Leadership</a>
+                        <a href="{% url 'eco' %}">Ecosystem Partnership</a>
+                        <a href="{% url 'Business_Practice' %}">Business Practice</a>
+                        <a href="{% url 'governance' %}">Governance</a>
+                        <a href="{% url 'awards' %}">Awards</a>
+
+
+                        <button class="dropdown-btn" onclick="location.href='about'"> About <i
+                                class="fa fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <a href="{% url 'expertise' %}">Expertise</a>
+                <a href="{% url 'projects' %}">Projects</a>
+                <a href="{% url 'digital' %}">Digital</a>
+                <div class="dropdown">
+                    <a href="{% url 'insights' %}">Insights </a>
+                    <!-- <div class="dropdown-content">
+                        <a href="#blog">Sustainablity & <br> Decarbonisation</a>
+                        <a href="#reports">Mobility</a>
+                        <a href="#news">Resilience</a>
+                        <a href="#news">places</a>
+
+                        <button class="dropdown-btn" onclick="location.href='insights'"> All Insights <i
+                                class="fa fa-arrow-right"></i></button>
+                    </div> -->
+                </div>
+                <div class="mobile-topbar">
+                    <div class="mobile-links">
+                        <a href="{% url 'investors' %}">Investors</a>
+                        <a href="{% url 'news' %}">News</a>
+                        <a href="{% url 'events' %}">Events</a>
+                        <a href="{% url 'contact' %}">Contact</a>
+                        <a href="{% url 'careers' %}">Careers</a>
+                    </div>
+                    <hr>
+                    <div class="mobile-contact">
+                        <span><i class="fas fa-phone"></i> +91 98765-43210</span>
+                        <span><i class="fas fa-envelope"></i> info@infrabuild.com</span>
+                    </div>
+                </div>
+                <a href="#search"><i class="fas fa-magnifying-glass"></i></a>
+            </nav>
+        </div>
+
+        <div class="header-content">
+            <h1 class="typewriter">Pioneering Infrastructure for <br> a Stronger Tomorrow</h1>
+            <p>Building sustainable infrastructure solutions that power cities, industries, and lives across the globe.
+                Your vision, our foundation.</p>
+            <a href="/insights/1/" class="cta-btn">Read More</a>
+        </div>
+    </header>
+
+    <section class="move-section">
+        <div class="move-box" data-aos="fade-left" data-aos-duration="1000">
+            <div class="responsive-controls">
+                <button onclick="closeMoveBox()" class="control-btn close-btn">✖</button>
+                <button onclick="refreshForm()" class="control-btn refresh-btn">⟳</button>
+            </div>
+            <div id="formContainer" class="estimate-section2-form-container" data-aos="fade-left"
+                data-aos-duration="1000">
+                <h2 class="estimate-section2-heading">Development Project Estimator</h2>
+
+                <form id="projectForm" class="estimate-section2-form">
+                    <label class="estimate-section2-label">Type of Development:</label>
+                    <select id="type" class="estimate-section2-select" required>
+                        <option value="">Select</option>
+
+                        <optgroup label="Residential">
+                            <option value="residential_housing">Residential Housing</option>
+                            <option value="small_parks">Small Parks</option>
+                        </optgroup>
+
+                        <optgroup label="Commercial">
+                            <option value="commercial_buildings">Commercial Buildings</option>
+                            <option value="urban_development">Urban Development</option>
+                            <option value="highway_construction">Highway Construction</option>
+                        </optgroup>
+
+                        <optgroup label="Infrastructure">
+                            <option value="electric_grid_setup">Electric Grid Setup</option>
+                            <option value="water_management">Water Management</option>
+                        </optgroup>
+
+                        <optgroup label="Mixed-Use">
+                            <option value="mixed_use_development">Mixed-Use Development</option>
+                        </optgroup>
+                    </select>
+
+                    <label class="estimate-section2-label">Total Area (in sq ft):</label>
+                    <input type="number" id="area" class="estimate-section2-input" required />
+
+                    <label class="estimate-section2-label">Location:</label>
+                    <input type="text" id="location" class="estimate-section2-input" required />
+
+                    <label class="estimate-section2-label">Preferred Green Features:</label>
+                    <div class="estimate-section2-checkbox-group">
+                        <label><input type="checkbox" name="green" value="solar" /> Solar Panels</label>
+                        <label><input type="checkbox" name="green" value="rainwater" /> Rainwater Harvesting</label>
+                        <label><input type="checkbox" name="green" value="greenroof" /> Green Roof</label>
+                        <label><input type="checkbox" name="green" value="waste" /> Waste Recycling System</label>
+                    </div>
+
+                    <label class="estimate-section2-label">Project Timeline:</label>
+                    <select id="timeline" class="estimate-section2-select" required>
+                        <option value="">Select</option>
+                        <option value="short">Less than 1 year</option>
+                        <option value="medium">1–3 years</option>
+                        <option value="long">More than 3 years</option>
+                    </select>
+
+                    <button type="submit" class="estimate-section2-button">Generate Estimate</button>
+                </form>
+            </div>
+            <div id="estimateSection" class="estimate-section2-container estimate-section2-hidden" data-aos="fade-up">
+                <h3 class="estimate-section2-heading2">Estimated <span>Cost Breakdown</span></h3>
+                <table id="estimateTable" class="estimate-section2-table"></table>
+                <p onclick="backToForm()" class="estimate-section2-backbutton">← Back to Form</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="home-section1">
+        <div class="content">
+            <div class="left">
+                <h2>From Groundwork to Skylines — <span>Our Complete Capabilities</span></h2>
+                <p>
+                    At InfraBuild, we offer comprehensive infrastructure solutions that drive development, enhance
+                    connectivity, and support sustainable growth. Our expertise spans across civil and structural
+                    engineering, transportation systems, urban infrastructure, industrial facilities, and energy
+                    projects. From highways and bridges to smart cities, logistics hubs, and renewable energy systems,
+                    we deliver end-to-end services with a strong focus on quality, safety, and timely execution. With a
+                    commitment to innovation and excellence, we help shape resilient environments that meet the evolving
+                    needs of communities and industries.
+                </p>
+                <div class="cta">
+                    <a href="{% url 'about' %}" class="btn">About Us</a>
+                    <div class="phone">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <span>Call Anytime</span><br>
+                            <strong>+91 9876543210</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <!-- <div class="main-img">
+                    <img src="../static/img/who-we-are-thumbnail.webp" alt="Main Transport Image">
+                </div> -->
+                <div class="label-box">
+                    <img src="../static/img/who-we-are2.avif" alt="Mini Image">
+                    <div class="label-text">
+                        <strong>20+</strong><br>
+                        Years of Service
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-heading-section">
+        <div class="intro-text">
+            <h2>Discover Our Infrastructure Projects Excellence</h2>
+        </div>
+        <div class="intro-para">
+            <p> We take pride in designing and executing cutting-edge infrastructure projects that elevate living
+                standards and support sustainable development. Our expertise spans across roads, buildings, urban
+                spaces, and smart systems tailored to tomorrow's needs.
+            </p>
+        </div>
+    </section>
+
+    <section class="project-divs">
+        <div class="icon-grid">
+            <div class="icon-box" data-aos="zoom-in" data-aos-duration="400">
+                <i class="fas fa-road"></i>
+                <h4>Highway Construction</h4>
+                <p>Modern highways enhance speed and safety through smart lighting and sensors.
+                    Concrete durability ensures long-lasting performance in changing weather zones.
+                    Real-time traffic management reduces congestion and improves travel reliability.
+                </p>
+
+            </div>
+
+            <div class="icon-box" data-aos="zoom-in" data-aos-duration="800">
+                <i class="fas fa-city"></i>
+                <h4>Urban Development</h4>
+                <p>Planning urban spaces that merge aesthetics, access, and smart connectivity.
+                    High-density housing integrates comfort, safety, and renewable energy options.
+                    Mixed-use zones promote business, housing, and mobility within walking range.
+                </p>
+            </div>
+            <div class="icon-box" data-aos="zoom-in" data-aos-duration="1200">
+                <i class="fas fa-bolt"></i>
+                <h4>Electric Grid Setup</h4>
+                <p>Smart grids enable stable, adaptive energy delivery with less power waste.
+                    Infrastructure supports solar and wind integration for future-ready grids.
+                    Maintenance is streamlined through predictive alerts and centralized controls.
+                </p>
+            </div>
+            <div class="icon-box" data-aos="zoom-in" data-aos-duration="1600">
+                <i class="fas fa-water"></i>
+                <h4>Water Management</h4>
+                <p>Systems ensure clean water access and storm drainage for every community.
+                    Treatment plants use smart tech for efficient and low-waste filtration.
+                    Underground networks are designed to prevent urban flooding and overflow.
+                </p>
+            </div>
+            <div class="icon-box" data-aos="zoom-in" data-aos-duration="2000">
+                <i class="fas fa-building"></i>
+                <h4>Commercial Buildings</h4>
+                <p>Projects include malls, hospitals, schools, and corporate tower complexes.
+                    Modern architecture uses glass, steel, and composite energy-efficient designs.
+                    Facilities include smart lighting, HVAC, and disaster-resilient frameworks.
+                </p>
+            </div>
+            <div class="icon-box" data-aos="zoom-in" data-aos-duration="2400">
+                <i class="fas fa-tree-city"></i>
+                <h4>Smart Parks</h4>
+                <p>Urban parks include smart benches, Wi-Fi, and renewable power stations.
+                    Designs blend green space with fitness zones and community gathering areas.
+                    Sensors manage lighting, watering, and safety for sustainable upkeep.
+                </p>
+
+            </div>
+        </div>
+    </section>
+
+    <button class="project-btn" onclick="location.href='projects#Projects'">View all our Projects <i
+            class="fa fa-arrow-right"></i></button>
+
+    <section class="news-heading-section">
+        <div class="intro-text">
+            <h2>Latest News & <br> Press Releases</h2>
+        </div>
+        <div class="intro-para">
+            <p>Stay informed with the most recent developments and achievements in infrastructure. From sustainable
+                construction methods to smart urban planning, we bring you impactful stories shaping tomorrow’s world.
+            </p>
+        </div>
+    </section>
+
+    <section class="projects-carousel-section">
+        <div class="carousel-container" id="carousel">
+            <div class="project-card active">
+                <img src="../static/img/project1.webp" alt="Highway Project">
+                <div class="content">
+                    <h3>12 March 2023</h3>
+                    <p>Government launches eco-friendly highway with smart lanes and solar-powered lighting
+                        systems.Sensor-driven traffic flow improves both safety and driving experience.</p>
+                </div>
+                <a href="{% url 'news' %}">Press Release <i class="fa fa-arrow-right"></i></a>
+            </div>
+
+            <div class="project-card">
+                <img src="../static/img/project2.webp" alt="Lighting Project">
+                <div class="content">
+                    <h3>27 July 2024</h3>
+                    <p>City deploys adaptive LED lights improving safety, visibility, and energy efficiency overnight.
+                        Cloud-based control systems allow updates in real-time citywide.
+                    </p>
+                </div>
+                <a href="{% url 'news' %}">Press Release <i class="fa fa-arrow-right"></i></a>
+            </div>
+
+            <div class="project-card">
+                <img src="../static/img/project3.webp" alt="Urban Housing">
+                <div class="content">
+                    <h3>03 November 2021</h3>
+                    <p>Affordable green housing launched with solar panels and water recycling built-in features.
+                        These green homes aim to reshape India’s urban planning.
+                    </p>
+                </div>
+                <a href="{% url 'news' %}">Press Release <i class="fa fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+        <div class="carousel-controls">
+            <button onclick="prevSlide()">Prev</button>
+            <button onclick="nextSlide()">Next</button>
+        </div>
+
+        <div class="dots">
+            <div class="dot active" onclick="goToSlide(0)"></div>
+            <div class="dot" onclick="goToSlide(1)"></div>
+            <div class="dot" onclick="goToSlide(2)"></div>
+        </div>
+    </section>
+
+    <div class="career-section">
+        <div class="career-section-left" data-aos="fade-right" data-aos-duration="1200">
+            <h2>Build Your Future <br> <span> With Infrabuild </span></h2>
+            <p>At Infrabuild, we offer more than jobs — we offer long-term growth. Join a team where innovation and
+                infrastructure come together to shape real-world impact. From on-site engineering to smart planning
+                roles, we value your skills and dedication. Let’s create future-ready cities together, one project at a
+                time.
+            </p>
+            <br>
+            <p>
+                “At Infrabuild, we don’t just construct buildings — we build careers that last. Every individual here is
+                a foundation stone in the cities we shape. If you’re driven by purpose, precision, and progress, there’s
+                a place for you on our team.” <br> — Rajiv Malhotra, CEO, Infrabuild Group
+            </p>
+            <br>
+            <br>
+            <button class="career-btn" onclick="location.href='careers'">Explore all career opportunities <i
+                    class="fa fa-arrow-right"></i></button>
+        </div>
+        <div class="career-section-right">
+            <img src="../static/img/careerhome5.avif" alt="Train Image">
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-section">
+                <a href="{% url 'home' %}">
+                    <h3>InfraBuild</h3>
+                </a>
+                <p>"Building Tomorrow, <br> Strengthening Today."</p>
+                <p>Building sustainable <br>infrastructure solutions <br>that power cities, <br> industries, and lives
+                    across <br>the
+                    globe. <br>
+                    Your vision, our foundation.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="{% url 'investors' %}">Investors</a></li>
+                    <li><a href="{% url 'news' %}">News</a></li>
+                    <li><a href="{% url 'events' %}">Events</a></li>
+                    <li><a href="{% url 'contact' %}">Contact</a></li>
+                    <li><a href="{% url 'careers' %}">Careers</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="{% url 'about' %}">About Us</a></li>
+                    <li><a href="{% url 'expertise' %}">Expertise</a></li>
+                    <li><a href="{% url 'projects' %}">Projects</a></li>
+                    <li><a href="{% url 'digital' %}">Digital</a></li>
+                    <li><a href="{% url 'insights' %}">Insights</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p><strong>Call:</strong> +0123 456 789 00</p>
+                <p><strong>Email:</strong> user@example.com</p>
+
+                <div class="subscribe-box">
+                    <input type="email" placeholder="Write Email" />
+                    <button>→</button>
+                </div>
+
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://wa.me/?text=Check%20this%20out!" target="_blank" rel="noopener noreferrer"
+                        title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div>
+                <a href="{% url 'privacy' %}">Privacy Policy</a>
+                <a href="{% url 'about' %}">Our History</a>
+                <a href="{% url 'expertise' %}">What We Do</a>
+            </div>
+            <div>
+                © 2025 InfraBuild. All images are for demo purposes only.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function closeMoveBox() {
+            document.querySelector('.move-box').style.display = 'none';
+        }
+
+        function refreshForm() {
+            document.getElementById('projectForm').reset();
+            document.getElementById('estimateSection').classList.add('estimate-section2-hidden');
+            document.getElementById('formContainer').style.display = 'block';
+        }
+    </script>
+
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("nav-menu").classList.toggle("show");
+        }
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script>
+        const cards = document.querySelectorAll('.project-card');
+        const dots = document.querySelectorAll('.dot');
+        let currentIndex = 0;
+
+        function updateCarousel(index) {
+            cards.forEach((card, i) => {
+                card.classList.toggle('active', i === index);
+            });
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % cards.length;
+            updateCarousel(currentIndex);
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+            updateCarousel(currentIndex);
+        }
+
+        function goToSlide(index) {
+            currentIndex = index;
+            updateCarousel(currentIndex);
+        }
+
+        setInterval(() => {
+            nextSlide();
+        }, 3000);
+    </script>
+
+    <script>
+        document.getElementById("projectForm")?.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const type = document.getElementById("type").value;
+            const area = parseInt(document.getElementById("area").value);
+            const greenCheckboxes = document.querySelectorAll("input[name='green']:checked");
+            const greenFeatures = Array.from(greenCheckboxes).map(cb => cb.value);
+
+            const parentCategory = subTypeToCategory[type];
+            const selectedRates = costRates[parentCategory];
+
+            if (!selectedRates) {
+                alert("No rate found for selected development type.");
+                return;
+            }
+
+            const baseRate = selectedRates.baseRate;
+            const greenCost = greenFeatures.length * selectedRates.greenCost;
+            const permitCost = selectedRates.permitCost;
+            const designPercentage = selectedRates.designPercentage;
+            const constructionCost = baseRate * area;
+            const designCost = constructionCost * (designPercentage / 100);
+            const total = constructionCost + greenCost + designCost + permitCost;
+
+            const table = document.getElementById("estimateTable");
+            table.innerHTML = `
+            <tr><th>Component</th><th>Estimated Cost (₹)</th></tr>
+            <tr><td>Construction (${area} sq ft)</td><td>₹${constructionCost.toLocaleString()}</td></tr>
+            <tr><td>Green Features (${greenFeatures.length})</td><td>₹${greenCost.toLocaleString()}</td></tr>
+            <tr><td>Design & Architecture (${designPercentage}%)</td><td>₹${designCost.toLocaleString()}</td></tr>
+            <tr><td>Permits & Legal</td><td>₹${permitCost.toLocaleString()}</td></tr>
+            <tr class="estimate-section2-total-row"><td>Total Estimated Cost</td><td>₹${total.toLocaleString()}</td></tr>
+        `;
+
+            document.getElementById("formContainer").classList.add("estimate-section2-hidden");
+            document.getElementById("estimateSection").classList.remove("estimate-section2-hidden");
+            document.getElementById("estimateSection").scrollIntoView({ behavior: "smooth" });
+        });
+
+        function backToForm() {
+            document.getElementById("estimateSection").classList.add("estimate-section2-hidden");
+            document.getElementById("formContainer").classList.remove("estimate-section2-hidden");
+            setTimeout(() => AOS.refresh(), 100);
+            document.getElementById("formContainer").scrollIntoView({ behavior: "smooth" });
+        }
+    </script>
+
+    <script>
+
+        const costRates = {
+            residential: {
+                baseRate: parseFloat("{{ rates.residential.base_rate|default:'0' }}"),
+                greenCost: parseFloat("{{ rates.residential.green_feature_cost|default:'0' }}"),
+                designPercentage: parseFloat("{{ rates.residential.design_percentage|default:'0' }}"),
+                permitCost: parseFloat("{{ rates.residential.permit_cost|default:'0' }}")
+            },
+            commercial: {
+                baseRate: parseFloat("{{ rates.commercial.base_rate|default:'0' }}"),
+                greenCost: parseFloat("{{ rates.commercial.green_feature_cost|default:'0' }}"),
+                designPercentage: parseFloat("{{ rates.commercial.design_percentage|default:'0' }}"),
+                permitCost: parseFloat("{{ rates.commercial.permit_cost|default:'0' }}")
+            },
+            mixed: {
+                baseRate: parseFloat("{{ rates.mixed.base_rate|default:'0' }}"),
+                greenCost: parseFloat("{{ rates.mixed.green_feature_cost|default:'0' }}"),
+                designPercentage: parseFloat("{{ rates.mixed.design_percentage|default:'0' }}"),
+                permitCost: parseFloat("{{ rates.mixed.permit_cost|default:'0' }}")
+            }
+        };
+
+        const subTypeToCategory = {
+            residential_housing: "residential",
+            small_parks: "residential",
+            commercial_buildings: "commercial",
+            urban_development: "commercial",
+            highway_construction: "commercial",
+            electric_grid_setup: "commercial",
+            water_management: "commercial",
+            mixed_use_development: "mixed"
+        };
+    </script>
+
+    <script>
+        window.addEventListener("scroll", function () {
+            const topbar = document.querySelector(".topbar");
+            const navbar = document.querySelector(".navbar");
+
+            if (window.scrollY > 10) {
+                topbar.classList.add("scrolled");
+                navbar.classList.add("scrolled");
+            } else {
+                topbar.classList.remove("scrolled");
+                navbar.classList.remove("scrolled");
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>
