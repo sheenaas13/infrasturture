@@ -14,8 +14,7 @@
 </head>
 
 <body>
-    <header
-        style=" background: linear-gradient(to right, rgb(28 40 51 / 55%), rgb(28 40 51 / 54%)), url(../static/img/eventsheader.webp) center / cover no-repeat;">
+    <header class="events-header">
         <div class="topbar">
             <div class="left">
                 <span><i class="fas fa-phone"></i> +91 98765-43210</span>
@@ -36,7 +35,11 @@
                 <a href="{% url 'home' %}"><img src="../static/img/infralogo.png" alt=""></a>
                 InfraBuild
             </div>
-            <nav>
+
+            <div class="toggler" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav id="nav-menu">
                 <div class="dropdown">
                     <a href="{% url 'about' %}">About Us <i class="fas fa-caret-down"></i></a>
                     <div class="dropdown-content">
@@ -47,6 +50,7 @@
                         <a href="{% url 'governance' %}">Governance</a>
                         <a href="{% url 'awards' %}">Awards</a>
 
+
                         <button class="dropdown-btn" onclick="location.href='about'"> About <i
                                 class="fa fa-arrow-right"></i></button>
                     </div>
@@ -55,16 +59,30 @@
                 <a href="{% url 'projects' %}">Projects</a>
                 <a href="{% url 'digital' %}">Digital</a>
                 <div class="dropdown">
-                    <a href="{% url 'insights' %}">Insights</a>
+                    <a href="{% url 'insights' %}">Insights </a>
                     <!-- <div class="dropdown-content">
                         <a href="#blog">Sustainablity & <br> Decarbonisation</a>
                         <a href="#reports">Mobility</a>
                         <a href="#news">Resilience</a>
                         <a href="#news">places</a>
 
-                        <button class="dropdown-btn" onclick="location.href='insights'">All Insights<i
+                        <button class="dropdown-btn" onclick="location.href='insights'"> All Insights <i
                                 class="fa fa-arrow-right"></i></button>
                     </div> -->
+                </div>
+                <div class="mobile-topbar">
+                    <div class="mobile-links">
+                        <a href="{% url 'investors' %}">Investors</a>
+                        <a href="{% url 'news' %}">News</a>
+                        <a href="{% url 'events' %}">Events</a>
+                        <a href="{% url 'contact' %}">Contact</a>
+                        <a href="{% url 'careers' %}">Careers</a>
+                    </div>
+                    <hr>
+                    <div class="mobile-contact">
+                        <span><i class="fas fa-phone"></i> +91 98765-43210</span>
+                        <span><i class="fas fa-envelope"></i> info@infrabuild.com</span>
+                    </div>
                 </div>
                 <a href="#search"><i class="fas fa-magnifying-glass"></i></a>
             </nav>
@@ -205,6 +223,32 @@
                 img.src = src;
             }
         });
+    </script>
+
+    <script>
+        window.addEventListener("scroll", function () {
+            const topbar = document.querySelector(".topbar");
+            const navbar = document.querySelector(".navbar");
+
+            if (window.scrollY > 10) {
+                topbar.classList.add("scrolled");
+                navbar.classList.add("scrolled");
+            } else {
+                topbar.classList.remove("scrolled");
+                navbar.classList.remove("scrolled");
+            }
+        });
+    </script>
+
+     <script>
+        function toggleMenu() {
+            document.getElementById("nav-menu").classList.toggle("show");
+        }
+    </script>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
     </script>
 
     <script>

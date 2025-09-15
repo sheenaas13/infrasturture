@@ -50,6 +50,35 @@ body {
     }
 }
 
+
+.career-header {
+    background: linear-gradient(to right, rgb(28 40 51 / 55%), rgb(28 40 51 / 54%)), url(../static/img/careerheader.gif) center / cover no-repeat;
+    height: 77vh;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.events-header {
+    background: linear-gradient(to right, rgb(28 40 51 / 55%), rgb(28 40 51 / 54%)), url(../static/img/eventsheader.webp) center / cover no-repeat;
+    height: 77vh;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.news-header {
+    background: linear-gradient(to right, rgb(28 40 51 / 55%), rgb(28 40 51 / 54%)), url(../static/img/inves-news4.webp) center / cover no-repeat;
+    height: 77vh;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .power_header {
     background: linear-gradient(to right, rgb(28 40 51 / 55%), rgb(28 40 51 / 54%)), url(./img/power-e.webp) center / cover no-repeat;
     height: 77vh;
@@ -8510,6 +8539,15 @@ html {
     background-color: #ccc;
 }
 
+@media screen and (max-width: 360px) {
+    .navbar {
+        gap: 137px;
+    }
+
+    .nav-hr {
+        margin-top: 69px;
+    }
+}
 
 
 @media screen and (min-width: 360px) and (max-width: 768px) {
@@ -9600,6 +9638,117 @@ html {
     }
 
     .quick-links h3 {
-    font-size: 25px;}
+        font-size: 25px;
+    }
+
+    .news-header {
+        height: 55vh;
+    }
+
+    .news-header .header-content h1 {
+        font-size: 23px;
+    }
+
+    .News-container {
+        padding: 28px 21px;
+    }
+
+    .News-navbar {
+        gap: 12px;
+        margin-left: 1px;
+    }
+
+    .News-card {
+        height: 40vh;
+    }
+
+    .events-header {
+        height: 61vh;
+    }
+
+    .recent-container {
+        padding: 20px 21px;
+    }
+
+    .recent-image {
+        height: 23vh;
+    }
+
+    .events-container {
+        padding: 27px 21px;
+    }
+
+    .event-hr {
+        margin: -4px 23px 0px 22px;
+    }
+
+    .contact-section {
+        padding: 22px 21px;
+    }
+
+    .contact-boxes {
+        text-align: center;
+    }
+
+    .contact-box {
+        background-color: #e3793212;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .contact-section2 {
+        margin: 0px;
+        width: 100%;
+    }
+
+    .office-section {
+        padding: 13px 20px;
+        text-align: left;
+    }
+
+    .office-card p {
+        font-size: 18px;
+    }
+
+    .office-card h3 {
+        font-size: 22px;
+    }
+
+    .office-card .icon {
+        font-size: 30px;
+        color: #e37932;
+        background-color: #f1f1ff;
+        width: 52px;
+        height: 45px;
+    }
+
+    .career-header .header-content h1 {
+        font-size: 22px;
+    }
+
+    .career-header {
+        height: 61vh;
+    }
+
+    .why-work-section {
+        padding: 34px 21px;
+        text-align: left;
+    }
+
+    .open-positions-section {
+        padding: 6px 21px;
+        text-align: left;
+    }
+
+    .job-grid {
+        margin: -17px auto;
+    }
+
+    .application-section {
+        padding: 37px 22px;
+    }
+
+    .application-form button {
+        font-size: 20px;
+    }
 
 }
