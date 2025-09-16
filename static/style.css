@@ -9,6 +9,7 @@ body {
     background-color: #fff;
     color: #fff;
     /* padding-top: 140px; */
+    overflow-x: hidden;
 }
 
 .fa-brands,
@@ -480,28 +481,41 @@ header {
     width: 100%;
 }
 
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
 .dropdown-content {
-    max-height: 0;
-    overflow: hidden;
+    height: 400px;
+    display: none;
     transition: max-height 0.5s ease, opacity 0.5s ease;
-    opacity: 0;
     position: absolute;
-    top: 100%;
-    left: 0;
+    top: 4vh;
+    left: 0px;
     background: white;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     width: 215px;
     z-index: 1000;
 }
 
-.dropdown.open .dropdown-content {
+.dropdown-content a:hover {
+    background-color: #f0f0f0;
+    opacity: 1;
+}
+
+.dropdown.open {
     max-height: 66vh;
     opacity: 1;
 }
 
 
-.fa-arrow-right {
-    padding-left: 10px;
+.dropdown-content a {
+    margin-left: 20px !important;
+    display: block;
+    padding: 15px 2px !important;
+    white-space: nowrap !important;
+    color: #333 !important;
 }
 
 .dropdown-btn {
@@ -518,21 +532,16 @@ header {
     border: none;
 }
 
-.dropdown-content a {
-    margin-left: 20px !important;
-    /* display: block; */
-    padding: 15px 2px !important;
-    white-space: nowrap !important;
-    color: #333 !important;
-}
-
-.dropdown-content a:hover {
-    background-color: #f0f0f0;
-}
-
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
+.fa-arrow-right {
+    padding-left: 10px;
+}
+
+
+
 
 i.fas {
     margin-left: 5px;
@@ -8613,6 +8622,8 @@ html {
 
     .dropdown-content {
         width: 270px;
+        height: 470px;
+        top: 3vh;
     }
 
     #nav-menu {
@@ -8918,6 +8929,20 @@ html {
 
     .insight-detail-page {
         flex-direction: column;
+        padding: 19px 21px;
+        gap: 0rem;
+    }
+
+    .sidebar-item.horizontal span {
+        font-size: 1.2rem;
+    }
+
+    .sidebar h3 {
+        font-size: 1.8rem;
+    }
+
+    .insight-detail-page .blog-section.active {
+        padding: 0px 0px !important;
     }
 
     .governance-section h2 {
@@ -9844,6 +9869,14 @@ html {
 
     .cp-history {
         padding: 21px 21px;
+    }
+
+    .insight_detail_header {
+        height: 59vh;
+    }
+
+    .insight_detail_header .header-content h1 {
+        font-size: 20px;
     }
 
 
