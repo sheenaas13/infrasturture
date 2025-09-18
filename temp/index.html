@@ -493,6 +493,41 @@
     </script>
 
     <script>
+        const costRates = {
+            residential: {
+                baseRate: parseFloat("{{ residential_rate.base_rate|default:0 }}"),
+                greenCost: parseFloat("{{ residential_rate.green_feature_cost|default:0 }}"),
+                designPercentage: parseFloat("{{ residential_rate.design_percentage|default:0 }}"),
+                permitCost: parseFloat("{{ residential_rate.permit_cost|default:0 }}")
+            },
+            commercial: {
+                baseRate: parseFloat("{{ commercial_rate.base_rate|default:0 }}"),
+                greenCost: parseFloat("{{ commercial_rate.green_feature_cost|default:0 }}"),
+                designPercentage: parseFloat("{{ commercial_rate.design_percentage|default:0 }}"),
+                permitCost: parseFloat("{{ commercial_rate.permit_cost|default:0 }}")
+            },
+            mixed: {
+                baseRate: parseFloat("{{ mixed_rate.base_rate|default:0 }}"),
+                greenCost: parseFloat("{{ mixed_rate.green_feature_cost|default:0 }}"),
+                designPercentage: parseFloat("{{ mixed_rate.design_percentage|default:0 }}"),
+                permitCost: parseFloat("{{ mixed_rate.permit_cost|default:0 }}")
+            }
+        };
+
+        const subTypeToCategory = {
+            residential_housing: "residential",
+            small_parks: "residential",
+            commercial_buildings: "commercial",
+            urban_development: "commercial",
+            highway_construction: "commercial",
+            electric_grid_setup: "commercial",
+            water_management: "commercial",
+            mixed_use_development: "mixed"
+        };
+    </script>
+
+
+    <script>
         document.getElementById("projectForm")?.addEventListener("submit", function (e) {
             e.preventDefault();
 
@@ -538,41 +573,6 @@
             setTimeout(() => AOS.refresh(), 100);
             document.getElementById("formContainer").scrollIntoView({ behavior: "smooth" });
         }
-    </script>
-
-    <script>
-
-        const costRates = {
-            residential: {
-                baseRate: parseFloat("{{ rates.residential.base_rate|default:'0' }}"),
-                greenCost: parseFloat("{{ rates.residential.green_feature_cost|default:'0' }}"),
-                designPercentage: parseFloat("{{ rates.residential.design_percentage|default:'0' }}"),
-                permitCost: parseFloat("{{ rates.residential.permit_cost|default:'0' }}")
-            },
-            commercial: {
-                baseRate: parseFloat("{{ rates.commercial.base_rate|default:'0' }}"),
-                greenCost: parseFloat("{{ rates.commercial.green_feature_cost|default:'0' }}"),
-                designPercentage: parseFloat("{{ rates.commercial.design_percentage|default:'0' }}"),
-                permitCost: parseFloat("{{ rates.commercial.permit_cost|default:'0' }}")
-            },
-            mixed: {
-                baseRate: parseFloat("{{ rates.mixed.base_rate|default:'0' }}"),
-                greenCost: parseFloat("{{ rates.mixed.green_feature_cost|default:'0' }}"),
-                designPercentage: parseFloat("{{ rates.mixed.design_percentage|default:'0' }}"),
-                permitCost: parseFloat("{{ rates.mixed.permit_cost|default:'0' }}")
-            }
-        };
-
-        const subTypeToCategory = {
-            residential_housing: "residential",
-            small_parks: "residential",
-            commercial_buildings: "commercial",
-            urban_development: "commercial",
-            highway_construction: "commercial",
-            electric_grid_setup: "commercial",
-            water_management: "commercial",
-            mixed_use_development: "mixed"
-        };
     </script>
 
     <script>

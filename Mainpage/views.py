@@ -13,9 +13,11 @@ def indexpage(request):
     return render(request, 'index.html', {'categories': categories})
 
 def home(request):
-    rates = {rate.development_type: rate for rate in CostRates.objects.all()}
-    return render(request, 'index.html', {
-        'rates': rates
+    rates = {rate.development_type.lower(): rate for rate in CostRates.objects.all()}
+    return render(request, "index.html", {
+        "residential_rate": rates.get("residential"),
+        "commercial_rate": rates.get("commercial"),
+        "mixed_rate": rates.get("mixed"),
     })
 
 def about(request):

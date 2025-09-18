@@ -149,11 +149,13 @@ class EstimateImageGallery(models.Model):
         return f"{self.category.name} - {self.caption or 'Image'}"
     
 class CostRates(models.Model):
-    development_type = models.CharField(max_length=50, choices=[
+    DEVELOPMENT_CHOICES = [
         ('residential', 'Residential'),
         ('commercial', 'Commercial'),
         ('mixed', 'Mixed-Use'),
-    ])
+    ]
+
+    development_type = models.CharField(max_length=50, choices=DEVELOPMENT_CHOICES)
     base_rate = models.PositiveIntegerField()  # per sq ft
     green_feature_cost = models.PositiveIntegerField(default=50000)
     design_percentage = models.FloatField(default=10.0)
@@ -161,6 +163,7 @@ class CostRates(models.Model):
 
     def __str__(self):
         return f"{self.development_type.capitalize()} Rates"
+
     
 class Blog(models.Model):
     name = models.CharField(max_length=200)

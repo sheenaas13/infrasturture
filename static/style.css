@@ -4766,7 +4766,7 @@ i.fas {
 }
 
 .unity-image {
-    width: 100%;
+    /* width: 100%; */
     max-width: 350px;
     border-radius: 12px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
@@ -8958,11 +8958,13 @@ html {
     }
 
     .bp-faq-item a {
-        font-size: 1rem;
+        font-size: 18px;
     }
 
     .cg-section {
         flex-direction: column;
+        padding: 31px 21px;
+
     }
 
     .bp-codeofconduct-row {
@@ -8983,6 +8985,7 @@ html {
 
     .eco-section3-row {
         flex-direction: column !important;
+        gap: 10px;
     }
 
     .leader-card {
@@ -9879,5 +9882,106 @@ html {
         font-size: 20px;
     }
 
+    .leaders_header {
+        height: 57vh;
+    }
+
+    .leadership-section {
+        padding: 23px 21px;
+    }
+
+    .leaders-section {
+        padding: 0px 21px;
+    }
+
+    .unity-leadership-section {
+        padding: 38px 21px;
+    }
+
+    .unity-image {
+        width: 100%;
+        height: 27vh;
+    }
+
+    .eco-header {
+        height: 55vh;
+    }
+
+    .eco-section1 {
+        padding: 40px 21px;
+    }
+
+    .eco-section2 {
+        padding: 0px 21px;
+    }
+
+    .partner-logos img {
+        width: 178px;
+    }
+
+    .eco-section3 {
+        padding: 30px 21px;
+    }
+
+    .eco-section3 h2 {
+        margin-bottom: 23px;
+    }
+
+    .eco-section3-image,
+    .eco-section3-content {
+        padding: 8px;
+        margin-bottom: 13px;
+    }
+
+    .eco-section1 p,
+    .eco-section2 p,
+    .eco-section3-content p {
+        font-size: 18px;
+    }
+
+    .Practice_header {
+        height: 59vh;
+    }
+
+    .bp-section1-container {
+        padding: 24px 21px;
+    }
+
+    .bp-section1-paragraph {
+        font-size: 18px;
+    }
+
+    .bp-codeofconduct-section {
+        padding: 0px 21px;
+    }
+
+    .bp-faq {
+        padding: 20px 21px;
+    }
+
+    .governance_header {
+        height: 59vh;
+    }
+
+    .governance_header .header-content h1 {
+        font-size: 22px;
+    }
+
+    .governance-section {
+        padding: 40px 21px;
+    }
+
+    .faq-section {
+        padding: 0px 21px;
+    }
+
+    .faq-image img {
+        height: 40vh;
+    }
+
+    .policies-section {
+        width: 100%;
+        padding: 35px 21px;
+    }
 
 }

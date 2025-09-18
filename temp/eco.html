@@ -35,7 +35,11 @@
                 <a href="{% url 'home' %}"><img src="../static/img/infralogo.png" alt=""></a>
                 InfraBuild
             </div>
-            <nav>
+
+            <div class="toggler" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav id="nav-menu">
                 <div class="dropdown">
                     <a href="{% url 'about' %}">About Us <i class="fas fa-caret-down"></i></a>
                     <div class="dropdown-content">
@@ -62,9 +66,23 @@
                         <a href="#news">Resilience</a>
                         <a href="#news">places</a>
 
-                        <button class="dropdown-btn" onclick="location.href='insights'">All Insights<i
+                        <button class="dropdown-btn" onclick="location.href='insights'"> All Insights <i
                                 class="fa fa-arrow-right"></i></button>
                     </div> -->
+                </div>
+                <div class="mobile-topbar">
+                    <div class="mobile-links">
+                        <a href="{% url 'investors' %}">Investors</a>
+                        <a href="{% url 'news' %}">News</a>
+                        <a href="{% url 'events' %}">Events</a>
+                        <a href="{% url 'contact' %}">Contact</a>
+                        <a href="{% url 'careers' %}">Careers</a>
+                    </div>
+                    <hr>
+                    <div class="mobile-contact">
+                        <span><i class="fas fa-phone"></i> +91 98765-43210</span>
+                        <span><i class="fas fa-envelope"></i> info@infrabuild.com</span>
+                    </div>
                 </div>
                 <a href="#search"><i class="fas fa-magnifying-glass"></i></a>
             </nav>
@@ -114,7 +132,7 @@
             <div class="eco-section3-image">
                 <img src="../static/img/Architecture-E.webp" alt="Smart City Development">
             </div>
-            <div class="eco-section3-content" >
+            <div class="eco-section3-content">
                 <h3><span class="eco-section3-number">01.</span> Smart City Development with Bechtel</h3>
                 <p>
                     Partnered with Bechtel to develop cutting-edge smart infrastructure across urban centers. This
@@ -288,6 +306,12 @@
                 navbar.classList.remove("scrolled");
             }
         });
+    </script>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("nav-menu").classList.toggle("show");
+        }
     </script>
 
 </body>
